@@ -8,7 +8,6 @@ export const circlesGroupedByFestival = (parent, props) => {
     // Standard margin conventions
     const width = +parent.attr('width');
     const height = +parent.attr('height');
-
     const innerWidth = width - margin.left - margin.right
     const innerHeight = height - margin.top - margin.bottom
 
@@ -21,13 +20,9 @@ export const circlesGroupedByFestival = (parent, props) => {
 
     // // 1. Group the data per festival
     const group = d3.group(data, d => d.festival);
-
-    // // 2. Change the structure to a hierarchy structure
-    const hierarchy = d3.hierarchy(group);
-
+    var hierarchy = d3.hierarchy(group);
     var nodes = d3.groups(hierarchy.leaves());
-
-    const festivals = hierarchy.children.map(d => d.data[0]);
+    var festivals = hierarchy.children.map(d => d.data[0]);
 
     const chart = g
         .attr('class', 'chart')

@@ -24,8 +24,6 @@ export const histogram = (parent, props) => {
     d => d.gender
   )
 
-  console.log(dataPreparedForHistogram);
-
   // Initialise scales
   const xScale = d3
     .scaleBand()

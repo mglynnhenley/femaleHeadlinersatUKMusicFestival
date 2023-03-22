@@ -2,13 +2,21 @@
 export const tree = (parent, props) => {
     // unpack my props
     const { data, margin } = props
-    
-    // Standard margin conventions
-    const width = +parent.attr('width')
-    const height = +parent.attr('height')
+
+    console.log(margin)
+
+    const { x, y, width, height } = parent
+        .node()
+        .getBoundingClientRect();
+
+    console.log(width + ',' + height)
+
+
     const innerWidth = width - margin.left - margin.right
     const innerHeight = height - margin.top - margin.bottom
 
+    console.log('treee:')
+    console.log(innerWidth)
 
     // Chart taking care of inner margins
     const g = parent.append('g')
@@ -16,40 +24,36 @@ export const tree = (parent, props) => {
     /// 0. Filter out the male data
     const dataWithoutMen = data.filter(d => d.gender == 'f');
 
-    // 0.5. Sort by the alphabetical name of the artist
 
     // // 1. Group the data per festival, per year the then per stage name
     const group = d3.group(
         dataWithoutMen,
         d => d.festival,
-        d => d.year    )
+        d => d.year)
 
     // // 2. Change the structure to a hierarchy structure
     const treeData = d3.hierarchy(group)
 
     const chart = g
-        .attr('class', 'chart')
         .attr('id', 'tree')
         .attr('transform', `translate(${margin.left},${margin.top})`)
 
-    const treeLayout = d3.tree().size([innerWidth*3/4, innerHeight*3/4])
+    const treeLayout = d3.tree().size([innerWidth, innerHeight])
     const links = treeLayout(treeData).links()
 
     function elbow(d, i) {
         return "M" + d.source.x + "," + d.source.y
             + "V" + d.target.y + "H" + d.target.x
-            + (d.target.children ? "" : ("v" + margin.bottom))
+            + (d.target.children ? "" : ("v"))
     }
 
-    // This is for the scrolling rectangle
-    chart
-        .append('rect')
-        .attr('class', 'scroll-rectangle')
-        .attr('width', -innerWidth)
-        .attr('height', 90)
-        .attr('x', -400)
-        .attr('y', -350);
-        
+    // rectangle 
+    var rectangle = chart
+                        .append('rect')
+                        .attr('class', 'scroll-rectangle')
+                        .attr('width', innerWidth)
+                        .attr('height', innerHeight / 5);
+
     // Create one path per link
     var link = chart
         .selectAll('.edge')
@@ -57,33 +61,34 @@ export const tree = (parent, props) => {
         .join('path')
         .attr('class', 'link')
         .attr('d', elbow);
-    
 
     var nodesGroup = chart
-            .selectAll('.node')
-            .data(treeData.descendants())
-            .enter()
-            .append('g')
-            .attr('class', 'node')
-            .attr('x', d => d.x)
-            .attr('y', d => d.y );
+        .selectAll('.node')
+        .data(treeData.descendants())
+        .enter()
+        .append('g')
+        .attr('class', 'node')
+        .attr('x', d => d.x)
+        .attr('y', d => d.y);
 
     nodesGroup
         .append('text')
         .attr('class', 'label')
+        .attr('id', d => d.data.stage_name)
         .attr('x', d => d.x)
-        .attr('y', d => d.y )
-        .attr('text-anchor', d => d.children ? 'middle' : 'start')
+        .attr('y', d => d.y - 10)
+        .attr('text-anchor', d => 'left')
         .attr('font-size', d => 2.25 - 0.5 * d.depth + 'em')
-        .text(d => d.data[0] ?? ( d.data.stage_name ?? 'Festivals' ))
-        .attr('opacity', d => 0);
-    
+        .text(d => d.data[0] ?? (d.data.stage_name ?? 'Festivals'))
+        .attr('opacity', d => 0)
+        .on('hover', d => d3.selectAll('#' + d.data.stage_name).attr('opacity', 1));
+
     nodesGroup
         .append('circle')
         .attr('class', 'node-circle')
-        .attr('r', d => 5)
+        .attr('r', d => 2)
         .attr('cx', d => d.x)
-        .attr('cy', d => d.y );
+        .attr('cy', d => d.y);
 
 
 }
