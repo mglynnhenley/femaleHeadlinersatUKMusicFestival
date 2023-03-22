@@ -121,6 +121,7 @@ const scrollVis = () => {
       .duration(600)
       .attr('opacity', 0);
 
+      circlesClassVariable.props.displayType = 'all Circles';
       circlesClassVariable.showCircles();
 
   }
@@ -140,7 +141,7 @@ const scrollVis = () => {
       .duration(600)
       .attr('opacity', 1);
 
-      circlesClassVariable.props.displayType = 'festival' 
+      circlesClassVariable.props.displayType = 'festival';
       circlesClassVariable.showCirclesGroupedByFestival();
 
   };

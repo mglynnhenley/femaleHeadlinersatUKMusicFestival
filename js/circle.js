@@ -37,23 +37,28 @@ class circle {
 
             const group = d3.group(vis.props.data, d => d.festival);
             const hierarchy = d3.hierarchy(group);
-            var nodes = d3.groups(hierarchy.leaves(), d => d.data.stage_name);
+            const nodes = d3.groups(hierarchy.leaves(), d => d.data.stage_name);
 
             nodes.forEach(d => {
                 d.radius = d[1].length
             })
 
             vis.simulation2
-                .alpha(1)
-                .alphaTarget(0.5)
+                .alpha(0.5)
+                .alphaTarget(0)
                 .restart();
 
             vis.simulation2.nodes(nodes)
-                .force('center', d3.forceCenter(xCentre, yCentre))
+                .force('x', d3.forceX().x((d) => {
+                    return xCentre;
+                }))
+                .force('y', d3.forceY().y((d) => {
+                    return yCentre;
+                }))
                 .force(
                     'collision',
                     d3.forceCollide().radius(function (d) {
-                        return 3 * d.radius + 1
+                        return 4 * d.radius
                     })
                 )
                 .on('tick', ticked)
