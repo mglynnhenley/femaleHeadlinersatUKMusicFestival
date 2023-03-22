@@ -1,36 +1,43 @@
+body {
+  background-color: #000;
+}
 
 .container {
   width: 890px;
+  height: 1000px;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+  background-color: #000;
 }
 
-#graphic {
-  padding-top: 60px;
+.left {
+  width:50%;
+  height:100vh;
+  float:left;
 }
 
-
-#sections {
-  position: relative;
-  display: inline-block;
-  width: 250px;
-  top: 0px;
-  z-index: 90;
-  padding-bottom: 200px;
+.right {
+  width:50%;
+  height:100%;
+  float:right;
+  position:fixed;
 }
 
 .step {
   margin-bottom: 200px;
   font-family: "TiemposTextWeb-Regular","Georgia";
-  font-size: 16px;
+  font-size: 8px;
   line-height: 23px;
-  color: #767678;
+  color: #814f68;
 }
 
 #sections .title {
   font-family: Arial,Helvetica,"san-serif";
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   margin-bottom: 2px;
-  color: #262626;
+  color: #26262600;
   line-height: 1.2em;
 }
 
@@ -39,7 +46,7 @@
 }
 
 #vis {
-  display: inline-block;
+  display: block;
   position: fixed;
   top: 60px;
   z-index: 1;
@@ -78,3 +85,30 @@
 }
 
 
+.link {
+  fill: none;
+  stroke: #15ff00;
+  stroke-width: 2px;
+}
+
+.label {
+  text-shadow:
+    -1px -1px 3px white,
+    -1px  1px 3px white,
+     1px -1px 3px white,
+     1px  1px 3px white;
+  pointer-events: none;
+  font-family: sans-serif;
+  dominant-baseline: central;
+}
+
+.node-circle {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3px;
+}
+
+.scroll-rectangle {
+  fill: rgb(255, 0, 238);
+  opacity: 0.5;
+}
