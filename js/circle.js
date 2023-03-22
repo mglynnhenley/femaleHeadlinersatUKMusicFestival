@@ -9,8 +9,7 @@ class circle {
             displayType: _props.displayType,
             onClick: _props.onClick,
         };
-
-
+        
         this.simulation2 = d3.forceSimulation();
 
         // Margin conventions
@@ -84,7 +83,7 @@ class circle {
                     .attr('fill', d => (d[1][0].data.gender == 'f' ? '#FF5F1F' : 'grey'))
                     .attr('opacity', d => (d[1][0].data.gender == 'f' ? 1 : 0.5))
                     .attr('stroke', d => (d[1][0].data.gender == 'f' ? 'blue' : 'grey'))
-                    
+
             }
         }
 
@@ -113,44 +112,28 @@ class circle {
                 }
             }
 
+            this.simulation2.stop()
 
-            vis.simulation2
-                .alpha(0.5)
-                .alphaTarget(0.3)
-                .restart();
+            var circleGroup = vis.chart
+                .selectAll('circle')
+                .data(nodes)
+                .join('circle')
 
-
-            vis.simulation2.nodes(nodes)
-                .force('x', d3.forceX().x((d) => {
+            circleGroup
+                .transition().duration(200).delay((d, i) => i * 5)
+                .attr('r', function (d) {
+                    return 3 * d.radius
+                })
+                .attr('cx', function (d) {
                     return groupByFestival(d).x;
-                }))
-                .force('y', d3.forceY().y((d) => {
+                })
+                .attr('cy', function (d) {
                     return groupByFestival(d).y;
-                }))
-                .force('collision', d3.forceCollide().radius(function (d) {
-                    return 3 * d.radius + 1
-                }))
-                .on('tick', tickedByFestival);
 
-            function tickedByFestival() {
-                var u = vis.chart
-                    .selectAll('circle')
-                    .data(nodes)
-                    .join('circle')
-                    .transition().duration(200).delay((d, i) => i * 5)
-                    .attr('r', function (d) {
-                        return 3 * d.radius
-                    })
-                    .attr('cx', function (d) {
-                        return d.x
-                    })
-                    .attr('cy', function (d) {
-                        return d.y
-                    })
-                    .attr('fill', d => d.data.gender == 'f' ? '#FF5F1F' : 'grey')
-                    .attr('opacity', d => d.data.gender == 'f' ? 1 : 0.5)
-                    .attr('stroke', d => d.data.gender == 'f' ? 'blue' : 'grey');
-            }
+                })
+                .attr('fill', d => d.data.gender == 'f' ? '#FF5F1F' : 'grey')
+                .attr('opacity', d => d.data.gender == 'f' ? 1 : 0.5)
+                .attr('stroke', d => d.data.gender == 'f' ? 'blue' : 'grey');
         }
 
     }

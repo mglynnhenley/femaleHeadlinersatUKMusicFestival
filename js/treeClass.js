@@ -1,6 +1,5 @@
 class treeClass {
   constructor (_parent, _props, _data) {
-    console.log('constructed')
     this.parent = _parent
     this.props = {
       data: _props.data,
@@ -118,7 +117,7 @@ class treeClass {
                         )
                         .transition();
     
-    this.parent.selectAll('circle').attr('r', d => this.props.artists.includes(d.data.stage_name) ? 7: 2)
+    this.parent.selectAll('circle').transition().duration(1000).attr('r', d => this.props.artists.includes(d.data.stage_name) ? 10: 2)
 
   }
 }

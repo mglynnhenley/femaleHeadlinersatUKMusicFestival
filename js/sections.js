@@ -7,6 +7,7 @@ const { x, y, width, height } = d3
 
 let data;
 let circlesClassVariable;
+let mapOfEnglandVariable;
 
 const scrollVis = (onClick) => {
   var margin = { top: 10, left: 10, bottom: 10, right: 10 };
@@ -29,7 +30,7 @@ const scrollVis = (onClick) => {
       svg.attr('width', width - margin.left - margin.right)
         .attr('height', height - margin.top - margin.bottom)
         .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-      
+
       setupVis();
       setupSections();
     });
@@ -48,9 +49,13 @@ const scrollVis = (onClick) => {
       id: 'latitude',
     });
 
+    mapOfEnglandVariable = new mapOfEngland(svg, {
+      margin: { top: 10, bottom: 10, left: 10, right: 10 },
+    })
+
     circlesClassVariable = new circle(svg, {
       data,
-      margin: { top: 10, bottom: 10, left: 10 , right: 10 },
+      margin: { top: 10, bottom: 10, left: 10, right: 10 },
       displayType: 'allCircles',
       onClick: onClick,
     });
@@ -82,10 +87,10 @@ const scrollVis = (onClick) => {
       .attr('opacity', 0);
 
     svg
-    .selectAll('#circles')
-    .transition(600)
-    .duration(600)
-    .attr('opacity', 0);
+      .selectAll('#circles')
+      .transition(600)
+      .duration(600)
+      .attr('opacity', 0);
 
   }
 
@@ -122,8 +127,8 @@ const scrollVis = (onClick) => {
       .duration(600)
       .attr('opacity', 0);
 
-      circlesClassVariable.props.displayType = 'all Circles';
-      circlesClassVariable.showCircles();
+    circlesClassVariable.props.displayType = 'all Circles';
+    circlesClassVariable.showCircles();
 
   }
 
@@ -136,14 +141,16 @@ const scrollVis = (onClick) => {
       .duration(600)
       .attr('opacity', 0);
 
-      svg
+    svg
       .selectAll('#circles')
       .transition(600)
       .duration(600)
       .attr('opacity', 1);
 
-      circlesClassVariable.props.displayType = 'festival';
-      circlesClassVariable.showCirclesGroupedByFestival();
+    circlesClassVariable.props.displayType = 'festival';
+    circlesClassVariable.showCirclesGroupedByFestival();
+    mapOfEnglandVariable.initVis();
+
 
   };
 
