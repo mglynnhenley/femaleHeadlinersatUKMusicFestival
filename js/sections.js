@@ -8,7 +8,7 @@ const { x, y, width, height } = d3
 let data;
 let circlesClassVariable;
 
-const scrollVis = () => {
+const scrollVis = (onClick) => {
   var margin = { top: 10, left: 10, bottom: 10, right: 10 };
   var lastIndex = -1;
   var activeIndex = 0;
@@ -51,7 +51,8 @@ const scrollVis = () => {
     circlesClassVariable = new circle(svg, {
       data,
       margin: { top: 10, bottom: 10, left: 10 , right: 10 },
-      displayType: 'allCircles'
+      displayType: 'allCircles',
+      onClick: onClick,
     });
 
   };
@@ -166,11 +167,11 @@ const scrollVis = () => {
 };
 
 
-export const display = (dataArgument, onScroll) => {
+export const display = (dataArgument, onScroll, onClick) => {
 
   data = dataArgument;
 
-  var plot = scrollVis();
+  var plot = scrollVis(onClick);
   d3.select('#vis').datum(data).call(plot, { data: data });
 
   var scroll = scroller().container(d3.select('#graphic'));

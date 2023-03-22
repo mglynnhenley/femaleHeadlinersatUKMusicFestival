@@ -2,12 +2,12 @@
 class circle {
 
     constructor(_parent, _props, _data) {
-        console.log("constructed")
         this.parent = _parent;
         this.props = {
             data: _props.data,
             margin: _props.margin,
             displayType: _props.displayType,
+            onClick: _props.onClick,
         };
 
 
@@ -58,7 +58,7 @@ class circle {
                 .force(
                     'collision',
                     d3.forceCollide().radius(function (d) {
-                        return 4 * d.radius
+                        return 6 * d.radius
                     })
                 )
                 .on('tick', ticked)
@@ -68,11 +68,12 @@ class circle {
                     .selectAll('circle')
                     .data(nodes)
                     .join('circle')
+                    .on('click', vis.props.onClick)
                     .transition()
                     .duration(100)
                     .delay((_d, i) => i * 5)
                     .attr('r', function (d) {
-                        return 3 * d.radius
+                        return 5 * d.radius
                     })
                     .attr('cx', function (d) {
                         return d.x
@@ -83,6 +84,7 @@ class circle {
                     .attr('fill', d => (d[1][0].data.gender == 'f' ? '#FF5F1F' : 'grey'))
                     .attr('opacity', d => (d[1][0].data.gender == 'f' ? 1 : 0.5))
                     .attr('stroke', d => (d[1][0].data.gender == 'f' ? 'blue' : 'grey'))
+                    
             }
         }
 

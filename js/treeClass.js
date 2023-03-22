@@ -6,6 +6,7 @@ class treeClass {
       data: _props.data,
       margin: _props.margin,
       index: _props.index,
+      artists: _props.artists,
     }
     const { x, y, width, height } = this.parent
     .node()
@@ -116,6 +117,8 @@ class treeClass {
                           `translate(${0},${this.props.index * innerHeight/5.5})`
                         )
                         .transition();
+    
+    this.parent.selectAll('circle').attr('r', d => this.props.artists.includes(d.data.stage_name) ? 7: 2)
 
   }
 }

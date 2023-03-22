@@ -15,7 +15,8 @@ body {
   border-color: red;
   border-width: 10px;
   width:20%;
-  display: inline-block;
+  height: 50vh;
+  position: fixed;
 }
 
 .left {
@@ -23,7 +24,9 @@ body {
   border-width: 10px;
   width:50%;
   height:80vh;
-  display: inline-block;
+  position: fixed;
+  left: 20vw;
+
 }
 
 svg.right {
@@ -31,8 +34,8 @@ svg.right {
   border-width: 10px;
   width:30%;
   height:100vh;
-  display: inline-block;
   position: fixed;
+  left: 70vw;
 }
 
 .step {
@@ -49,6 +52,15 @@ svg.right {
   font-weight: bold;
   margin-bottom: 2px;
   color: #26262600;
+  line-height: 1.2em;
+}
+
+#artist-info {
+  font-family: Arial,Helvetica,"san-serif";
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  fill: #fafafa;
   line-height: 1.2em;
 }
 
