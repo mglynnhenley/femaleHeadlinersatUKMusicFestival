@@ -33,7 +33,9 @@ class treeClass {
     const group = d3.group(
         dataWithoutMen,
         d => d.festival,
-        d => d.year)
+        d => d.city,
+        d => d.year, 
+     )
 
     // // 2. Change the structure to a hierarchy structure
     const treeData = d3.hierarchy(group)
@@ -77,18 +79,6 @@ class treeClass {
         .attr('y', d => d.y);
 
     nodesGroup
-        .append('text')
-        .attr('class', 'label')
-        .attr('id', d => d.data.stage_name)
-        .attr('x', d => d.x)
-        .attr('y', d => d.y - 10)
-        .attr('text-anchor', d => 'left')
-        .attr('font-size', d => 2.25 - 0.5 * d.depth + 'em')
-        .text(d => d.data[0] ?? (d.data.stage_name ?? 'Festivals'))
-        .attr('opacity', d => 0)
-        .on('hover', d => d3.selectAll('#' + d.data.stage_name).attr('opacity', 1));
-
-    nodesGroup
         .append('circle')
         .attr('class', 'node-circle')
         .attr('r', d => 2)
@@ -113,7 +103,7 @@ class treeClass {
                         .style("fill", mapIndexToColor[this.props.index])
                         .attr(
                           'transform',
-                          `translate(${0},${this.props.index * innerHeight/5.5})`
+                          `translate(${0},${this.props.index * innerHeight/6.5})`
                         )
                         .transition();
     

@@ -1,9 +1,12 @@
 export const loadAndProcessData = () =>
 Promise
   .all([
-    d3.csv('../data/headliners_processed.csv'),
+    d3.csv('../data/headliners_with_location.csv'),
+    d3.json('./data/united-kingdom.geojson'),
+    d3.csv('../data/artist_info_merged_with_spotify.csv'),
+
   ])
-  .then(([data]) => {   
+  .then(([data, geoData, artistData]) => {   
 
     // Parse CSV data 
     data.forEach(d => {
@@ -11,15 +14,20 @@ Promise
       d.age_present = +d.age_present;
       d['age_(at_time_of_appearance)'] = +d['age_(at_time_of_appearance)'];
       d['years_active_(at_time_of_appearance)'] = +d['years_active_(at_time_of_appearance)']
+      d.longitude = +d.longitude;
+      d.latitude = +d.latitude;
+      d.stage_name = d.stage_name.toLowerCase();
     });
 
-    // // 1. Group the data per festival
-    // const group = d3.group(data, d => d.festival);
+    artistData.forEach(d => {
+      d.popularity = +d.popularity;
+      d.name = d.name.toLowerCase();
+    })
 
-    // // 2. Change the structure to a hierarchy structure
-    // const hierarchy = d3.hierarchy(group);
+    data.sort(function(x, y){
+      return d3.ascending(x.gender, y.gender);
+   })
 
-    // return hierarchy;
-    return data
+    return [data, geoData, artistData]
   });
 

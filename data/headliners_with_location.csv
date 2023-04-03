@@ -1,0 +1,606 @@
+,Unnamed: 0,festival,year,location,city,stage_name,actfilter,solo/band,formation,country_of_origin,birthplace,ethnicity,gender,age_present,age_(at_time_of_appearance),years_active_(at_time_of_appearance),still_active,rock_n_roll_hall_of_fame,longitude,latitude
+0,0,bestival,2007,robin hill,isle of wight,Chemical Brothers,1,b,1989.0,england,manchester,white british,m,52.0,37.0,18.0,y,,-1.3328042802764226,50.67108245
+1,1,bestival,2007,robin hill,isle of wight,Beastie Boys,1,b,1980.0,United States,new york,white american,m,55.0,40.0,27.0,n,,-1.3328042802764226,50.67108245
+2,2,bestival,2007,robin hill,isle of wight,Primal Scream,1,b,1982.0,scotland,glasgow,white british,m,57.0,42.0,25.0,y,,-1.3328042802764226,50.67108245
+3,3,bestival,2008,robin hill,isle of wight,my bloody valentine,1,b,1983.0,ireland,dublin,white irish,mixed,58.0,44.0,25.0,y,,-1.3328042802764226,50.67108245
+4,4,bestival,2008,robin hill,isle of wight,underworld,1,b,1980.0,england,london,white british,m,63.0,49.0,28.0,y,,-1.3328042802764226,50.67108245
+5,5,bestival,2008,robin hill,isle of wight,amy winehouse,1,s,2003.0,england,london,white british,f,,,5.0,n,,-1.3328042802764226,50.67108245
+6,6,bestival,2009,robin hill,isle of wight,Elbow,1,b,1997.0,england,bury,white british,m,48.0,35.0,12.0,y,,-1.3328042802764226,50.67108245
+7,7,bestival,2009,robin hill,isle of wight,massive attack,1,b,1988.0,england,bristol,mixed,m,58.0,45.0,21.0,y,,-1.3328042802764226,50.67108245
+8,8,bestival,2009,robin hill,isle of wight,Kraftwerk,1,b,1969.0,germany,dusseldorf,white european,m,69.0,56.0,40.0,y,,-1.3328042802764226,50.67108245
+9,9,bestival,2010,robin hill,isle of wight,dizzee rascal,1,s,2000.0,england,london,black british,m,37.0,25.0,10.0,y,,-1.3328042802764226,50.67108245
+10,10,bestival,2010,robin hill,isle of wight,The Prodigy,1,b,1990.0,england,essex,mixed,m,52.0,40.0,20.0,y,,-1.3328042802764226,50.67108245
+11,11,bestival,2010,robin hill,isle of wight,the flaming lips,1,b,1983.0,United States,oklahoma,white american,m,58.0,46.0,27.0,y,,-1.3328042802764226,50.67108245
+12,12,bestival,2011,robin hill,isle of wight,bjork,1,s,1976.0,iceland,reykjavik,white european,f,56.0,45.0,35.0,y,,-1.3328042802764226,50.67108245
+13,13,bestival,2011,robin hill,isle of wight,The Cure,1,b,1976.0,england,crawley,white british,m,62.0,51.0,35.0,y,,-1.3328042802764226,50.67108245
+14,14,bestival,2011,robin hill,isle of wight,pendulum,1,b,2002.0,australia,perth,mixed,m,,,9.0,y,,-1.3328042802764226,50.67108245
+15,15,bestival,2012,robin hill,isle of wight,Florence & the Machine,1,b,2007.0,england,london,white british,f,35.0,25.0,5.0,y,,-1.3328042802764226,50.67108245
+16,16,bestival,2012,robin hill,isle of wight,New Order,1,b,1980.0,england,manchester,white british,m,64.0,54.0,32.0,y,,-1.3328042802764226,50.67108245
+17,17,bestival,2012,robin hill,isle of wight,Stevie Wonder,1,s,1961.0,United States,michigan,african american,m,71.0,61.0,51.0,y,,-1.3328042802764226,50.67108245
+18,18,bestival,2013,robin hill,isle of wight,snoop dogg,1,s,1992.0,United States,california,black american,m,50.0,41.0,21.0,y,,-1.3328042802764226,50.67108245
+19,19,bestival,2013,robin hill,isle of wight,fatboy slim,1,s,1996.0,england,london,white british,m,58.0,49.0,17.0,y,,-1.3328042802764226,50.67108245
+20,20,bestival,2013,robin hill,isle of wight,elton john,1,b,1963.0,england,london,white british,m,75.0,66.0,50.0,y,,-1.3328042802764226,50.67108245
+21,21,bestival,2014,robin hill,isle of wight,Foals,1,b,2005.0,england,oxfordshire,mixed,m,35.0,27.0,9.0,y,,-1.3328042802764226,50.67108245
+22,22,bestival,2014,robin hill,isle of wight,outkast,1,b,1991.0,United States,georgia,black american,m,47.0,39.0,23.0,y,,-1.3328042802764226,50.67108245
+23,23,bestival,2014,robin hill,isle of wight,beck,1,s,1985.0,United States,los angeles,white american,m,51.0,43.0,29.0,y,,-1.3328042802764226,50.67108245
+24,24,bestival,2014,robin hill,isle of wight,chic,1,b,1976.0,United States,new york,black american,mixed,69.0,61.0,38.0,y,,-1.3328042802764226,50.67108245
+25,25,bestival,2015,robin hill,isle of wight,missy elliott,1,s,1989.0,United States,virginia,black american,f,50.0,43.0,26.0,y,,-1.3328042802764226,50.67108245
+26,26,bestival,2015,robin hill,isle of wight,Chemical Brothers,2,b,1989.0,england,manchester,white british,m,52.0,45.0,26.0,y,,-1.3328042802764226,50.67108245
+27,27,bestival,2015,robin hill,isle of wight,duran duran,1,b,1978.0,england,birmingham,white british,m,61.0,54.0,37.0,y,,-1.3328042802764226,50.67108245
+28,28,bestival,2016,robin hill,isle of wight,major lazer,1,b,2009.0,,,mixed,m,41.0,35.0,7.0,y,,-1.3328042802764226,50.67108245
+29,29,bestival,2016,robin hill,isle of wight,The Cure,2,b,1976.0,england,crawley,white british,m,62.0,56.0,40.0,y,,-1.3328042802764226,50.67108245
+30,30,bestival,2016,robin hill,isle of wight,hot chip,1,b,2000.0,england,london,white british,m,,,16.0,y,,-1.3328042802764226,50.67108245
+31,31,bestival,2017,lulworth estate,isle of wight,the xx,1,b,2005.0,england,london,mixed,mixed,33.0,28.0,12.0,y,,-1.3328042802764226,50.67108245
+32,32,bestival,2017,lulworth estate,isle of wight,jamie t,1,s,2005.0,england,london,white british,m,36.0,31.0,12.0,y,,-1.3328042802764226,50.67108245
+33,33,bestival,2017,lulworth estate,isle of wight,Pet Shop Boys,1,b,1981.0,england,london,white british,m,65.0,60.0,36.0,y,,-1.3328042802764226,50.67108245
+34,34,bestival,2017,lulworth estate,isle of wight,a tribe called quest,1,b,1985.0,United States,new york,black american,mixed,,,32.0,y,,-1.3328042802764226,50.67108245
+35,35,boardmasters,2007,newquay,cornwall,Ash,1,b,1992.0,northern ireland,downpatrick,white british,m,45.0,30.0,15.0,y,,-4.75,50.416667
+36,36,boardmasters,2007,newquay,cornwall,the subways,1,b,2000.0,england,hertfordshire,white british,mixed,,,7.0,y,,-4.75,50.416667
+37,37,boardmasters,2007,newquay,cornwall,funeral for a friend,1,b,2001.0,wales,bridgend,white british,m,,,6.0,n,,-4.75,50.416667
+38,38,boardmasters,2008,newquay,cornwall,groove armada,1,b,1996.0,england,london,white british,m,50.0,36.0,12.0,y,,-4.75,50.416667
+39,39,boardmasters,2008,newquay,cornwall,the zutons,1,b,2001.0,england,liverpool,white british,mixed,,,7.0,n,,-4.75,50.416667
+40,40,boardmasters,2008,newquay,cornwall,the pigeon detectives,1,b,2004.0,england,west yorkshire,white british,m,,,4.0,y,,-4.75,50.416667
+41,41,boardmasters,2009,newquay,cornwall,Calvin Harris,1,s,2002.0,scotland,dumfries,white british,m,38.0,25.0,7.0,y,,-4.75,50.416667
+42,42,boardmasters,2009,newquay,cornwall,super furry animals,1,b,1993.0,wales,cardiff,white british,m,50.0,37.0,16.0,y,,-4.75,50.416667
+43,43,boardmasters,2009,newquay,cornwall,cypress hill,1,b,1988.0,United States,california,latin american,m,54.0,41.0,21.0,y,,-4.75,50.416667
+44,44,boardmasters,2009,newquay,cornwall,the streets,1,b,1994.0,england,birmingham,mixed,m,,,15.0,n,,-4.75,50.416667
+45,45,boardmasters,2010,newquay,cornwall,newton faulkner,1,s,2006.0,england,surrey,white british,m,37.0,25.0,4.0,y,,-4.75,50.416667
+46,46,boardmasters,2010,newquay,cornwall,seasick steve,1,s,,united states,california,white american,m,80.0,68.0,,y,,-4.75,50.416667
+47,47,boardmasters,2010,newquay,cornwall,leftfield,1,,1989.0,england,london,mixed,mixed,,,21.0,y,,-4.75,50.416667
+48,48,boardmasters,2010,newquay,cornwall,chase & status,1,b,2003.0,england,london,white british,m,,,7.0,y,,-4.75,50.416667
+49,49,boardmasters,2011,newquay,cornwall,klaxons,1,b,2005.0,england,london,white british,m,38.0,27.0,6.0,n,,-4.75,50.416667
+50,50,boardmasters,2011,newquay,cornwall,fatboy slim,2,s,1996.0,england,london,white british,m,58.0,47.0,15.0,y,,-4.75,50.416667
+51,51,boardmasters,2011,newquay,cornwall,bombay bicycle club,1,b,2005.0,england,london,mixed,m,,,6.0,n,,-4.75,50.416667
+52,52,boardmasters,2012,newquay,cornwall,ed sheeran,1,s,2004.0,england,suffolk,white british,m,31.0,21.0,8.0,y,,-4.75,50.416667
+53,53,boardmasters,2012,newquay,cornwall,dizzee rascal,2,s,2000.0,england,london,black british,m,37.0,27.0,12.0,y,,-4.75,50.416667
+54,54,boardmasters,2013,newquay,cornwall,ben howard,1,s,2008.0,england,devon,white british,m,34.0,25.0,5.0,y,,-4.75,50.416667
+55,55,boardmasters,2013,newquay,cornwall,Basement Jaxx,1,b,1994.0,england,london,white british,m,52.0,43.0,19.0,y,,-4.75,50.416667
+56,56,boardmasters,2013,newquay,cornwall,the vaccines,1,b,2010.0,england,london,,,,,3.0,y,,-4.75,50.416667
+57,57,boardmasters,2014,newquay,cornwall,bastille,1,b,2010.0,england,london,white british,mixed,35.0,27.0,4.0,y,,-4.75,50.416667
+58,58,boardmasters,2014,newquay,cornwall,snoop dogg,2,s,1992.0,United States,california,black american,m,50.0,42.0,22.0,y,,-4.75,50.416667
+59,59,boardmasters,2014,newquay,cornwall,chase & status,2,b,2003.0,england,london,white british,m,,,11.0,y,,-4.75,50.416667
+60,60,boardmasters,2015,newquay,cornwall,bastille,2,b,2010.0,england,london,white british,mixed,35.0,28.0,5.0,y,,-4.75,50.416667
+61,61,boardmasters,2015,newquay,cornwall,Faithless,1,b,1995.0,england,london,black british,mixed,57.0,50.0,20.0,y,,-4.75,50.416667
+62,62,boardmasters,2015,newquay,cornwall,rudimental,1,b,2010.0,england,london,mixed,mixed,,,5.0,y,,-4.75,50.416667
+63,63,boardmasters,2016,newquay,cornwall,james bay,1,s,2013.0,england,hertfordshire,white british,m,28.0,22.0,3.0,y,,-4.75,50.416667
+64,64,boardmasters,2016,newquay,cornwall,deadmau5,1,s,1998.0,canada,ontario,white canadian,m,41.0,35.0,18.0,y,,-4.75,50.416667
+65,65,boardmasters,2016,newquay,cornwall,chase & status,3,b,2003.0,england,london,white british,m,,,13.0,y,,-4.75,50.416667
+66,66,boardmasters,2017,newquay,cornwall,jamiroquai,1,b,1992.0,england,london,white british,m,52.0,47.0,25.0,y,,-4.75,50.416667
+67,67,boardmasters,2017,newquay,cornwall,two door cinema club,1,b,2007.0,northern ireland,county down,white british,m,,,10.0,y,,-4.75,50.416667
+68,68,boardmasters,2017,newquay,cornwall,alt-J,1,b,2007.0,england,leeds,white british,m,,,10.0,y,,-4.75,50.416667
+69,69,cornbury festival,2004,charlbury,oxfordshire,will young,1,s,2001.0,england,wokingham,white british,m,43.0,25.0,3.0,y,,-1.25,51.833333
+70,70,cornbury festival,2004,charlbury,oxfordshire,jools holland,1,b,1974.0,england,london,white british,m,62.0,44.0,30.0,y,,-1.25,51.833333
+71,71,cornbury festival,2005,charlbury,oxfordshire,elvis costello,1,s,1970.0,england,london,white british,m,67.0,50.0,35.0,y,,-1.25,51.833333
+72,72,cornbury festival,2005,charlbury,oxfordshire,joe cocker,1,s,1961.0,england,sheffield,white british,m,,,44.0,y,,-1.25,51.833333
+73,73,cornbury festival,2006,charlbury,oxfordshire,texas,1,b,1986.0,scotland,glasgow,white british,mixed,54.0,38.0,20.0,y,,-1.25,51.833333
+74,74,cornbury festival,2006,charlbury,oxfordshire,robert plant,1,s,1965.0,england,staffordshire,white british,m,73.0,57.0,41.0,y,,-1.25,51.833333
+75,75,cornbury festival,2007,charlbury,oxfordshire,david gray,1,s,1992.0,england,trafford,white british,m,53.0,38.0,15.0,y,,-1.25,51.833333
+76,76,cornbury festival,2007,charlbury,oxfordshire,blondie,1,b,1974.0,United States,new york,white american,mixed,71.0,56.0,33.0,y,,-1.25,51.833333
+77,77,cornbury festival,2008,charlbury,oxfordshire,crowded house,1,b,1985.0,australia,melbourne,white australian,m,63.0,49.0,23.0,y,,-1.25,51.833333
+78,78,cornbury festival,2008,charlbury,oxfordshire,paul simon,1,s,1957.0,United States,new jersey,white american,m,80.0,66.0,51.0,y,,-1.25,51.833333
+79,79,cornbury festival,2009,charlbury,oxfordshire,sugababes,1,b,1998.0,england,london,mixed,f,37.0,24.0,11.0,y,,-1.25,51.833333
+80,80,cornbury festival,2009,charlbury,oxfordshire,scouting for girls,1,b,2005.0,england,london,,m,43.0,30.0,4.0,y,,-1.25,51.833333
+81,81,cornbury festival,2010,charlbury,oxfordshire,david gray,2,s,1992.0,england,trafford,white british,m,53.0,41.0,18.0,y,,-1.25,51.833333
+82,82,cornbury festival,2010,charlbury,oxfordshire,jackson browne,1,s,1966.0,United States,california,white american,m,73.0,61.0,44.0,y,,-1.25,51.833333
+83,83,cornbury festival,2011,chipping norton,oxfordshire,james blunt,1,s,2003.0,england,hampshire,white british,m,48.0,37.0,8.0,y,,-1.25,51.833333
+84,84,cornbury festival,2011,chipping norton,oxfordshire,status quo,1,b,1962.0,england,london,white british,m,70.0,59.0,49.0,y,,-1.25,51.833333
+85,85,cornbury festival,2011,chipping norton,oxfordshire,the faces,1,b,1969.0,england,london,white british,m,73.0,62.0,42.0,y,,-1.25,51.833333
+86,86,cornbury festival,2012,chipping norton,oxfordshire,james morrison,1,s,2006.0,england,warwickshire,white british,m,37.0,27.0,6.0,y,,-1.25,51.833333
+87,87,cornbury festival,2012,chipping norton,oxfordshire,elvis costello,2,s,1970.0,england,london,white british,m,67.0,57.0,42.0,y,,-1.25,51.833333
+88,88,cornbury festival,2012,chipping norton,oxfordshire,bellowhead,1,b,2004.0,,,,mixed,,,8.0,n,,-1.25,51.833333
+89,89,cornbury festival,2012,chipping norton,oxfordshire,katzenjammer,1,b,2005.0,norway,oslo,white european,,,,7.0,y,,-1.25,51.833333
+90,90,cornbury festival,2013,chipping norton,oxfordshire,keane,1,b,1995.0,england,east sussex,white british,m,44.0,35.0,18.0,y,,-1.25,51.833333
+91,91,cornbury festival,2013,chipping norton,oxfordshire,squeeze,1,b,1974.0,england,london,,mixed,,,39.0,y,,-1.25,51.833333
+92,92,cornbury festival,2014,chipping norton,oxfordshire,jools holland,2,b,1974.0,england,london,white british,m,62.0,54.0,40.0,y,,-1.25,51.833333
+93,93,cornbury festival,2014,chipping norton,oxfordshire,simple minds,1,b,1977.0,scotland,glasgow,white british,m,62.0,54.0,37.0,y,,-1.25,51.833333
+94,94,cornbury festival,2014,chipping norton,oxfordshire,the gypsy kings,1,b,1978.0,france,provence,,,,,36.0,y,,-1.25,51.833333
+95,95,cornbury festival,2015,chipping norton,oxfordshire,roger hodgson,1,s,1969.0,england,portsmouth,white british,m,72.0,65.0,46.0,y,,-1.25,51.833333
+96,96,cornbury festival,2015,chipping norton,oxfordshire,the jacques,1,b,2014.0,england,bristol,,m,,,1.0,y,,-1.25,51.833333
+97,97,cornbury festival,2015,chipping norton,oxfordshire,king b,1,s,,,,,,,,,,,-1.25,51.833333
+98,98,cornbury festival,2016,chipping norton,oxfordshire,jamie cullum,1,s,1999.0,england,essex,white british,m,42.0,36.0,17.0,y,,-1.25,51.833333
+99,99,cornbury festival,2016,chipping norton,oxfordshire,seal,1,s,1987.0,england,london,black british,m,59.0,53.0,29.0,y,,-1.25,51.833333
+100,100,cornbury festival,2016,chipping norton,oxfordshire,bryan ferry,1,s,1970.0,england,durham,white british,m,76.0,70.0,46.0,y,,-1.25,51.833333
+101,101,cornbury festival,2017,chipping norton,oxfordshire,Kaiser Chiefs,1,b,2000.0,england,leeds,white british,,46.0,41.0,17.0,y,,-1.25,51.833333
+102,102,cornbury festival,2017,chipping norton,oxfordshire,Bryan Adams,1,s,1975.0,canada,ontario,white canadian,m,62.0,57.0,42.0,y,,-1.25,51.833333
+103,103,cornbury festival,2017,chipping norton,oxfordshire,the pretenders,1,b,1978.0,england,hereford,,mixed,,,39.0,y,,-1.25,51.833333
+104,104,download,2003,donington park,leicestershire,Iron Maiden,1,b,1975.0,england,london,white british,m,66.0,47.0,28.0,y,,-1.1847653085946246,52.68491375
+105,105,download,2003,donington park,leicestershire,audioslave,1,b,2001.0,United States,california,mixed,m,55.0,,,y,,-1.1847653085946246,52.68491375
+106,106,download,2004,donington park,leicestershire,Linkin Park,1,b,1996.0,United States,california,white american,m,44.0,26.0,8.0,y,,-1.1847653085946246,52.68491375
+107,107,download,2004,donington park,leicestershire,Metallica,1,b,1981.0,United States,los angeles,white american,m,58.0,,,y,,-1.1847653085946246,52.68491375
+108,108,download,2005,donington park,leicestershire,feeder,1,b,1992.0,wales,newport,white british,m,54.0,37.0,13.0,y,,-1.1847653085946246,52.68491375
+109,109,download,2005,donington park,leicestershire,system of a down,1,b,1994.0,United States,california,mixed,m,49.0,,,y,,-1.1847653085946246,52.68491375
+110,110,download,2005,donington park,leicestershire,black sabbath,1,b,1968.0,england,birmingham,white british,m,73.0,,,n,,-1.1847653085946246,52.68491375
+111,111,download,2006,donington park,leicestershire,tool,1,b,1990.0,United States,california,white american,m,55.0,39.0,16.0,y,,-1.1847653085946246,52.68491375
+112,112,download,2006,donington park,leicestershire,Metallica,2,b,1981.0,United States,los angeles,white american,m,58.0,42.0,25.0,y,,-1.1847653085946246,52.68491375
+113,113,download,2006,donington park,leicestershire,Guns n Roses,1,b,1985.0,United States,california,mixed,,58.0,42.0,21.0,y,,-1.1847653085946246,52.68491375
+114,114,download,2007,donington park,leicestershire,My Chemical Romance,1,b,2001.0,United States,new jersey,mixed,m,42.0,27.0,6.0,y,,-1.1847653085946246,52.68491375
+115,115,download,2007,donington park,leicestershire,Linkin Park,2,b,1996.0,United States,california,white american,m,44.0,29.0,11.0,y,,-1.1847653085946246,52.68491375
+116,116,download,2007,donington park,leicestershire,Iron Maiden,2,b,1975.0,england,london,white british,m,66.0,51.0,32.0,y,,-1.1847653085946246,52.68491375
+117,117,download,2008,donington park,leicestershire,Lostprophets,1,b,1997.0,wales,pontypridd,white british,m,45.0,31.0,11.0,n,,-1.1847653085946246,52.68491375
+118,118,download,2008,donington park,leicestershire,The Offspring,1,b,1984.0,United States,california,white american,m,55.0,41.0,24.0,y,,-1.1847653085946246,52.68491375
+119,119,download,2008,donington park,leicestershire,KISS,1,b,1973.0,United States,new york,white american,m,67.0,53.0,35.0,y,,-1.1847653085946246,52.68491375
+120,120,download,2009,donington park,leicestershire,Slipknot,1,b,1995.0,United States,iowa,,m,49.0,36.0,14.0,y,,-1.1847653085946246,52.68491375
+121,121,download,2009,donington park,leicestershire,Faith no More,1,b,1979.0,United States,california,white american,m,57.0,44.0,30.0,y,,-1.1847653085946246,52.68491375
+122,122,download,2009,donington park,leicestershire,Def Leppard,1,b,1977.0,england,sheffield,white british,m,61.0,48.0,32.0,y,,-1.1847653085946246,52.68491375
+123,123,download,2010,donington park,leicestershire,Rage Against the Machine,1,b,1991.0,United States,los angeles,mixed,m,54.0,42.0,19.0,n,,-1.1847653085946246,52.68491375
+124,124,download,2010,donington park,leicestershire,AC/DC,1,b,1973.0,australia,sydney,white australian,m,69.0,57.0,37.0,y,,-1.1847653085946246,52.68491375
+125,125,download,2010,donington park,leicestershire,Aerosmith,1,b,1970.0,United States,boston,white american,m,71.0,59.0,40.0,y,,-1.1847653085946246,52.68491375
+126,126,download,2011,donington park,leicestershire,Linkin Park,3,b,1996.0,United States,california,white american,m,44.0,33.0,15.0,y,,-1.1847653085946246,52.68491375
+127,127,download,2011,donington park,leicestershire,system of a down,2,b,1994.0,United States,california,mixed,m,49.0,38.0,17.0,y,,-1.1847653085946246,52.68491375
+128,128,download,2011,donington park,leicestershire,Def Leppard,2,b,1977.0,england,sheffield,white british,m,61.0,50.0,34.0,y,,-1.1847653085946246,52.68491375
+129,129,download,2012,donington park,leicestershire,The Prodigy,2,b,1990.0,england,essex,mixed,m,52.0,42.0,22.0,y,,-1.1847653085946246,52.68491375
+130,130,download,2012,donington park,leicestershire,Metallica,3,b,1981.0,United States,los angeles,white american,m,58.0,48.0,31.0,y,,-1.1847653085946246,52.68491375
+131,131,download,2012,donington park,leicestershire,black sabbath,2,b,1968.0,england,birmingham,white british,m,73.0,63.0,44.0,n,,-1.1847653085946246,52.68491375
+132,132,download,2013,donington park,leicestershire,Slipknot,2,b,1995.0,United States,iowa,,m,49.0,40.0,18.0,y,,-1.1847653085946246,52.68491375
+133,133,download,2013,donington park,leicestershire,rammstein,1,b,1994.0,germany,berlin,white european,,54.0,45.0,19.0,y,,-1.1847653085946246,52.68491375
+134,134,download,2013,donington park,leicestershire,Iron Maiden,3,b,1975.0,england,london,white british,m,66.0,57.0,38.0,n,,-1.1847653085946246,52.68491375
+135,135,download,2014,donington park,leicestershire,Avenged sevenfold,1,b,1999.0,united states,california,white american,m,40.0,32.0,15.0,y,,-1.1847653085946246,52.68491375
+136,136,download,2014,donington park,leicestershire,Linkin Park,4,b,1996.0,United States,california,white american,m,44.0,36.0,18.0,y,,-1.1847653085946246,52.68491375
+137,137,download,2014,donington park,leicestershire,Aerosmith,2,b,1970.0,United States,boston,white american,m,71.0,63.0,44.0,y,,-1.1847653085946246,52.68491375
+138,138,download,2015,donington park,leicestershire,Muse,1,b,1994.0,england,teignmouth,white british,,43.0,36.0,21.0,y,,-1.1847653085946246,52.68491375
+139,139,download,2015,donington park,leicestershire,Slipknot,3,b,1995.0,United States,iowa,,m,49.0,42.0,20.0,y,,-1.1847653085946246,52.68491375
+140,140,download,2015,donington park,leicestershire,KISS,2,b,1973.0,United States,new york,white american,m,67.0,60.0,42.0,y,,-1.1847653085946246,52.68491375
+141,141,download,2016,donington park,leicestershire,rammstein,2,b,1994.0,germany,berlin,white european,,54.0,48.0,22.0,y,,-1.1847653085946246,52.68491375
+142,142,download,2016,donington park,leicestershire,Iron Maiden,4,b,1975.0,england,london,white british,m,66.0,60.0,41.0,n,,-1.1847653085946246,52.68491375
+143,143,download,2016,donington park,leicestershire,black sabbath,3,b,1968.0,england,birmingham,white british,m,73.0,67.0,48.0,n,,-1.1847653085946246,52.68491375
+144,144,download,2017,donington park,leicestershire,Biffy Clyro,1,b,1995.0,scotland,east ayrshire,white british,m,41.0,36.0,22.0,y,,-1.1847653085946246,52.68491375
+145,145,download,2017,donington park,leicestershire,system of a down,3,b,1994.0,United States,california,mixed,m,49.0,44.0,23.0,y,,-1.1847653085946246,52.68491375
+146,146,download,2017,donington park,leicestershire,Aerosmith,3,b,1970.0,United States,boston,white american,m,71.0,66.0,47.0,y,,-1.1847653085946246,52.68491375
+147,147,end of the road festival,2006,blandford,dorset,josh ritter,1,s,1997.0,United States,idaho,white american,m,45.0,29.0,9.0,y,,-2.34473226124306,50.79683685
+148,148,end of the road festival,2006,blandford,dorset,badly drawn boy,1,s,1995.0,england,bedfordshire,white british,m,52.0,36.0,11.0,y,,-2.34473226124306,50.79683685
+149,149,end of the road festival,2006,blandford,dorset,lambchop,1,b,1986.0,United States,tennessee,white american,m,63.0,47.0,20.0,y,,-2.34473226124306,50.79683685
+150,150,end of the road festival,2007,blandford,dorset,ryan adams,1,b,1991.0,United States,north carolina,white american,m,47.0,32.0,16.0,y,,-2.34473226124306,50.79683685
+151,151,end of the road festival,2007,blandford,dorset,super furry animals,2,b,1993.0,wales,cardiff,white british,m,50.0,35.0,14.0,y,,-2.34473226124306,50.79683685
+152,152,end of the road festival,2007,blandford,dorset,yo la tengo,1,b,1984.0,United States,new jersey,white american,mixed,65.0,50.0,23.0,y,,-2.34473226124306,50.79683685
+153,153,end of the road festival,2008,blandford,dorset,conor oberst,1,s,1993.0,United States,nebraska,white american,m,42.0,28.0,15.0,y,,-2.34473226124306,50.79683685
+154,154,end of the road festival,2008,blandford,dorset,mercury rev,1,b,1989.0,United States,new york,white american,m,55.0,41.0,19.0,y,,-2.34473226124306,50.79683685
+155,155,end of the road festival,2008,blandford,dorset,calexico,1,b,1996.0,United States,arizona,white american,,,,12.0,y,,-2.34473226124306,50.79683685
+156,156,end of the road festival,2009,blandford,dorset,Fleet Foxes,1,b,2006.0,United States,seattle,white american,m,40.0,27.0,3.0,y,,-2.34473226124306,50.79683685
+157,157,end of the road festival,2009,blandford,dorset,steve earle,1,s,1974.0,United States,virginia,white american,m,67.0,54.0,35.0,y,,-2.34473226124306,50.79683685
+158,158,end of the road festival,2009,blandford,dorset,explosions in the sky,1,b,1999.0,United States,texas,white american,m,,,10.0,y,,-2.34473226124306,50.79683685
+159,159,end of the road festival,2010,blandford,dorset,wilco,1,b,1994.0,United States,chicago,white american,m,53.0,41.0,16.0,y,,-2.34473226124306,50.79683685
+160,160,end of the road festival,2010,blandford,dorset,yo la tengo,2,b,1984.0,United States,new jersey,white american,mixed,65.0,53.0,26.0,y,,-2.34473226124306,50.79683685
+161,161,end of the road festival,2010,blandford,dorset,modest mouse,1,b,1992.0,United States,washington state,,,,,18.0,y,,-2.34473226124306,50.79683685
+162,162,end of the road festival,2011,blandford,dorset,beirut,1,s,2006.0,United States,new mexico,white american,,36.0,25.0,5.0,y,,-2.34473226124306,50.79683685
+163,163,end of the road festival,2011,blandford,dorset,joanna newsom,1,s,,United States,california,white american,f,40.0,29.0,,y,,-2.34473226124306,50.79683685
+164,164,end of the road festival,2011,blandford,dorset,Mogwai,1,b,1995.0,scotland,glasgow,white british,m,45.0,34.0,16.0,y,,-2.34473226124306,50.79683685
+165,165,end of the road festival,2012,blandford,dorset,grizzly bear,1,b,2002.0,United States,new york,white american,m,40.0,30.0,10.0,y,,-2.34473226124306,50.79683685
+166,166,end of the road festival,2012,blandford,dorset,beach house,1,b,2004.0,United States,maryland,white american,mixed,40.0,30.0,8.0,y,,-2.34473226124306,50.79683685
+167,167,end of the road festival,2012,blandford,dorset,grandaddy,1,b,1992.0,united states,california,white american,m,,,20.0,y,,-2.34473226124306,50.79683685
+168,168,end of the road festival,2013,blandford,dorset,Sigur Ros,1,b,1994.0,iceland,reykjavik,white european,m,45.0,36.0,19.0,y,,-2.34473226124306,50.79683685
+169,169,end of the road festival,2013,blandford,dorset,Belle and Sebastian,1,b,1996.0,scotland,glasgow,white british,mixed,53.0,44.0,17.0,y,,-2.34473226124306,50.79683685
+170,170,end of the road festival,2013,blandford,dorset,david byrne & st vincent,1,b,,,,,mixed,54.0,45.0,,y,,-2.34473226124306,50.79683685
+171,171,end of the road festival,2014,blandford,dorset,st vincent,1,s,2003.0,United States,oklahoma,white american,f,39.0,31.0,11.0,y,,-2.34473226124306,50.79683685
+172,172,end of the road festival,2014,blandford,dorset,the flaming lips,2,b,2005.0,United States,pennsylvania,,m,43.0,35.0,9.0,y,,-2.34473226124306,50.79683685
+173,173,end of the road festival,2014,blandford,dorset,wild beasts,1,b,2002.0,england,kendal,white british,m,,,12.0,y,,-2.34473226124306,50.79683685
+174,174,end of the road festival,2015,blandford,dorset,tame impala,1,b,2007.0,australia,perth,white australian,m,33.0,26.0,8.0,y,,-2.34473226124306,50.79683685
+175,175,end of the road festival,2015,blandford,dorset,the war on drugs,1,b,2005.0,United States,pennsylvania,,m,43.0,36.0,10.0,Y,,-2.34473226124306,50.79683685
+176,176,end of the road festival,2015,blandford,dorset,sufjan stevens,1,s,1999.0,United States,michigan,white american,m,46.0,39.0,16.0,y,,-2.34473226124306,50.79683685
+177,177,end of the road festival,2016,blandford,dorset,joanna newsom,2,s,,United States,california,white american,f,40.0,34.0,,y,,-2.34473226124306,50.79683685
+178,178,end of the road festival,2016,blandford,dorset,bat for lashes,1,s,2006.0,england,london,british asian,f,42.0,36.0,10.0,y,,-2.34473226124306,50.79683685
+179,179,end of the road festival,2016,blandford,dorset,animal collective,1,b,2000.0,United States,maryland,white american,m,43.0,37.0,16.0,y,,-2.34473226124306,50.79683685
+180,180,end of the road festival,2017,blandford,dorset,father john misty,1,s,2004.0,United States,maryland,white american,m,40.0,35.0,13.0,y,,-2.34473226124306,50.79683685
+181,181,end of the road festival,2017,blandford,dorset,lucinda williams,1,s,1978.0,United States,lousiana,white american,f,69.0,64.0,39.0,y,,-2.34473226124306,50.79683685
+182,182,end of the road festival,2017,blandford,dorset,mac Demarco,1,s,2008.0,canada,british columbia,white canadian,m,,,9.0,y,,-2.34473226124306,50.79683685
+183,183,Glastonbury,1970,pilton,somerset,T-rex,1,b,1967.0,england,london,white british,m,,22.0,3.0,n,,-3.0753867062227487,51.161750850000004
+184,184,Glastonbury,1971,pilton,somerset,David Bowie,1,s,1962.0,england,london,white british,m,,24.0,9.0,n,y,-3.0753867062227487,51.161750850000004
+185,185,Glastonbury,1979,pilton,somerset,peter gabriel,1,s,1967.0,england,surrey,white british,m,72.0,29.0,,y,y,-3.0753867062227487,51.161750850000004
+186,186,Glastonbury,1979,pilton,somerset,tim blake,1,s,1970.0,england,london,white british,m,70.0,,9.0,y,,-3.0753867062227487,51.161750850000004
+187,187,Glastonbury,1981,pilton,somerset,New Order,2,b,1980.0,england,manchester,white british,m,64.0,23.0,1.0,y,,-3.0753867062227487,51.161750850000004
+188,188,Glastonbury,1981,pilton,somerset,hawkwind,1,b,1969.0,england,london,white british,m,,,12.0,y,,-3.0753867062227487,51.161750850000004
+189,189,Glastonbury,1982,pilton,somerset,jackson browne,2,s,1966.0,United States,california,white american,m,73.0,33.0,16.0,y,y,-3.0753867062227487,51.161750850000004
+190,190,Glastonbury,1982,pilton,somerset,van morrison,1,s,1958.0,northern ireland,belfast,white british,m,76.0,36.0,24.0,y,y,-3.0753867062227487,51.161750850000004
+191,191,Glastonbury,1983,pilton,somerset,ub40,1,b,1978.0,england,birmingham,mixed,m,63.0,24.0,5.0,y,,-3.0753867062227487,51.161750850000004
+192,192,Glastonbury,1983,pilton,somerset,curtis mayfield,1,s,1956.0,United States,chicago,black american,m,,41.0,27.0,n,y,-3.0753867062227487,51.161750850000004
+193,193,Glastonbury,1984,pilton,somerset,the smiths,1,b,1982.0,england,manchester,white british,m,59.0,22.0,2.0,n,,-3.0753867062227487,51.161750850000004
+194,194,Glastonbury,1984,pilton,somerset,weather report,1,b,1970.0,United States,new york,mixed,mixed,,,,n,,-3.0753867062227487,51.161750850000004
+195,195,Glastonbury,1984,pilton,somerset,black uhuru,1,b,1972.0,jamaica,kingston,black american,mixed,,,,y,,-3.0753867062227487,51.161750850000004
+196,196,Glastonbury,1985,pilton,somerset,echo and the bunnymen,1,b,1978.0,england,liverpool,white british,m,63.0,26.0,7.0,y,,-3.0753867062227487,51.161750850000004
+197,197,Glastonbury,1985,pilton,somerset,the boomtown rats,1,b,1975.0,ireland,county dublin,white irish,m,68.0,31.0,10.0,y,,-3.0753867062227487,51.161750850000004
+198,198,Glastonbury,1985,pilton,somerset,joe cocker,2,s,1961.0,england,sheffield,white british,m,,41.0,24.0,n,,-3.0753867062227487,51.161750850000004
+199,199,Glastonbury,1986,pilton,somerset,The Cure,3,b,1976.0,england,crawley,white british,m,62.0,26.0,10.0,y,,-3.0753867062227487,51.161750850000004
+200,200,Glastonbury,1986,pilton,somerset,level 42,1,b,1980.0,england,isle of wight,white british,m,63.0,27.0,6.0,y,,-3.0753867062227487,51.161750850000004
+201,201,Glastonbury,1986,pilton,somerset,psychedelic furs,1,b,1977.0,england,london,,,64.0,28.0,9.0,y,,-3.0753867062227487,51.161750850000004
+202,202,Glastonbury,1987,pilton,somerset,the communards,1,b,1985.0,scotland,glasgow,white british,m,60.0,25.0,2.0,n,,-3.0753867062227487,51.161750850000004
+203,203,Glastonbury,1987,pilton,somerset,elvis costello,3,s,1970.0,england,london,white british,m,67.0,32.0,17.0,y,,-3.0753867062227487,51.161750850000004
+204,204,Glastonbury,1987,pilton,somerset,van morrison,2,s,1958.0,northern ireland,belfast,white british,m,76.0,41.0,29.0,y,,-3.0753867062227487,51.161750850000004
+205,205,Glastonbury,1989,pilton,somerset,suzanne vega,1,s,1982.0,United States,new york,white american,f,62.0,29.0,7.0,y,,-3.0753867062227487,51.161750850000004
+206,206,Glastonbury,1989,pilton,somerset,elvis costello,4,s,1970.0,england,london,white british,m,67.0,34.0,19.0,y,y,-3.0753867062227487,51.161750850000004
+207,207,Glastonbury,1989,pilton,somerset,van morrison,3,s,1958.0,northern ireland,belfast,white british,m,76.0,43.0,31.0,y,y,-3.0753867062227487,51.161750850000004
+208,208,Glastonbury,1990,pilton,somerset,sinead o'connor,1,s,1986.0,ireland,county dublin,white irish,f,55.0,23.0,4.0,y,,-3.0753867062227487,51.161750850000004
+209,209,Glastonbury,1990,pilton,somerset,happy mondays,1,b,1980.0,england,manchester,white british,m,58.0,26.0,10.0,y,,-3.0753867062227487,51.161750850000004
+210,210,Glastonbury,1990,pilton,somerset,The Cure,4,b,1976.0,england,crawley,white british,m,62.0,30.0,14.0,y,,-3.0753867062227487,51.161750850000004
+211,211,Glastonbury,1992,pilton,somerset,youssou n'dour,1,s,1979.0,senegal,dakar,black african,m,62.0,32.0,13.0,y,,-3.0753867062227487,51.161750850000004
+212,212,Glastonbury,1992,pilton,somerset,carter usm,1,b,1987.0,england,london,white british,m,62.0,32.0,5.0,n,,-3.0753867062227487,51.161750850000004
+213,213,Glastonbury,1992,pilton,somerset,shakespear's sister,1,b,1988.0,england,london,mixed,f,66.0,37.0,4.0,y,,-3.0753867062227487,51.161750850000004
+214,214,Glastonbury,1993,pilton,somerset,lenny kravitz,1,s,1988.0,United States,new york,black american,m,57.0,28.0,5.0,y,,-3.0753867062227487,51.161750850000004
+215,215,Glastonbury,1993,pilton,somerset,christy moore,1,s,1969.0,ireland,county kildare,white irish,m,76.0,47.0,24.0,y,,-3.0753867062227487,51.161750850000004
+216,216,Glastonbury,1993,pilton,somerset,the black crowes,1,b,1989.0,United States,georgia,,m,,,4.0,n,,-3.0753867062227487,51.161750850000004
+217,217,Glastonbury,1994,pilton,somerset,elvis costello,5,s,1970.0,england,london,white british,m,67.0,39.0,24.0,y,y,-3.0753867062227487,51.161750850000004
+218,218,Glastonbury,1994,pilton,somerset,peter gabriel,2,s,1967.0,england,surrey,white british,m,72.0,45.0,27.0,y,y,-3.0753867062227487,51.161750850000004
+219,219,Glastonbury,1994,pilton,somerset,the levellers,1,b,1988.0,england,brighton,white british,m,,,6.0,y,,-3.0753867062227487,51.161750850000004
+220,220,Glastonbury,1995,pilton,somerset,Oasis,1,b,1991.0,england,manchester,white british,m,52.0,27.0,5.0,y,,-3.0753867062227487,51.161750850000004
+221,221,Glastonbury,1995,pilton,somerset,Pulp,1,b,1978.0,england,sheffield,white british,mixed,57.0,30.0,17.0,n,,-3.0753867062227487,51.161750850000004
+222,222,Glastonbury,1995,pilton,somerset,The Cure,5,b,1976.0,england,crawley,white british,m,62.0,35.0,19.0,y,,-3.0753867062227487,51.161750850000004
+223,223,Glastonbury,1997,pilton,somerset,Ash,2,b,1992.0,northern ireland,downpatrick,white british,m,45.0,20.0,5.0,Y,,-3.0753867062227487,51.161750850000004
+224,224,Glastonbury,1997,pilton,somerset,Radiohead,1,b,1985.0,england,oxfordshire,white british,m,52.0,27.0,12.0,Y,,-3.0753867062227487,51.161750850000004
+225,225,Glastonbury,1997,pilton,somerset,The Prodigy,3,b,1990.0,england,essex,mixed,m,52.0,27.0,7.0,Y,,-3.0753867062227487,51.161750850000004
+226,226,Glastonbury,1998,pilton,somerset,Blur,1,b,1988.0,england,london,white british,m,53.0,29.0,10.0,Y,,-3.0753867062227487,51.161750850000004
+227,227,Glastonbury,1998,pilton,somerset,Pulp,2,b,1978.0,england,sheffield,white british,mixed,57.0,33.0,20.0,N,,-3.0753867062227487,51.161750850000004
+228,228,Glastonbury,1998,pilton,somerset,Primal Scream,2,b,1982.0,scotland,glasgow,white british,m,57.0,33.0,16.0,Y,,-3.0753867062227487,51.161750850000004
+229,229,Glastonbury,1999,pilton,somerset,Manic Street Preachers,1,b,1986.0,wales,caerphilly,white british,m,53.0,30.0,13.0,Y,,-3.0753867062227487,51.161750850000004
+230,230,Glastonbury,1999,pilton,somerset,Skunk Anansie,1,b,1994.0,england,london,mixed,f,54.0,31.0,5.0,Y,,-3.0753867062227487,51.161750850000004
+231,231,Glastonbury,1999,pilton,somerset,REM,1,b,1980.0,United States,georgia,white american,m,63.0,40.0,19.0,N,n,-3.0753867062227487,51.161750850000004
+232,232,Glastonbury,2000,pilton,somerset,Travis,1,b,1990.0,scotland,glasgow,white british,m,50.0,28.0,10.0,Y,,-3.0753867062227487,51.161750850000004
+233,233,Glastonbury,2000,pilton,somerset,Chemical Brothers,3,b,1989.0,england,manchester,white british,m,52.0,30.0,11.0,Y,,-3.0753867062227487,51.161750850000004
+234,234,Glastonbury,2000,pilton,somerset,David Bowie,2,s,1962.0,england,london,white british,m,,53.0,38.0,N,n,-3.0753867062227487,51.161750850000004
+235,235,Glastonbury,2002,pilton,somerset,Stereophonics,1,b,1992.0,wales,mid glamorgan,white british,m,47.0,27.0,10.0,Y,,-3.0753867062227487,51.161750850000004
+236,236,Glastonbury,2002,pilton,somerset,Coldplay,1,b,1996.0,england,london,white british,m,44.0,27.0,9.0,Y,,-3.0753867062227487,51.161750850000004
+237,237,Glastonbury,2002,pilton,somerset,Rod Stewart,1,s,1961.0,england,london,white british,m,77.0,55.0,56.0,Y,y,-3.0753867062227487,51.161750850000004
+238,238,Glastonbury,2003,pilton,somerset,Radiohead,2,b,1985.0,england,oxfordshire,white british,m,52.0,33.0,18.0,Y,,-3.0753867062227487,51.161750850000004
+239,239,Glastonbury,2003,pilton,somerset,Moby,1,s,1978.0,United States,new york,white american,m,56.0,34.0,25.0,Y,,-3.0753867062227487,51.161750850000004
+240,240,Glastonbury,2003,pilton,somerset,REM,2,b,1980.0,United States,georgia,white american,m,63.0,44.0,23.0,N,y,-3.0753867062227487,51.161750850000004
+241,241,Glastonbury,2004,pilton,somerset,Muse,2,b,1994.0,england,teignmouth,white british,m,43.0,25.0,10.0,Y,,-3.0753867062227487,51.161750850000004
+242,242,Glastonbury,2004,pilton,somerset,Oasis,2,b,1991.0,england,manchester,white british,m,52.0,34.0,13.0,N,,-3.0753867062227487,51.161750850000004
+243,243,Glastonbury,2004,pilton,somerset,Paul McCartney,1,s,1957.0,england,liverpool,white british,m,79.0,61.0,47.0,Y,y,-3.0753867062227487,51.161750850000004
+244,244,Glastonbury,2005,pilton,somerset,Coldplay,2,b,1996.0,england,london,white british,m,44.0,27.0,9.0,Y,,-3.0753867062227487,51.161750850000004
+245,245,Glastonbury,2005,pilton,somerset,The White Stripes,1,b,1997.0,United States,detroit,white american,mixed,47.0,30.0,8.0,N,,-3.0753867062227487,51.161750850000004
+246,246,Glastonbury,2005,pilton,somerset,Basement Jaxx,2,b,1994.0,england,london,white british,m,52.0,35.0,11.0,Y,,-3.0753867062227487,51.161750850000004
+247,247,Glastonbury,2007,pilton,somerset,Arctic Monkeys,1,b,2002.0,england,sheffield,white british,m,36.0,21.0,5.0,Y,,-3.0753867062227487,51.161750850000004
+248,248,Glastonbury,2007,pilton,somerset,The Killers,1,b,2001.0,United States,las vegas,white american,m,44.0,29.0,6.0,Y,,-3.0753867062227487,51.161750850000004
+249,249,Glastonbury,2007,pilton,somerset,The Who,1,b,1964.0,england,london,white british,m,77.0,62.0,43.0,Y,y,-3.0753867062227487,51.161750850000004
+250,250,Glastonbury,2008,pilton,somerset,Kings of Leon,1,b,1999.0,United States,tennessee,white american,m,39.0,25.0,18.0,Y,,-3.0753867062227487,51.161750850000004
+251,251,Glastonbury,2008,pilton,somerset,The Verve,1,b,1990.0,england,wigan,white british,m,50.0,36.0,18.0,N,,-3.0753867062227487,51.161750850000004
+252,252,Glastonbury,2008,pilton,somerset,Jaz-Z,1,s,1986.0,United States,new york,black american,m,52.0,38.0,22.0,Y,,-3.0753867062227487,51.161750850000004
+253,253,Glastonbury,2009,pilton,somerset,Blur,2,b,1988.0,england,london,white british,m,53.0,40.0,21.0,Y,,-3.0753867062227487,51.161750850000004
+254,254,Glastonbury,2009,pilton,somerset,Bruce Springsteen,1,s,1964.0,United States,new jersey,white american,m,72.0,59.0,46.0,Y,y,-3.0753867062227487,51.161750850000004
+255,255,Glastonbury,2009,pilton,somerset,Neil Young,1,s,1960.0,canada,toronto,white canadian,m,76.0,63.0,49.0,Y,y,-3.0753867062227487,51.161750850000004
+256,256,Glastonbury,2010,pilton,somerset,Muse,3,b,1994.0,england,teignmouth,white british,m,43.0,31.0,16.0,Y,,-3.0753867062227487,51.161750850000004
+257,257,Glastonbury,2010,pilton,somerset,Gorillaz,1,b,1998.0,england,essex,mixed,m,53.0,41.0,12.0,Y,,-3.0753867062227487,51.161750850000004
+258,258,Glastonbury,2010,pilton,somerset,Stevie Wonder,2,s,1961.0,United States,michigan,african american,m,71.0,59.0,39.0,Y,y,-3.0753867062227487,51.161750850000004
+259,259,Glastonbury,2011,pilton,somerset,Beyonce,1,s,1997.0,United States,houston,african american,f,40.0,29.0,14.0,Y,,-3.0753867062227487,51.161750850000004
+260,260,Glastonbury,2011,pilton,somerset,Coldplay,3,b,1996.0,england,london,white british,m,44.0,33.0,5.0,Y,,-3.0753867062227487,51.161750850000004
+261,261,Glastonbury,2011,pilton,somerset,U2,1,b,1976.0,ireland,dublin,white irish,m,61.0,50.0,35.0,Y,y,-3.0753867062227487,51.161750850000004
+262,262,Glastonbury,2013,pilton,somerset,Mumford & Sons,1,b,2007.0,england,london,white british,m,35.0,26.0,5.0,Y,,-3.0753867062227487,51.161750850000004
+263,263,Glastonbury,2013,pilton,somerset,Arctic Monkeys,2,b,2002.0,england,sheffield,white british,m,36.0,27.0,11.0,Y,,-3.0753867062227487,51.161750850000004
+264,264,Glastonbury,2013,pilton,somerset,The Rolling Stones,1,b,1962.0,england,dartford,white british,m,77.0,68.0,51.0,Y,y,-3.0753867062227487,51.161750850000004
+265,265,Glastonbury,2014,pilton,somerset,Arcade Fire,1,b,2001.0,canada,montreal,white canadian,mixed,42.0,34.0,14.0,Y,,-3.0753867062227487,51.161750850000004
+266,266,Glastonbury,2014,pilton,somerset,Kasabian,1,b,1997.0,england,leicester,white british,m,43.0,35.0,17.0,Y,,-3.0753867062227487,51.161750850000004
+267,267,Glastonbury,2014,pilton,somerset,Metallica,4,b,1981.0,United States,los angeles,white american,m,58.0,50.0,26.0,Y,y,-3.0753867062227487,51.161750850000004
+268,268,Glastonbury,2015,pilton,somerset,Florence & the Machine,2,b,2007.0,england,london,white british,f,35.0,28.0,10.0,Y,,-3.0753867062227487,51.161750850000004
+269,269,Glastonbury,2015,pilton,somerset,Kanye West,1,s ,1996.0,United States,chicago,african american,m,44.0,38.0,19.0,Y,,-3.0753867062227487,51.161750850000004
+270,270,Glastonbury,2015,pilton,somerset,The Who,2,b,1964.0,england,london,white british,m,77.0,71.0,51.0,Y,y,-3.0753867062227487,51.161750850000004
+271,271,Glastonbury,2016,pilton,somerset,Adele,1,s,2006.0,england,london,white british,f,33.0,27.0,10.0,Y,,-3.0753867062227487,51.161750850000004
+272,272,Glastonbury,2016,pilton,somerset,Muse,4,b,1994.0,england,teignmouth,white british,,43.0,37.0,23.0,Y,,-3.0753867062227487,51.161750850000004
+273,273,Glastonbury,2016,pilton,somerset,Coldplay,4,b,1996.0,england,london,white british,m,44.0,38.0,20.0,Y,,-3.0753867062227487,51.161750850000004
+274,274,Glastonbury,2017,pilton,somerset,Radiohead,3,b,1985.0,england,oxfordshire,white british,m,52.0,47.0,32.0,Y,,-3.0753867062227487,51.161750850000004
+275,275,Glastonbury,2017,pilton,somerset,Foo Fighters,1,b,1994.0,United States,seattle,white american,m,52.0,47.0,,Y,,-3.0753867062227487,51.161750850000004
+276,276,Isle of Wight,2002,seaclose park,newport,The Charlatans,1,b,1989.0,england,manchester,white british,m,55.0,50.0,13.0,Y,,-71.3137707,41.4899827
+277,277,Isle of Wight,2003,seaclose park,newport,Bryan Adams,2,s,1975.0,canada,ontario,white canadian,m,62.0,42.0,28.0,Y,,-71.3137707,41.4899827
+278,278,Isle of Wight,2003,seaclose park,newport,Paul Weller,1,s,1972.0,england,surrey,white british,m,63.0,44.0,31.0,Y,,-71.3137707,41.4899827
+279,279,Isle of Wight,2004,seaclose park,newport,Stereophonics,2,b,1992.0,wales,mid glamorgan,white british,m,47.0,29.0,12.0,Y,,-71.3137707,41.4899827
+280,280,Isle of Wight,2004,seaclose park,newport,The Who,3,b,1964.0,england,london,white british,m,77.0,59.0,40.0,Y,,-71.3137707,41.4899827
+281,281,Isle of Wight,2004,seaclose park,newport,David Bowie,3,s,1962.0,england,london,white british,m,,,42.0,N,,-71.3137707,41.4899827
+282,282,Isle of Wight,2005,seaclose park,newport,Travis,2,b,1990.0,scotland,glasgow,white british,m,50.0,33.0,15.0,Y,,-71.3137707,41.4899827
+283,283,Isle of Wight,2005,seaclose park,newport,Faithless,2,b,1995.0,england,london,black british,mixed,57.0,40.0,10.0,Y,,-71.3137707,41.4899827
+284,284,Isle of Wight,2005,seaclose park,newport,REM,3,b,1980.0,United States,georgia,white american,m,63.0,45.0,25.0,N,,-71.3137707,41.4899827
+285,285,Isle of Wight,2006,seaclose park,newport,Coldplay,5,b,1996.0,england,london,white british,m,44.0,27.0,10.0,Y,,-71.3137707,41.4899827
+286,286,Isle of Wight,2006,seaclose park,newport,The Prodigy,4,b,1990.0,england,essex,mixed,m,52.0,36.0,16.0,Y,,-71.3137707,41.4899827
+287,287,Isle of Wight,2006,seaclose park,newport,Foo Fighters,2,b,1994.0,United States,seattle,white american,m,52.0,36.0,12.0,Y,,-71.3137707,41.4899827
+288,288,Isle of Wight,2007,seaclose park,newport,Muse,5,b,1994.0,england,teignmouth,white british,m ,43.0,28.0,13.0,Y,,-71.3137707,41.4899827
+289,289,Isle of Wight,2007,seaclose park,newport,Snow Patrol,1,b,1993.0,scotland,dundee,white british,m,45.0,30.0,14.0,Y,,-71.3137707,41.4899827
+290,290,Isle of Wight,2007,seaclose park,newport,The Rolling Stones,2,b,1962.0,england,dartford,white british,m,77.0,61.0,45.0,Y,,-71.3137707,41.4899827
+291,291,Isle of Wight,2008,seaclose park,newport,Kaiser Chiefs,2,b,2000.0,england,leeds,white british,,46.0,32.0,8.0,Y,,-71.3137707,41.4899827
+292,292,Isle of Wight,2008,seaclose park,newport,The Sex Pistols,1,b,1975.0,england,london,white british,m,66.0,52.0,33.0,N,,-71.3137707,41.4899827
+293,293,Isle of Wight,2008,seaclose park,newport,The Police,1,b,1977.0,england,london,white british,m,72.0,57.0,31.0,n,,-71.3137707,41.4899827
+294,294,Isle of Wight,2009,seaclose park,newport,Stereophonics,3,b,1992.0,wales,mid glamorgan,white british,m,47.0,34.0,17.0,Y,,-71.3137707,41.4899827
+295,295,Isle of Wight,2009,seaclose park,newport,The Prodigy,5,b,1990.0,england,essex,mixed,m,52.0,39.0,19.0,Y,,-71.3137707,41.4899827
+296,296,Isle of Wight,2009,seaclose park,newport,Neil Young,2,s,1960.0,canada,toronto,white canadian,m,76.0,62.0,49.0,Y,,-71.3137707,41.4899827
+297,297,Isle of Wight,2010,seaclose park,newport,The Strokes,1,b,1998.0,United States,new york,white american,m,42.0,30.0,12.0,Y,,-71.3137707,41.4899827
+298,298,Isle of Wight,2010,seaclose park,newport,jay-z,1,s,1986.0,United States,new york,black american,m,52.0,40.0,24.0,,,-71.3137707,41.4899827
+299,299,Isle of Wight,2010,seaclose park,newport,Paul McCartney,2,s,1957.0,england,liverpool,white british,m,79.0,66.0,53.0,y,,-71.3137707,41.4899827
+300,300,Isle of Wight,2011,seaclose park,newport,Kings of Leon,2,b,1999.0,United States,tennessee,white american,m,39.0,28.0,12.0,Y,,-71.3137707,41.4899827
+301,301,Isle of Wight,2011,seaclose park,newport,Kasabian,2,b,1997.0,england,leicester,white british,m,43.0,31.0,14.0,Y,,-71.3137707,41.4899827
+302,302,Isle of Wight,2011,seaclose park,newport,Foo Fighters,3,b,1994.0,United States,seattle,white american,m,52.0,41.0,17.0,Y,,-71.3137707,41.4899827
+303,303,Isle of Wight,2012,seaclose park,newport,Pearl Jam,1,b,1990.0,United States,seattle,white american,m ,57.0,47.0,22.0,Y,,-71.3137707,41.4899827
+304,304,Isle of Wight,2012,seaclose park,newport,Bruce Springsteen,2,s,1964.0,United States,new jersey,white american,m,72.0,61.0,48.0,Y,,-71.3137707,41.4899827
+305,305,Isle of Wight,2012,seaclose park,newport,Tom Petty and the Heartbreakers,1,b,1976.0,United States,florida,white american,,71.0,61.0,36.0,Y,,-71.3137707,41.4899827
+306,306,Isle of Wight,2013,seaclose park,newport,The Killers,2,b,2001.0,United States,las vegas,white american,m,44.0,35.0,12.0,Y,,-71.3137707,41.4899827
+307,307,Isle of Wight,2013,seaclose park,newport,The Stone Roses,1,b,1983.0,england,manchester,white british,m,58.0,49.0,30.0,,,-71.3137707,41.4899827
+308,308,Isle of Wight,2013,seaclose park,newport,Bon Jovi,1,b,1983.0,United States,new jersey,whie american,m,60.0,50.0,30.0,Y,,-71.3137707,41.4899827
+309,309,Isle of Wight,2014,seaclose park,newport,Calvin Harris,2,s,2002.0,scotland,dumfries,white british,m,38.0,30.0,12.0,Y,,-71.3137707,41.4899827
+310,310,Isle of Wight,2014,seaclose park,newport,Kings of Leon,3,b,1999.0,United States,tennessee,white american,m,39.0,31.0,15.0,Y,,-71.3137707,41.4899827
+311,311,Isle of Wight,2014,seaclose park,newport,Red Hot Chili Peppers,1,b,1983.0,United States,los angeles,white american,m,59.0,51.0,31.0,Y,,-71.3137707,41.4899827
+312,312,Isle of Wight,2014,seaclose park,newport,Boy George,1,s,1979.0,england,london,white british,m,60.0,52.0,35.0,Y,,-71.3137707,41.4899827
+313,313,Isle of Wight,2014,seaclose park,newport,Billy Idol,1,s,1976.0,england,london,white british,m,66.0,57.0,38.0,Y,,-71.3137707,41.4899827
+314,314,Isle of Wight,2015,seaclose park,newport,The Prodigy,6,b,1990.0,england,essex,mixed,m,52.0,45.0,25.0,Y,,-71.3137707,41.4899827
+315,315,Isle of Wight,2015,seaclose park,newport,Blur,3,b,1988.0,england,london,white british,m,53.0,46.0,27.0,Y,,-71.3137707,41.4899827
+316,316,Isle of Wight,2015,seaclose park,newport,Fleetwood Mac,1,b,1967.0,england,london,white british,mixed,76.0,68.0,48.0,Y,,-71.3137707,41.4899827
+317,317,Isle of Wight,2016,seaclose park,newport,Stereophonics,4,b,1992.0,wales,mid glamorgan,white british,m,47.0,41.0,24.0,Y,,-71.3137707,41.4899827
+318,318,Isle of Wight,2016,seaclose park,newport,Faithless,3,b,1995.0,england,london,black british,mixed,57.0,51.0,21.0,Y,,-71.3137707,41.4899827
+319,319,Isle of Wight,2016,seaclose park,newport,Queen with Adam Lambert,1,b,1970.0,england,london,white british,m,73.0,66.0,46.0,Y,,-71.3137707,41.4899827
+320,320,Isle of Wight,2016,seaclose park,newport,The Who,4,b,1964.0,england,london,white british,m,77.0,71.0,52.0,Y,,-71.3137707,41.4899827
+321,321,Isle of Wight,2017,seaclose park,newport,Arcade Fire,2,b,2001.0,canada,montreal,white canadian,mixed,42.0,37.0,16.0,Y,,-71.3137707,41.4899827
+322,322,Isle of Wight,2017,seaclose park,newport,David Guetta,1,s,1984.0,france,paris,white european,m,54.0,49.0,33.0,Y,,-71.3137707,41.4899827
+323,323,Isle of Wight,2017,seaclose park,newport,Run DMC,1,b,1981.0,United States,new york,black american,m,57.0,52.0,36.0,,,-71.3137707,41.4899827
+324,324,Isle of Wight,2017,seaclose park,newport,Rod Stewart,2,s,1961.0,england,london,white british,m,77.0,71.0,56.0,Y,,-71.3137707,41.4899827
+325,325,Latitude,2006,Suffolk,Suffolk,Snow Patrol,2,b,1993.0,scotland,dundee,white british,m,45.0,29.0,13.0,Y,,1.0466830312565236,52.241001350000005
+326,326,Latitude,2006,Suffolk,Suffolk,Mogwai,2,b,1995.0,scotland,glasgow,white british,m,45.0,29.0,11.0,Y,,1.0466830312565236,52.241001350000005
+327,327,Latitude,2006,Suffolk,Suffolk,Antony and the Johnsons,1,s,1995.0,United States,new york,white british,f,50.0,34.0,11.0,Y,,1.0466830312565236,52.241001350000005
+328,328,Latitude,2007,Suffolk,Suffolk,Arcade Fire,3,b,2001.0,canada,montreal,white canadian,mixed,42.0,27.0,6.0,Y,,1.0466830312565236,52.241001350000005
+329,329,Latitude,2007,Suffolk,Suffolk,Damien Rice,1,s,1991.0,ireland,kildare,white irish,m,48.0,33.0,16.0,Y,,1.0466830312565236,52.241001350000005
+330,330,Latitude,2007,Suffolk,Suffolk,"The Good, The Bad and The Queen",1,b,2007.0,england,london,mixed,m,63.0,48.0,1.0,N,,1.0466830312565236,52.241001350000005
+331,331,Latitude,2008,Suffolk,Suffolk,Sigur Ros,2,b,1994.0,iceland,reykjavik,white european,m,45.0,31.0,14.0,Y,,1.0466830312565236,52.241001350000005
+332,332,Latitude,2008,Suffolk,Suffolk,Franz Ferdinand,1,b,2002.0,scotland,glasgow,white british,m,45.0,31.0,6.0,Y,,1.0466830312565236,52.241001350000005
+333,333,Latitude,2008,Suffolk,Suffolk,Interpol,1,b,1997.0,United States,new york,mixed,m,48.0,34.0,11.0,Y,,1.0466830312565236,52.241001350000005
+334,334,Latitude,2009,Suffolk,Suffolk,Nick Cave and the Bad Seeds,1,b,1983.0,australia,melbourne,white other,m,64.0,51.0,36.0,Y,,1.0466830312565236,52.241001350000005
+335,335,Latitude,2009,Suffolk,Suffolk,Pet Shop Boys,2,b,1981.0,england,london,white british,m,65.0,52.0,28.0,Y,,1.0466830312565236,52.241001350000005
+336,336,Latitude,2009,Suffolk,Suffolk,Grace Jones,1,s,1973.0,United States,new york,black american,f,73.0,60.0,36.0,Y,,1.0466830312565236,52.241001350000005
+337,337,Latitude,2010,Suffolk,Suffolk,Florence & the Machine,3,b,2007.0,england,london,white british,f,35.0,23.0,3.0,Y,,1.0466830312565236,52.241001350000005
+338,338,Latitude,2010,Suffolk,Suffolk,Vampire Weekend,1,b,2006.0,United States,new york,white american,m,37.0,25.0,4.0,Y,,1.0466830312565236,52.241001350000005
+339,339,Latitude,2010,Suffolk,Suffolk,Belle and Sebastian,2,b,1996.0,scotland,glasgow,white british,mixed,53.0,41.0,14.0,Y,,1.0466830312565236,52.241001350000005
+340,340,Latitude,2011,Suffolk,Suffolk,Paolo Nutini,1,s,2005.0,scotland,paisley,white british,m,35.0,24.0,6.0,Y,,1.0466830312565236,52.241001350000005
+341,341,Latitude,2011,Suffolk,Suffolk,The National,1,b,1999.0,United States,ohio,white american,,47.0,36.0,12.0,Y,,1.0466830312565236,52.241001350000005
+342,342,Latitude,2011,Suffolk,Suffolk,Suede,1,b,1989.0,england,london,white british,m,50.0,39.0,22.0,Y,,1.0466830312565236,52.241001350000005
+343,343,Latitude,2012,Suffolk,Suffolk,Bon Iver,1,s,2007.0,United States,wisconsin,white american,m,40.0,30.0,5.0,Y,,1.0466830312565236,52.241001350000005
+344,344,Latitude,2012,Suffolk,Suffolk,Elbow,2,b,1997.0,england,bury,white british,m,48.0,38.0,15.0,Y,,1.0466830312565236,52.241001350000005
+345,345,Latitude,2012,Suffolk,Suffolk,Paul Weller,2,s,1972.0,england,surrey,white british,m,63.0,53.0,45.0,Y,,1.0466830312565236,52.241001350000005
+346,346,Latitude,2013,Suffolk,Suffolk,Foals,2,b,2005.0,england,oxfordshire,mixed,m,35.0,25.0,8.0,Y,,1.0466830312565236,52.241001350000005
+347,347,Latitude,2013,Suffolk,Suffolk,Bloc Party,1,b,1999.0,england,london,mixed,m,40.0,30.0,14.0,Y,,1.0466830312565236,52.241001350000005
+348,348,Latitude,2013,Suffolk,Suffolk,Kraftwerk,2,b,1969.0,germany,dusseldorf,white european,m,69.0,59.0,45.0,Y,,1.0466830312565236,52.241001350000005
+349,349,Latitude,2014,Suffolk,Suffolk,Lily Allen,1,s,2002.0,england,london,white british,f,36.0,28.0,12.0,Y,,1.0466830312565236,52.241001350000005
+350,350,Latitude,2014,Suffolk,Suffolk,The Black Keys,1,b,2001.0,United States,ohio,white american,m,42.0,34.0,13.0,Y,,1.0466830312565236,52.241001350000005
+351,351,Latitude,2014,Suffolk,Suffolk,Damon Albarn,1,s,1988.0,england,essex,white british,m,54.0,45.0,26.0,Y,,1.0466830312565236,52.241001350000005
+352,352,Latitude,2015,Suffolk,Suffolk,Portishead,1,b,1991.0,england,bristol,white british,mixed,54.0,47.0,24.0,Y,,1.0466830312565236,52.241001350000005
+353,353,Latitude,2015,Suffolk,Suffolk,Noel Gallagher's High Flying Birds,1,s,1991.0,england,manchester,white british,m,54.0,47.0,24.0,Y,,1.0466830312565236,52.241001350000005
+354,354,Latitude,2015,Suffolk,Suffolk,alt-J,2,b,2007.0,england,leeds,white british,m,,,8.0,Y,,1.0466830312565236,52.241001350000005
+355,355,Latitude,2016,Suffolk,Suffolk,The National,2,b,1999.0,United States,ohio,white american,,47.0,41.0,17.0,Y,,1.0466830312565236,52.241001350000005
+356,356,Latitude,2016,Suffolk,Suffolk,New Order,3,b,1980.0,england,manchester,white british,m,64.0,58.0,36.0,Y,,1.0466830312565236,52.241001350000005
+357,357,Latitude,2016,Suffolk,Suffolk,The Maccabees,1,b,2004.0,england,london,white british,m,,,12.0,Y,,1.0466830312565236,52.241001350000005
+358,358,Latitude,2017,Suffolk,Suffolk,Mumford and Sons,1,b,2007.0,england,london,white british,m,35.0,30.0,10.0,Y,,1.0466830312565236,52.241001350000005
+359,359,Latitude,2017,Suffolk,Suffolk,Fleet Foxes,2,b,2006.0,United States,seattle,white american,m,40.0,35.0,11.0,Y,,1.0466830312565236,52.241001350000005
+360,360,Latitude,2017,Suffolk,Suffolk,The 1975,1,b,2012.0,england,manchester,white british,m,,,5.0,Y,,1.0466830312565236,52.241001350000005
+361,361,lovebox,2005,victoria park,london,mylo,1,s,2004.0,scotland,isle of skye,white british,m,43.0,26.0,1.0,y,,-0.12765,51.5073359
+362,362,lovebox,2005,victoria park,london,norman jay,1,s,,england,london,black british,m,64.0,47.0,,y,,-0.12765,51.5073359
+363,363,lovebox,2006,victoria park,london,groove armada,2,b,1996.0,england,london,white british,m,50.0,34.0,10.0,y,,-0.12765,51.5073359
+364,364,lovebox,2006,victoria park,london,jamiroquai,2,b,1992.0,england,london,white british,m,52.0,36.0,14.0,y,,-0.12765,51.5073359
+365,365,lovebox,2007,victoria park,london,groove armada,3,b,1996.0,england,london,white british,m,50.0,35.0,11.0,y,,-0.12765,51.5073359
+366,366,lovebox,2007,victoria park,london,sly and the family stone,1,b,1966.0,United States,california,mixed,mixed,79.0,64.0,41.0,n,,-0.12765,51.5073359
+367,367,lovebox,2008,victoria park,london,the flaming lips,3,b,1983.0,United States,oklahoma,white american,m,58.0,44.0,25.0,y,,-0.12765,51.5073359
+368,368,lovebox,2008,victoria park,london,manu chao,1,s,1984.0,france,paris,white european,m,60.0,46.0,24.0,y,,-0.12765,51.5073359
+369,369,lovebox,2009,victoria park,london,groove armada,4,b,1996.0,england,london,white british,m,50.0,37.0,13.0,y,,-0.12765,51.5073359
+370,370,lovebox,2009,victoria park,london,duran duran,2,b,1978.0,england,birmingham,white british,m,61.0,48.0,31.0,y,,-0.12765,51.5073359
+371,371,lovebox,2010,victoria park,london,dizzee rascal,3,s,2000.0,england,london,black british,m,37.0,25.0,10.0,y,,-0.12765,51.5073359
+372,372,lovebox,2010,victoria park,london,roxy music,1,b,1972.0,england,london,white british,m,73.0,61.0,38.0,,,-0.12765,51.5073359
+373,373,lovebox,2010,victoria park,london,Grace Jones,2,s,1973.0,United States,new york,black american,f,73.0,61.0,37.0,y,,-0.12765,51.5073359
+374,374,lovebox,2011,victoria park,london,the wombats,1,b,2003.0,england,liverpool,white british,m,38.0,27.0,8.0,y,,-0.12765,51.5073359
+375,375,lovebox,2011,victoria park,london,scissor sisters,1,b,2001.0,United States,new york,white american,mixed,45.0,34.0,10.0,y,,-0.12765,51.5073359
+376,376,lovebox,2011,victoria park,london,snoop dogg,3,s,1992.0,United States,california,black american,m,50.0,39.0,19.0,y,,-0.12765,51.5073359
+377,377,lovebox,2012,victoria park,london,friendly fires,1,b,2006.0,england,st albans,white british,m,37.0,27.0,6.0,y,,-0.12765,51.5073359
+378,378,lovebox,2012,victoria park,london,Grace Jones,3,s,1973.0,United States,new york,black american,f,73.0,63.0,39.0,y,,-0.12765,51.5073359
+379,379,lovebox,2012,victoria park,london,hot chip,2,b,2000.0,england,london,white british,m,,,12.0,Y,,-0.12765,51.5073359
+380,380,lovebox,2013,victoria park,london,azealia banks,1,s,2008.0,United States,new york,black american,f,30.0,21.0,5.0,y,,-0.12765,51.5073359
+381,381,lovebox,2013,victoria park,london,plan b,1,s,2005.0,england,london,white british,m,38.0,29.0,8.0,y,,-0.12765,51.5073359
+382,382,lovebox,2013,victoria park,london,goldfrapp,1,s,1999.0,england,,white british,mixed,58.0,49.0,14.0,y,,-0.12765,51.5073359
+383,383,lovebox,2014,victoria park,london,M.I.A,1,s,2000.0,england,london,british asian,f,46.0,38.0,14.0,y,,-0.12765,51.5073359
+384,384,lovebox,2014,victoria park,london,Nas,1,s,1991.0,United States,new york,black american,m,48.0,40.0,23.0,y,,-0.12765,51.5073359
+385,385,lovebox,2014,victoria park,london,chase & status,4,b,2003.0,england,london,white british,m,,,11.0,y,,-0.12765,51.5073359
+386,386,lovebox,2015,victoria park,london,snoop dogg,4,s,1992.0,United States,california,black american,m,50.0,43.0,23.0,y,,-0.12765,51.5073359
+387,387,lovebox,2015,victoria park,london,rudimental,2,b,2010.0,england,london,mixed,mixed,,,5.0,y,,-0.12765,51.5073359
+388,388,lovebox,2016,victoria park,london,major lazer,2,b,2009.0,,,mixed,m,41.0,35.0,7.0,y,,-0.12765,51.5073359
+389,389,lovebox,2016,victoria park,london,lcd soundsystem,1,b,2002.0,United States,new york,white american,m,52.0,46.0,14.0,y,,-0.12765,51.5073359
+390,390,lovebox,2017,victoria park,london,frank ocean,1,s,2005.0,United States,new orleans,black american,m,34.0,29.0,12.0,y,,-0.12765,51.5073359
+391,391,lovebox,2017,victoria park,london,chase & status,5,b,2003.0,england,london,white british,m,,,14.0,y,,-0.12765,51.5073359
+392,392,Reading,1997,,reading,Manic Street Preachers,2,b,1986.0,wales,caerphilly,white british,m,53.0,28.0,11.0,Y,,-0.9696512,51.456659
+393,393,Reading,1997,,reading,Suede,2,b,1989.0,england,london,white british,m,54.0,29.0,8.0,Y,,-0.9696512,51.456659
+394,394,Reading,1997,,reading,Metallica,5,b,1981.0,United States,los angeles,white british,m,58.0,33.0,16.0,Y,,-0.9696512,51.456659
+395,395,Reading,1998,,reading,Beastie Boys,2,b,1980.0,United States,new york,white american,m,55.0,29.0,18.0,N,,-0.9696512,51.456659
+396,396,Reading,1998,,reading,Garbage,1,b,1993.0,United States,wisconsin,white american,mixed,55.0,31.0,5.0,Y,,-0.9696512,51.456659
+397,397,Reading,1998,,reading,Jimmy Page and Robert Plant,1,b,1965.0,england,,white british,m,76.0,51.0,33.0,Y,,-0.9696512,51.456659
+398,398,Reading,1999,,reading,Blur,4,b,1988.0,england,london,white british,m,53.0,30.0,11.0,Y,,-0.9696512,51.456659
+399,399,Reading,1999,,reading,Charlatans,1,b,1989.0,england,manchester,white british,m,55.0,32.0,10.0,Y,,-0.9696512,51.456659
+400,400,Reading,1999,,reading,Red Hot Chili Peppers,2,b,1983.0,United States,los angeles,white american,m,59.0,36.0,16.0,Y,,-0.9696512,51.456659
+401,401,Reading,2000,,reading,Stereophonics,5,b,1992.0,wales,mid glamorgan,white british,m,47.0,25.0,8.0,Y,,-0.9696512,51.456659
+402,402,Reading,2000,,reading,Oasis,3,b,1991.0,england,manchester,white british,m,52.0,30.0,9.0,N,,-0.9696512,51.456659
+403,403,Reading,2000,,reading,Pulp,3,b,1978.0,england,sheffield,white british,mixed,40.0,33.0,12.0,N,,-0.9696512,51.456659
+404,404,Reading,2001,,reading,Eminem,1,s,1988.0,United States,michigan,white american,m,49.0,28.0,13.0,Y,,-0.9696512,51.456659
+405,405,Reading,2001,,reading,Travis,3,b,1990.0,scotland,glasgow,white british,m,50.0,29.0,11.0,Y,,-0.9696512,51.456659
+406,406,Reading,2001,,reading,Manic Street Preachers,3,b,1986.0,wales,caerphilly,white british,m,53.0,31.0,15.0,Y,,-0.9696512,51.456659
+407,407,Reading,2002,,reading,The Strokes,2,b,1998.0,United States,new york,white american,m,42.0,22.0,4.0,Y,,-0.9696512,51.456659
+408,408,Reading,2002,,reading,The Prodigy,7,b,1990.0,england,essex,mixed,m,52.0,32.0,12.0,Y,,-0.9696512,51.456659
+409,409,Reading,2002,,reading,Foo Fighters,4,b,1994.0,United States,seattle,white american,m,52.0,32.0,8.0,Y,,-0.9696512,51.456659
+410,410,Reading,2003,,reading,Linkin Park,5,b,1996.0,United States,california,white american,m,44.0,25.0,7.0,Y,,-0.9696512,51.456659
+411,411,Reading,2003,,reading,Blur,5,b,1988.0,england,london,white british,m,53.0,34.0,15.0,Y,,-0.9696512,51.456659
+412,412,Reading,2003,,reading,Metallica,6,b,1981.0,United States,los angeles,white british,m,58.0,39.0,22.0,Y,,-0.9696512,51.456659
+413,413,Reading,2004,,reading,The White Stripes,2,b,1997.0,United States,detroit,white american,mixed,47.0,29.0,7.0,N,,-0.9696512,51.456659
+414,414,Reading,2004,,reading,The Darkness,1,b,2000.0,england,suffolk,white british,m,48.0,30.0,4.0,Y,,-0.9696512,51.456659
+415,415,Reading,2004,,reading,Green Day,1,b,1986.0,United States,california,white american,m,49.0,31.0,18.0,Y,,-0.9696512,51.456659
+416,416,Reading,2005,,reading,Foo Fighters,5,b,1994.0,United States,seattle,white american,m,52.0,35.0,11.0,Y,,-0.9696512,51.456659
+417,417,Reading,2005,,reading,Pixies,1,b,1986.0,United States,boston,mixed,mixed,57.0,40.0,19.0,Y,,-0.9696512,51.456659
+418,418,Reading,2005,,reading,Iron Maiden,5,b,1975.0,england,london,white british,m,66.0,49.0,30.0,Y,,-0.9696512,51.456659
+419,419,Reading,2006,,reading,Muse,6,b,1994.0,england,teignmouth,white british,m ,43.0,27.0,12.0,Y,,-0.9696512,51.456659
+420,420,Reading,2006,,reading,Franz Ferdinand,2,b,2002.0,scotland,glasgow,white british,m,45.0,29.0,4.0,Y,,-0.9696512,51.456659
+421,421,Reading,2006,,reading,Pearl Jam,2,b,1990.0,United States,seattle,white american,m ,57.0,41.0,16.0,Y,,-0.9696512,51.456659
+422,422,Reading,2007,,reading,Razorlight,1,b,2002.0,england,london,white british,m,41.0,26.0,5.0,Y,,-0.9696512,51.456659
+423,423,Reading,2007,,reading,The Smashing Pumpkins,1,b,1988.0,United States,chicago,mixed,mixed,54.0,39.0,19.0,Y,,-0.9696512,51.456659
+424,424,Reading,2007,,reading,Red Hot Chili Peppers,3,b,1983.0,United States,los angeles,white american,m,59.0,44.0,24.0,Y,,-0.9696512,51.456659
+425,425,Reading,2008,,reading,The Killers,3,b,2001.0,United States,las vegas,white american,m,44.0,30.0,7.0,Y,,-0.9696512,51.456659
+426,426,Reading,2008,,reading,Rage Against the Machine,2,b,1991.0,United States,los angeles,mixed,m,54.0,40.0,17.0,N,,-0.9696512,51.456659
+427,427,Reading,2008,,reading,Metallica,7,b,1981.0,United States,los angeles,white american,m,58.0,44.0,17.0,Y,,-0.9696512,51.456659
+428,428,Reading,2009,,reading,Arctic Monkeys,3,b,2002.0,england,sheffield,white british,m,36.0,23.0,7.0,Y,,-0.9696512,51.456659
+429,429,Reading,2009,,reading,Kings of Leon,4,b,1999.0,United States,tennessee,white american,m,39.0,28.0,10.0,Y,,-0.9696512,51.456659
+430,430,Reading,2009,,reading,Radiohead,4,b,1985.0,england,oxfordshire,white british,m,52.0,39.0,24.0,Y,,-0.9696512,51.456659
+431,431,Reading,2010,,reading,Guns n Roses,2,b,1985.0,United States,california,mixed,,58.0,25.0,46.0,Y,,-0.9696512,51.456659
+432,432,Reading,2010,,reading,Arcade Fire,4,b,2001.0,canada,montreal,white canadian,mixed,42.0,30.0,9.0,Y,,-0.9696512,51.456659
+433,433,Reading,2010,,reading,Blink 182,1,b,1992.0,United States,california,white american,m,47.0,35.0,8.0,Y,,-0.9696512,51.456659
+434,434,Reading,2011,,reading,The Strokes,3,b,1998.0,United States,new york,white american,m,42.0,31.0,13.0,Y,,-0.9696512,51.456659
+435,435,Reading,2011,,reading,My Chemical Romance,2,b,2001.0,United States,new jersey,mixed,m,42.0,31.0,10.0,N,,-0.9696512,51.456659
+436,436,Reading,2011,,reading,Muse,7,b,1994.0,england,teignmouth,white british,m ,43.0,32.0,17.0,Y,,-0.9696512,51.456659
+437,437,Reading,2012,,reading,Kasabian,3,b,1997.0,england,leicester,white british,m,43.0,33.0,15.0,Y,,-0.9696512,51.456659
+438,438,Reading,2012,,reading,Foo Fighters,6,b,1994.0,United States,seattle,white american,m,52.0,42.0,15.0,Y,,-0.9696512,51.456659
+439,439,Reading,2012,,reading,The Cure,6,b,1976.0,england,crawley,white british,m,62.0,51.0,36.0,Y,,-0.9696512,51.456659
+440,440,Reading,2013,,reading,Biffy Clyro,2,b,1995.0,scotland,east ayrshire,white british,m,41.0,32.0,18.0,Y,,-0.9696512,51.456659
+441,441,Reading,2013,,reading,Green Day,2,b,1986.0,United States,california,white american,m,49.0,40.0,27.0,Y,,-0.9696512,51.456659
+442,442,Reading,2013,,reading,Eminem,2,b,1988.0,United States,michigan,white american,,49.0,40.0,25.0,Y,,-0.9696512,51.456659
+443,443,Reading,2014,,reading,Arctic Monkeys,4,b,2002.0,england,sheffield,white british,m,36.0,28.0,12.0,Y,,-0.9696512,51.456659
+444,444,Reading,2014,,reading,Blink 182,2,b,1992.0,United States,california,white american,m,47.0,39.0,12.0,Y,,-0.9696512,51.456659
+445,445,Reading,2014,,reading,Queens of the Stone Age,1,b,1996.0,United States,california,white american,,48.0,40.0,18.0,Y,,-0.9696512,51.456659
+446,446,Reading,2015,,reading,Mumford & Sons,2,b,2007.0,england,london,white british,m,35.0,28.0,8.0,Y,,-0.9696512,51.456659
+447,447,Reading,2015,,reading,The Libertines,1,b,1997.0,england,london,mixed,m,45.0,38.0,21.0,Y,,-0.9696512,51.456659
+448,448,Reading,2015,,reading,Metallica,8,b,1981.0,United States,los angeles,white american,m,58.0,51.0,34.0,Y,,-0.9696512,51.456659
+449,449,Reading,2016,,reading,Foals,3,b,2005.0,england,oxfordshire,mixed,m,35.0,29.0,11.0,Y,,-0.9696512,51.456659
+450,450,Reading,2016,,reading,Biffy Clyro,3,b,1995.0,scotland,east ayrshire,white british,m,41.0,35.0,21.0,Y,,-0.9696512,51.456659
+451,451,Reading,2016,,reading,Red Hot Chili Peppers,4,b,1983.0,United States,los angeles,white american,m,59.0,36.0,16.0,Y,,-0.9696512,51.456659
+452,452,Reading,2017,,reading,Muse,8,b,1994.0,england,teignmouth,white british,m ,43.0,38.0,23.0,Y,,-0.9696512,51.456659
+453,453,Reading,2017,,reading,Kasabian,4,b,1997.0,england,leicester,white british,m,43.0,38.0,20.0,Y,,-0.9696512,51.456659
+454,454,Reading,2017,,reading,Eminem,3,b,1988.0,United States,michigan,white american,m,49.0,44.0,29.0,Y,,-0.9696512,51.456659
+455,489,t in the park,1994,strathclyde,scotland,Rage Against the Machine,3,b,1991.0,United States,los angeles,mixed,m,54.0,26.0,3.0,n,,-4.1140518,56.7861112
+456,490,t in the park,1994,strathclyde,scotland,Primal Scream,3,b,1982.0,scotland,glasgow,white british,m,57.0,29.0,12.0,y,,-4.1140518,56.7861112
+457,491,t in the park,1995,strathclyde,scotland,m people,1,b,1990.0,england,manchester,mixed,mixed,57.0,30.0,5.0,y,,-4.1140518,56.7861112
+458,492,t in the park,1995,strathclyde,scotland,Paul Weller,3,s,1972.0,england,surrey,white british,m,63.0,36.0,23.0,y,,-4.1140518,56.7861112
+459,493,t in the park,1996,strathclyde,scotland,Radiohead,5,b,1985.0,england,oxfordshire,white british,m,52.0,26.0,11.0,y,,-4.1140518,56.7861112
+460,494,t in the park,1996,strathclyde,scotland,Pulp,4,b,1978.0,england,sheffield,white british,mixed,57.0,31.0,18.0,y,,-4.1140518,56.7861112
+461,495,t in the park,1997,strathclyde,scotland,Charlatans,2,b,1989.0,england,manchester,white british,m,55.0,30.0,8.0,y,,-4.1140518,56.7861112
+462,496,t in the park,1997,strathclyde,scotland,Paul Weller,4,s,1972.0,england,surrey,white british,m,63.0,38.0,25.0,y,,-4.1140518,56.7861112
+463,497,t in the park,1998,strathclyde,scotland,The Prodigy,8,b,1990.0,england,essex,mixed,m,52.0,28.0,8.0,y,,-4.1140518,56.7861112
+464,498,t in the park,1998,strathclyde,scotland,Pulp,5,b,1978.0,england,sheffield,white british,mixed,57.0,33.0,20.0,n,,-4.1140518,56.7861112
+465,499,t in the park,1999,strathclyde,scotland,Manic Street Preachers,4,b,1986.0,wales,caerphilly,white british,m,53.0,30.0,13.0,y,,-4.1140518,56.7861112
+466,500,t in the park,1999,strathclyde,scotland,Blur,6,b,1988.0,england,london,white british,m,53.0,30.0,11.0,n,,-4.1140518,56.7861112
+467,501,t in the park,2000,kinross,scotland,Travis,4,b,1990.0,scotland,glasgow,white british,m,50.0,28.0,10.0,y,,-4.1140518,56.7861112
+468,502,t in the park,2000,kinross,scotland,Moby,2,s,1978.0,United States,new york,white american,m,56.0,34.0,22.0,y,,-4.1140518,56.7861112
+469,503,t in the park,2001,kinross,scotland,Stereophonics,6,b,1992.0,wales,mid glamorgan,white british,m,47.0,26.0,9.0,y,,-4.1140518,56.7861112
+470,504,t in the park,2001,kinross,scotland,Travis,5,b,1990.0,scotland,glasgow,white british,m,50.0,29.0,11.0,y,,-4.1140518,56.7861112
+471,505,t in the park,2002,kinross,scotland,Chemical Brothers,4,b,1989.0,england,manchester,white british,m,52.0,32.0,13.0,y,,-4.1140518,56.7861112
+472,506,t in the park,2002,kinross,scotland,Oasis,4,b,1991.0,england,manchester,white british,m,52.0,32.0,11.0,n,,-4.1140518,56.7861112
+473,507,t in the park,2003,kinross,scotland,Coldplay,6,b,1996.0,england,london,white british,m,44.0,25.0,7.0,y,,-4.1140518,56.7861112
+474,508,t in the park,2003,kinross,scotland,REM,4,b,1980.0,United States,georgia,white american,m,63.0,44.0,23.0,n,,-4.1140518,56.7861112
+475,509,t in the park,2004,kinross,scotland,The Strokes,4,b,1998.0,United States,new york,white american,m,42.0,24.0,6.0,y,,-4.1140518,56.7861112
+476,510,t in the park,2004,kinross,scotland,The Darkness,2,b,2000.0,england,suffolk,white british,m,48.0,30.0,4.0,y,,-4.1140518,56.7861112
+477,511,t in the park,2005,kinross,scotland,Green Day,3,b,1986.0,United States,california,white american,m,49.0,32.0,19.0,y,,-4.1140518,56.7861112
+478,512,t in the park,2005,kinross,scotland,Foo Fighters,7,b,1994.0,United States,seattle,white american,m,52.0,35.0,11.0,y,,-4.1140518,56.7861112
+479,513,t in the park,2006,kinross,scotland,Red Hot Chili Peppers,5,b,1983.0,United States,los angeles,white american,m,59.0,43.0,23.0,y,,-4.1140518,56.7861112
+480,514,t in the park,2006,kinross,scotland,The Who,5,b,1964.0,england,london,white british,m,77.0,61.0,42.0,y,,-4.1140518,56.7861112
+481,515,t in the park,2007,kinross,scotland,Arctic Monkeys,5,b,2002.0,england,sheffield,white british,m,36.0,21.0,5.0,y,,-4.1140518,56.7861112
+482,516,t in the park,2007,kinross,scotland,The Killers,4,b,2001.0,United States,las vegas,white american,m,44.0,29.0,6.0,y,,-4.1140518,56.7861112
+483,517,t in the park,2007,kinross,scotland,Snow Patrol,3,b,1993.0,scotland,dundee,white british,m,45.0,30.0,14.0,y,,-4.1140518,56.7861112
+484,518,t in the park,2008,kinross,scotland,The Verve,2,b,1990.0,england,wigan,white british,m,50.0,36.0,18.0,n,,-4.1140518,56.7861112
+485,519,t in the park,2008,kinross,scotland,Rage Against the Machine,4,b,1991.0,United States,los angeles,mixed,m,54.0,40.0,17.0,n,,-4.1140518,56.7861112
+486,520,t in the park,2008,kinross,scotland,REM,5,b,1980.0,United States,georgia,white american,m,63.0,49.0,28.0,n,,-4.1140518,56.7861112
+487,521,t in the park,2009,kinross,scotland,Kings of Leon,5,b,1999.0,United States,tennessee,white american,m,39.0,26.0,10.0,y,,-4.1140518,56.7861112
+488,522,t in the park,2009,kinross,scotland,The Killers,5,b,2001.0,United States,las vegas,white american,m,44.0,31.0,8.0,y,,-4.1140518,56.7861112
+489,523,t in the park,2009,kinross,scotland,Blur,7,b,1988.0,england,london,white british,m,53.0,40.0,21.0,y,,-4.1140518,56.7861112
+490,524,t in the park,2010,kinross,scotland,Muse,9,b,1994.0,england,teignmouth,white british,,43.0,31.0,16.0,y,,-4.1140518,56.7861112
+491,525,t in the park,2010,kinross,scotland,Kasabian,5,b,1997.0,england,leicester,white british,m,43.0,31.0,13.0,y,,-4.1140518,56.7861112
+492,526,t in the park,2010,kinross,scotland,Eminem,4,s,1988.0,United States,michigan,white american,m,49.0,37.0,22.0,y,,-4.1140518,56.7861112
+493,527,t in the park,2011,kinross,scotland,Arctic Monkeys,6,b,2002.0,england,sheffield,white british,m,36.0,25.0,9.0,y,,-4.1140518,56.7861112
+494,528,t in the park,2011,kinross,scotland,Coldplay,7,b,1996.0,england,london,white british,m,44.0,33.0,15.0,y,,-4.1140518,56.7861112
+495,529,t in the park,2011,kinross,scotland,Foo Fighters,8,b,1994.0,United States,seattle,white american,m,52.0,41.0,17.0,y,,-4.1140518,56.7861112
+496,530,t in the park,2012,kinross,scotland,Kasabian,6,b,1997.0,england,leicester,white british,m,43.0,33.0,15.0,y,,-4.1140518,56.7861112
+497,531,t in the park,2012,kinross,scotland,Snow Patrol,4,b,1993.0,scotland,dundee,white british,m,45.0,35.0,19.0,y,,-4.1140518,56.7861112
+498,532,t in the park,2012,kinross,scotland,The Stone Roses,2,b,1983.0,england,manchester,white british,m,58.0,48.0,29.0,y,,-4.1140518,56.7861112
+499,533,t in the park,2013,kinross,scotland,rihanna,1,s,2003.0,barbados,saint michael,black american,f,34.0,25.0,10.0,y,,-4.1140518,56.7861112
+500,534,t in the park,2013,kinross,scotland,Mumford & Sons,3,b,2007.0,england,london,white british,m,35.0,26.0,6.0,y,,-4.1140518,56.7861112
+501,535,t in the park,2013,kinross,scotland,The Killers,6,b,2001.0,United States,las vegas,white american,m,44.0,35.0,12.0,y,,-4.1140518,56.7861112
+502,536,t in the park,2014,kinross,scotland,Arctic Monkeys,7,b,2002.0,england,sheffield,white british,m,36.0,28.0,12.0,y,,-4.1140518,56.7861112
+503,537,t in the park,2014,kinross,scotland,Calvin Harris,3,s,2002.0,scotland,dumfries,white british,m,38.0,30.0,12.0,y,,-4.1140518,56.7861112
+504,538,t in the park,2014,kinross,scotland,Biffy Clyro,4,b,1995.0,scotland,east ayrshire,white british,m,41.0,33.0,19.0,y,,-4.1140518,56.7861112
+505,539,t in the park,2015,kinross,scotland,avicii,1,s,2006.0,sweden,stockholm,white european,m,32.0,25.0,9.0,y,,-4.1140518,56.7861112
+506,540,t in the park,2015,kinross,scotland,Kasabian,7,b,1997.0,england,leicester,white british,m,43.0,36.0,18.0,y,,-4.1140518,56.7861112
+507,541,t in the park,2015,kinross,scotland,Noel Gallagher's High Flying Birds,2,s,1991.0,england,manchester,white british,m,54.0,47.0,24.0,y,,-4.1140518,56.7861112
+508,542,t in the park,2016,kinross,scotland,Calvin Harris,4,s,2002.0,scotland,dumfries,white british,m,38.0,32.0,14.0,y,,-4.1140518,56.7861112
+509,543,t in the park,2016,kinross,scotland,The Stone Roses,3,b,1983.0,england,manchester,white british,m,58.0,52.0,33.0,y,,-4.1140518,56.7861112
+510,544,t in the park,2016,kinross,scotland,Red Hot Chili Peppers,6,b,1983.0,United States,los angeles,white american,m,59.0,53.0,33.0,y,,-4.1140518,56.7861112
+511,545,v festival,1996,hylands park,chelmsford,Pulp,6,b,1978.0,england,sheffield,white british,mixed,57.0,31.0,18.0,n,,0.4730532,51.7345329
+512,546,v festival,1996,hylands park,chelmsford,Paul Weller,5,s,1972.0,england,surrey,white british,m,63.0,37.0,24.0,y,,0.4730532,51.7345329
+513,547,v festival,1997,hylands park,chelmsford,The Prodigy,9,b,1990.0,england,essex,mixed,m,52.0,27.0,7.0,y,,0.4730532,51.7345329
+514,548,v festival,1997,hylands park,chelmsford,Blur,8,b,1988.0,england,london,white british,m,53.0,28.0,9.0,y,,0.4730532,51.7345329
+515,549,v festival,1998,hylands park,chelmsford,The Verve,3,b,1990.0,england,wigan,white british,m,50.0,26.0,8.0,n,,0.4730532,51.7345329
+516,550,v festival,1998,hylands park,chelmsford,Charlatans,3,b,1989.0,england,manchester,white british,m,55.0,31.0,9.0,y,,0.4730532,51.7345329
+517,551,v festival,1999,hylands park,chelmsford,Manic Street Preachers,5,b,1986.0,wales,caerphilly,white british,m,53.0,30.0,13.0,y,,0.4730532,51.7345329
+518,552,v festival,1999,hylands park,chelmsford,Suede,3,b,1989.0,england,london,white british,m,54.0,31.0,10.0,y,,0.4730532,51.7345329
+519,553,v festival,2000,hylands park,chelmsford,Travis,6,b,1990.0,scotland,glasgow,white british,m,50.0,28.0,10.0,y,,0.4730532,51.7345329
+520,554,v festival,2000,hylands park,chelmsford,richard ashcroft,1,s,1990.0,england,wigan,white british,m,50.0,28.0,10.0,y,,0.4730532,51.7345329
+521,555,v festival,2001,hylands park,chelmsford,texas,2,b,1986.0,scotland,glasgow,white british,mixed,54.0,33.0,15.0,y,,0.4730532,51.7345329
+522,556,v festival,2001,hylands park,chelmsford,Red Hot Chili Peppers,7,b,1983.0,United States,los angeles,white american,m,59.0,38.0,18.0,y,,0.4730532,51.7345329
+523,557,v festival,2002,hylands park,chelmsford,Stereophonics,7,b,1992.0,wales,mid glamorgan,white british,m,47.0,27.0,10.0,y,,0.4730532,51.7345329
+524,558,v festival,2002,hylands park,chelmsford,Chemical Brothers,5,b,1989.0,england,manchester,white british,m,52.0,32.0,13.0,y,,0.4730532,51.7345329
+525,559,v festival,2003,hylands park,chelmsford,Coldplay,8,b,1996.0,england,london,white british,m,44.0,25.0,7.0,y,,0.4730532,51.7345329
+526,560,v festival,2003,hylands park,chelmsford,Red Hot Chili Peppers,8,b,1983.0,United States,los angeles,white american,m,59.0,40.0,20.0,y,,0.4730532,51.7345329
+527,561,v festival,2004,hylands park,chelmsford,The Strokes,5,b,1998.0,United States,new york,white american,m,42.0,24.0,6.0,y,,0.4730532,51.7345329
+528,562,v festival,2004,hylands park,chelmsford,Muse,10,b,1994.0,england,teignmouth,white british,,43.0,25.0,10.0,y,,0.4730532,51.7345329
+529,563,v festival,2005,hylands park,chelmsford,scissor sisters,2,b,2001.0,United States,new york,white american,mixed,45.0,28.0,4.0,y,,0.4730532,51.7345329
+530,564,v festival,2005,hylands park,chelmsford,Franz Ferdinand,3,b,2002.0,scotland,glasgow,white british,m,45.0,28.0,3.0,y,,0.4730532,51.7345329
+531,565,v festival,2005,hylands park,chelmsford,Oasis,5,b,1991.0,england,manchester,white british,m,52.0,35.0,14.0,n,,0.4730532,51.7345329
+532,566,v festival,2006,hylands park,chelmsford,Radiohead,6,b,1985.0,england,oxfordshire,white british,m,52.0,36.0,21.0,y,,0.4730532,51.7345329
+533,567,v festival,2006,hylands park,chelmsford,Faithless,4,b,1995.0,england,london,black british,mixed,57.0,41.0,11.0,y,,0.4730532,51.7345329
+534,568,v festival,2006,hylands park,chelmsford,morrissey,1,s,1977.0,england,lancashire,white british,m,62.0,46.0,29.0,y,,0.4730532,51.7345329
+535,569,v festival,2007,hylands park,chelmsford,Kasabian,8,b,1997.0,england,leicester,white british,m,43.0,28.0,10.0,y,,0.4730532,51.7345329
+536,570,v festival,2007,hylands park,chelmsford,The Killers,7,b,2001.0,United States,las vegas,white american,m,44.0,29.0,6.0,y,,0.4730532,51.7345329
+537,571,v festival,2007,hylands park,chelmsford,Foo Fighters,9,b,1994.0,United States,seattle,white american,m,52.0,37.0,13.0,y,,0.4730532,51.7345329
+538,572,v festival,2008,hylands park,chelmsford,Kings of Leon,6,b,1999.0,United States,tennessee,white american,m,39.0,25.0,9.0,y,,0.4730532,51.7345329
+539,573,v festival,2008,hylands park,chelmsford,Muse,11,b,1994.0,england,teignmouth,white british,,43.0,29.0,14.0,y,,0.4730532,51.7345329
+540,574,v festival,2008,hylands park,chelmsford,Stereophonics,8,b,1992.0,wales,mid glamorgan,white british,m,47.0,33.0,16.0,y,,0.4730532,51.7345329
+541,575,v festival,2008,hylands park,chelmsford,The Verve,4,b,1990.0,england,wigan,white british,m,50.0,36.0,18.0,y,,0.4730532,51.7345329
+542,576,v festival,2009,hylands park,chelmsford,The Killers,8,b,2001.0,United States,las vegas,white american,m,44.0,31.0,8.0,y,,0.4730532,51.7345329
+543,577,v festival,2009,hylands park,chelmsford,Oasis,6,b,1991.0,england,manchester,white british,m,52.0,39.0,18.0,n,,0.4730532,51.7345329
+544,578,v festival,2010,hylands park,chelmsford,Kings of Leon,7,b,1999.0,United States,tennessee,white american,m,39.0,27.0,11.0,y,,0.4730532,51.7345329
+545,579,v festival,2010,hylands park,chelmsford,Kasabian,9,b,1997.0,england,leicester,white british,m,43.0,31.0,13.0,y,,0.4730532,51.7345329
+546,580,v festival,2011,hylands park,chelmsford,Arctic Monkeys,8,b,2002.0,england,sheffield,white british,m,36.0,25.0,9.0,y,,0.4730532,51.7345329
+547,581,v festival,2011,hylands park,chelmsford,Eminem,5,s,1988.0,United States,michigan,white american,m,49.0,38.0,23.0,y,,0.4730532,51.7345329
+548,582,v festival,2012,hylands park,chelmsford,The Killers,9,b,2001.0,United States,las vegas,white american,m,44.0,34.0,11.0,y,,0.4730532,51.7345329
+549,583,v festival,2012,hylands park,chelmsford,The Stone Roses,4,b,1983.0,england,manchester,white british,m,58.0,48.0,29.0,y,,0.4730532,51.7345329
+550,584,v festival,2013,hylands park,chelmsford,Kings of Leon,8,b,1999.0,United States,tennessee,white american,m,39.0,30.0,14.0,y,,0.4730532,51.7345329
+551,585,v festival,2013,hylands park,chelmsford,Beyonce,2,s,1997.0,United States,houston,african american,f,40.0,31.0,16.0,y,,0.4730532,51.7345329
+552,586,v festival,2014,hylands park,chelmsford,justin timberlake,1,b,1992.0,United States,tennessee,white american,m,41.0,33.0,22.0,y,,0.4730532,51.7345329
+553,587,v festival,2014,hylands park,chelmsford,The Killers,10,b,2001.0,United States,las vegas,white american,m,44.0,36.0,13.0,y,,0.4730532,51.7345329
+554,588,v festival,2015,hylands park,chelmsford,Calvin Harris,5,s,2002.0,scotland,dumfries,white british,m,38.0,31.0,13.0,y,,0.4730532,51.7345329
+555,589,v festival,2015,hylands park,chelmsford,Kasabian,10,b,1997.0,england,leicester,white british,m,43.0,36.0,18.0,y,,0.4730532,51.7345329
+556,590,v festival,2016,hylands park,chelmsford,justin bieber,1,s,2008.0,canada,ontario,white canadian,m,28.0,22.0,8.0,y,,0.4730532,51.7345329
+557,591,v festival,2016,hylands park,chelmsford,rihanna,2,s,2003.0,barbados,saint michael,black american,f,34.0,28.0,13.0,y,,0.4730532,51.7345329
+558,592,v festival,2017,hylands park,chelmsford,pink,1,s,1995.0,United States,pennsylvania,white american,,42.0,37.0,22.0,y,,0.4730532,51.7345329
+559,593,v festival,2017,hylands park,chelmsford,jay-z,2,s,1986.0,United States,new york,black american,m,52.0,47.0,31.0,y,,0.4730532,51.7345329
+560,594,Wireless,2005,hyde park,london,keane,2,b,1995.0,england,east sussex,white british,m,44.0,27.0,10.0,N,,-0.12765,51.5073359
+561,595,Wireless,2005,hyde park,london,Kasabian,11,b,1997.0,england,leicester,white british,m,43.0,27.0,8.0,Y,,-0.12765,51.5073359
+562,596,Wireless,2005,hyde park,london,Basement Jaxx,3,b,1994.0,england,london,white british,m,52.0,35.0,11.0,Y,,-0.12765,51.5073359
+563,597,Wireless,2005,hyde park,london,New Order,4,b,1980.0,england,manchester,white british,m,64.0,47.0,25.0,Y,,-0.12765,51.5073359
+564,598,Wireless,2006,hyde park,london,The Strokes,6,b,1998.0,United States,new york,white american,m,42.0,26.0,8.0,Y,,-0.12765,51.5073359
+565,599,Wireless,2006,hyde park,london,james blunt,2,s,2003.0,england,hampshire,white british,m,48.0,32.0,3.0,Y,,-0.12765,51.5073359
+566,600,Wireless,2006,hyde park,london,david gray,3,s,1992.0,england,trafford,white british,m,53.0,37.0,14.0,Y,,-0.12765,51.5073359
+567,601,Wireless,2006,hyde park,london,massive attack,2,b,1988.0,england,bristol,mixed,m,58.0,42.0,18.0,Y,,-0.12765,51.5073359
+568,602,Wireless,2006,hyde park,london,depeche mode,1,b,1980.0,england,essex,white british,m,60.0,44.0,26.0,Y,,-0.12765,51.5073359
+569,603,Wireless,2006,hyde park,london,The Who,6,b,1964.0,england,london,white british,m,77.0,61.0,42.0,Y,,-0.12765,51.5073359
+570,604,Wireless,2007,hyde park,london,Kaiser Chiefs,3,b,2000.0,england,leeds,white british,,46.0,31.0,7.0,Y,,-0.12765,51.5073359
+571,605,Wireless,2007,hyde park,london,The White Stripes,3,b,1997.0,United States,detroit,white american,mixed,47.0,32.0,10.0,N,,-0.12765,51.5073359
+572,606,Wireless,2007,hyde park,london,daft punk,1,b,1993.0,france,paris,white european,m,48.0,33.0,14.0,Y,,-0.12765,51.5073359
+573,607,Wireless,2007,hyde park,london,Faithless,5,b,1995.0,england,london,black british,mixed,57.0,40.0,12.0,Y,,-0.12765,51.5073359
+574,608,Wireless,2008,hyde park,london,jay-z,3,s,1986.0,United States,new york,black american,m,52.0,38.0,22.0,Y,,-0.12765,51.5073359
+575,609,Wireless,2008,hyde park,london,counting crows,1,b,1991.0,United States,berkeley,white american,m,57.0,42.0,17.0,Y,,-0.12765,51.5073359
+576,610,Wireless,2008,hyde park,london,fatboy slim,3,s,1996.0,england,london,white british,m,58.0,44.0,12.0,Y,,-0.12765,51.5073359
+577,611,Wireless,2008,hyde park,london,morrissey,2,s,1977.0,england,lancashire,white british,m,62.0,48.0,31.0,Y,,-0.12765,51.5073359
+578,612,Wireless,2009,hyde park,london,Kanye West,2,s ,1996.0,United States,chicago,african american,m,44.0,30.0,13.0,Y,,-0.12765,51.5073359
+579,613,Wireless,2009,hyde park,london,Basement Jaxx,4,b,1994.0,england,london,white british,m,52.0,39.0,15.0,Y,,-0.12765,51.5073359
+580,614,Wireless,2010,hyde park,london,pink,2,s,1995.0,United States,pennsylvania,white american,,42.0,30.0,15.0,Y,,-0.12765,51.5073359
+581,615,Wireless,2010,hyde park,london,jay-z,4,s,1986.0,United States,new york,black american,m,52.0,39.0,24.0,Y,,-0.12765,51.5073359
+582,616,Wireless,2010,hyde park,london,lcd soundsystem,2,b,2002.0,United States,new york,white american,m,52.0,40.0,8.0,Y,,-0.12765,51.5073359
+583,617,Wireless,2011,hyde park,london,the black eyed peas,1,b,1992.0,United States,los angeles,mixed heritage,mixed,46.0,35.0,19.0,Y,,-0.12765,51.5073359
+584,618,Wireless,2011,hyde park,london,Chemical Brothers,6,b,1989.0,england,manchester,white british,m,52.0,41.0,22.0,Y,,-0.12765,51.5073359
+585,619,Wireless,2011,hyde park,london,Pulp,7,b,1978.0,england,sheffield,white british,mixed,57.0,45.0,33.0,N,,-0.12765,51.5073359
+586,620,Wireless,2012,hyde park,london,rihanna,3,s,2003.0,barbados,saint michael,black american,f,34.0,23.0,9.0,Y,,-0.12765,51.5073359
+587,621,Wireless,2012,hyde park,london,drake,1,s,2001.0,canada,toronto,black canadian,m,35.0,25.0,11.0,Y,,-0.12765,51.5073359
+588,622,Wireless,2012,hyde park,london,deadmau5,2,s,1998.0,canada,ontario,white canadian,m,41.0,31.0,14.0,Y,,-0.12765,51.5073359
+589,623,Wireless,2013,stratford,london,rihanna,4,s,2003.0,barbados,saint michael,black american,f,34.0,24.0,10.0,Y,,-0.12765,51.5073359
+590,624,Wireless,2013,stratford,london,justin timberlake,2,s,1992.0,United States,memphis,white american,m,41.0,32.0,21.0,Y,,-0.12765,51.5073359
+591,625,Wireless,2013,stratford,london,jay-z,5,s,1986.0,United States,new york,black american,m,52.0,43.0,27.0,Y,,-0.12765,51.5073359
+592,626,Wireless,2014,finsbury park,london,bruno mars,1,s,2004.0,United States,hawaii,mixed heritage,m,36.0,28.0,10.0,Y,,-0.12765,51.5073359
+593,627,Wireless,2014,finsbury park,london,Kanye West,3,s ,1996.0,United States,chicago,african american,m,44.0,36.0,18.0,Y,,-0.12765,51.5073359
+594,628,Wireless,2014,finsbury park,london,rudimental,3,b,2010.0,england,london,mixed,mixed,,,4.0,Y,,-0.12765,51.5073359
+595,629,Wireless,2015,finsbury park,london,avicii,2,s,2006.0,sweden,stockholm,white european,m,32.0,25.0,9.0,Y,,-0.12765,51.5073359
+596,630,Wireless,2015,finsbury park,london,drake,2,s,2001.0,canada,toronto,black canadian,m,35.0,28.0,14.0,Y,,-0.12765,51.5073359
+597,631,Wireless,2015,finsbury park,london,nicki minaj,1,s,2004.0,United States,new york,black american,f,39.0,31.0,11.0,Y,,-0.12765,51.5073359
+598,632,Wireless,2015,finsbury park,london,David Guetta,2,s,1984.0,france,paris,white european,m,54.0,47.0,31.0,Y,,-0.12765,51.5073359
+599,633,Wireless,2016,finsbury park,london,kygo,1,s,2009.0,norway,bergen,white european,m,30.0,23.0,7.0,Y,,-0.12765,51.5073359
+600,634,Wireless,2016,finsbury park,london,Calvin Harris,6,s,2002.0,scotland,dumfries,white british,m,38.0,32.0,14.0,Y,,-0.12765,51.5073359
+601,635,Wireless,2016,finsbury park,london,chase & status,6,b,2003.0,england,london,white british,m,,,13.0,Y,,-0.12765,51.5073359
+602,636,Wireless,2017,finsbury park,london,chance the rapper,1,s,2011.0,United States,chicago,black american,m,28.0,23.0,6.0,Y,,-0.12765,51.5073359
+603,637,Wireless,2017,finsbury park,london,the weeknd,1,s,2010.0,canada,toronto,black candadian,m,32.0,26.0,7.0,Y,,-0.12765,51.5073359
+604,638,Wireless,2017,finsbury park,london,skepta,1,s,2003.0,england,london,black british,m,39.0,34.0,14.0,Y,,-0.12765,51.5073359

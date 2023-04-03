@@ -1,196 +1,134 @@
-import { histogram } from './histogram.js';
+import { map } from './map.js'
 
 const { x, y, width, height } = d3
   .selectAll('#graphic')
   .node()
-  .getBoundingClientRect();
+  .getBoundingClientRect()
 
-let data;
-let circlesClassVariable;
-let mapOfEnglandVariable;
+let data
+let geoData
+let circlesClassVariable
+let circlesHistogramClassVariable
 
-const scrollVis = (onClick) => {
-  var margin = { top: 10, left: 10, bottom: 10, right: 10 };
-  var lastIndex = -1;
-  var activeIndex = 0;
-  var svg = null;
-  var g = null;
+const scrollVis = onClick => {
+  var margin = { top: 10, left: 10, bottom: 10, right: 10 }
+  var lastIndex = -1
+  var activeIndex = 0
+  var svg = null
+  var g = null
 
-  var activateFunctions = [];
-  var updateFunctions = [];
+  var activateFunctions = []
+  var updateFunctions = []
 
   var chart = function (selection) {
     selection.each(function (rawData) {
       // create svg and give it a width and height
-      svg = d3.select(this).selectAll('svg').data([data]);
-      var svgE = svg.enter().append('svg');
-
+      svg = d3.select(this).selectAll('svg').data([data])
+      var svgE = svg.enter().append('svg')
       // @v4 use merge to combine enter and existing selection
-      svg = svg.merge(svgE);
-      svg.attr('width', width - margin.left - margin.right)
+      svg = svg.merge(svgE)
+      svg
+        .attr('width', width - margin.left - margin.right)
         .attr('height', height - margin.top - margin.bottom)
-        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
 
-      setupVis();
-      setupSections();
-    });
-  };
+      setupVis()
+      setupSections()
+    })
+  }
 
   const setupVis = () => {
-    svg.call(histogram, {
-      data: data,
-      margin: { top: 10, bottom: 10, left: 10, right: 10 },
-      id: 'histogram',
-    });
-
-    svg.call(histogram, {
-      data: data.filter((d) => d.festival == 'Latitude'),
-      margin: { top: 10, bottom: 10, left: 10, right: 10 },
-      id: 'latitude',
-    });
-
-    mapOfEnglandVariable = new mapOfEngland(svg, {
-      margin: { top: 10, bottom: 10, left: 10, right: 10 },
-    })
-
-    circlesClassVariable = new circle(svg, {
+    circlesClassVariable = new summaryCircles(svg, {
       data,
-      margin: { top: 10, bottom: 10, left: 10, right: 10 },
-      displayType: 'allCircles',
-      onClick: onClick,
-    });
-
-  };
+      margin: { top: 40, bottom: 10, left: 40, right: 10 },
+      onClick: onClick
+    })
+    circlesHistogramClassVariable = new histogramCircles(svg, {
+      data: data.filter(d => d.year >= 2007),
+      margin: { top: 40, bottom: 200, left:200, right:20 },
+      xAxisLabel: 'UK Festival',
+      yAxisLabel: 'Number of Headlining Acts' ,
+      onClick: onClick
+    })
+  }
 
   var setupSections = function () {
-    activateFunctions[0] = showCirclez;
-    activateFunctions[1] = showCirclesGroupedByFestival;
-    activateFunctions[2] = showTitle;
-    activateFunctions[3] = showHistogram;
-
+    activateFunctions[3] = splitCircles
+    activateFunctions[2] = showSummary
+    activateFunctions[1] = showHistogram
+    activateFunctions[0] = showTitle
     for (var i = 0; i < 5; i++) {
-      updateFunctions[i] = function () { };
+      updateFunctions[i] = function () {}
     }
-  };
-
-  function showTitle() {
-    svg
-      .selectAll('#histogram')
-      .transition(0)
-      .duration(600)
-      .attr('opacity', 1);
-
-    svg
-      .selectAll('#latitude')
-      .transition(600)
-      .duration(600)
-      .attr('opacity', 0);
-
-    svg
-      .selectAll('#circles')
-      .transition(600)
-      .duration(600)
-      .attr('opacity', 0);
-
   }
 
-  function showHistogram() {
-    svg
-      .selectAll('#circles')
-      .transition(600)
-      .duration(600)
-      .attr('opacity', 0);
-
-    svg
-      .selectAll('#latitude')
-      .transition(0)
-      .duration(600)
-      .attr('opacity', 1);
-
-    svg
-      .selectAll('#histogram')
-      .transition(600)
-      .duration(600)
-      .attr('opacity', 0);
+  function showTitle () {
+    svg.selectAll('.histogram').transition().duration(1000).attr('opacity', 0)
   }
 
-  function showCirclez() {
-    svg
-      .selectAll('#latitude')
-      .transition(600)
-      .duration(600)
-      .attr('opacity', 0);
-
-    svg
-      .selectAll('#histogram')
-      .transition(600)
-      .duration(600)
-      .attr('opacity', 0);
-
-    circlesClassVariable.props.displayType = 'all Circles';
-    circlesClassVariable.showCircles();
-
+  function showSummary () {
+    svg.selectAll('circle').transition().attr('opacity', 1)
+    svg.selectAll('.histogram').transition().duration(1000).attr('opacity', 0)
+    circlesClassVariable.props.data = data
+    circlesClassVariable.showCircles()
   }
 
-  const showCirclesGroupedByFestival = () => {
-    svg.selectAll('#latitude').transition(600).duration(600).attr('opacity', 0);
+  function splitCircles () {
+    circlesClassVariable.props.data = data.filter(d => d.gender == 'f' | d.gender == 'mixed')
+    circlesClassVariable.showCircles()
+  }
 
-    svg
-      .selectAll('#histogram')
-      .transition(600)
-      .duration(600)
-      .attr('opacity', 0);
+  const showHistogram = () => {
+    svg.selectAll('circle').transition().attr('opacity', 0)
+    circlesHistogramClassVariable.showCircles();
+    }
 
-    svg
-      .selectAll('#circles')
-      .transition(600)
-      .duration(600)
-      .attr('opacity', 1);
-
-    circlesClassVariable.props.displayType = 'festival';
-    circlesClassVariable.showCirclesGroupedByFestival();
-    mapOfEnglandVariable.initVis();
-
-
-  };
-
+  function showMap () {
+    svg.call(map, {
+      countries: geoData,
+      locations: data,
+      margin: { top: 10, bottom: 10, left: 10, right: 10 }
+    })
+    svg.selectAll('#map').transition(1000).duration(600).attr('opacity', 1)
+    svg.selectAll('#histogram').transition(1000).duration(600).attr('opacity', 0)
+  }
 
   chart.activate = function (index) {
-    activeIndex = index;
-    var sign = activeIndex - lastIndex < 0 ? -1 : 1;
-    var scrolledSections = d3.range(lastIndex + sign, activeIndex + sign, sign);
+    activeIndex = index
+    var sign = activeIndex - lastIndex < 0 ? -1 : 1
+    var scrolledSections = d3.range(lastIndex + sign, activeIndex + sign, sign)
     scrolledSections.forEach(function (i) {
-      activateFunctions[i]();
-    });
-    lastIndex = activeIndex;
-  };
-
+      activateFunctions[i]()
+    })
+    lastIndex = activeIndex
+  }
 
   chart.update = function (index, progress) {
-    updateFunctions[index](progress);
-  };
+    updateFunctions[index](progress)
+  }
 
-  return chart;
-};
+  return chart
+}
 
+export const display = (dataArgument, geoDataArgument, onClick) => {
+  data = dataArgument
+  geoData = geoDataArgument
 
-export const display = (dataArgument, onScroll, onClick) => {
+  var plot = scrollVis(onClick)
+  d3.select('#vis').datum(data).call(plot, { data: data })
 
-  data = dataArgument;
+  var scroll = scroller().container(d3.select('#graphic'))
 
-  var plot = scrollVis(onClick);
-  d3.select('#vis').datum(data).call(plot, { data: data });
-
-  var scroll = scroller().container(d3.select('#graphic'));
-
-  scroll(d3.selectAll('.step'));
+  scroll(d3.selectAll('.step'))
 
   scroll.on('active', function (index) {
-    onScroll(index);
-    plot.activate(index);
-  });
+    plot.activate(index)
+    d3.selectAll('.step')
+    .transition().duration(1000)
+    .style('opacity', function (d, i) { return i === index ? 1 : 0.1; });
+  })
 
   scroll.on('progress', function (index, progress) {
-    plot.update(index, progress);
-  });
-};
+    plot.update(index, progress)
+  })
+}

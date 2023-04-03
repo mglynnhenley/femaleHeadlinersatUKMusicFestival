@@ -1,6 +1,6 @@
 export const histogram = (parent, props) => {
   // unpack my props
-  const { data, margin, id } = props
+  const { data, margin, id, year } = props
 
   const width = +parent.attr('width')
   const height = +parent.attr('height')
@@ -19,7 +19,7 @@ export const histogram = (parent, props) => {
     .attr('transform', `translate(${margin.left},${margin.top})`)
 
   const dataPreparedForHistogram = d3.flatRollup(
-    data,
+    data.filter(d => d.year == year),
     v => v.length,
     d => d.gender
   )

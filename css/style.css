@@ -1,41 +1,101 @@
 body {
-  background-color: #000;
+  background-color: black;
+}
+
+circle:hover {
+  fill: #ffffff;
+}
+
+svg {
+  overflow: visible !important;
+}
+
+text {
+  font-family: "Comic Sans", "Helvetica Neue", Helvetica;
+  font-size: 16px;
+  line-height: 10px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 16px;
+  color: #fffcfc;
+  line-height: 6px;
+  opacity: 1;
+  text-align: center;
+  font-family: system-ui;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #ffffff, rgba(0, 0, 0, 0));
+}
+
+#tooltip {
+  position: absolute;
+  display: none;
+  background: rgba(0, 0, 0, .7);
+  border-radius: 3px;
+  box-shadow: -3px 3px 15px #939393;
+  color: white;
+  padding: 6px;
+  font-size: 1.1em;
+  max-width: 400px;
+  z-index: 100;
+  text-transform:capitalize;
+}
+
+.artist_info {
+  padding: 10px;
+  text-align: left;
+  box-shadow: rgba(255, 255, 255, 0.09) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px;  margin: 10px;
+  font-size: 12px;
+  text-transform:capitalize;
+  color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 3%;
+  fill: black;
+}
+
+.subtitle {
+  inline-size: 300px;
+  overflow-wrap: break-word;
+  opacity: 0.6;
+  font-size: 16px;
+
 }
 
 .container {
-  width: 100vw;
-  height: 500vh;
-  margin: 1rem;
+  width: 80vw;
+  height: 250vh;
+  margin: 2rem;
   padding: 2rem 2rem;
   text-align: left;
-  background-color: #000;
+  background-color: #000000;
 }
 
-.leftleft {
-  border-color: red;
-  border-width: 10px;
+#right {
+  height: 80vh;
   width:20%;
-  height: 50vh;
+  left: 75vw;
+  font-size: 20px;
   position: fixed;
+  opacity: 1;
+  text-align: center;
+  overflow-y: scroll;
 }
 
 .left {
-  border-color: red;
   border-width: 10px;
-  width:50%;
-  height:80vh;
-  position: fixed;
-  left: 20vw;
-
-}
-
-svg.right {
-  border-color: red;
-  border-width: 10px;
-  width:30%;
-  height:100vh;
-  position: fixed;
-  left: 70vw;
+  width:60%;
+  height:50vh;
+  left: 19vw;
+  display: flex;
+  position: absolute; 
 }
 
 .step {
@@ -43,51 +103,56 @@ svg.right {
   font-family: "TiemposTextWeb-Regular","Georgia";
   font-size: 8px;
   line-height: 23px;
-  color: #814f68;
+  color: #000000;
+  position: relative;
+  left: -15vw;
 }
 
 #sections .title {
   font-family: Arial,Helvetica,"san-serif";
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: light;
   margin-bottom: 2px;
-  color: #26262600;
-  line-height: 1.2em;
-}
-
-#artist-info {
-  font-family: Arial,Helvetica,"san-serif";
-  font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 2px;
-  fill: #fafafa;
-  line-height: 1.2em;
+  color: #ffffff;
+  inline-size: 300px;
+  overflow-wrap: break-word;
 }
 
 #graphic {
   height: 80vh;
 }
 
-
 #sections {
-  position: fixed;
+  position: relative;
 }
 
 #vis {
   position: fixed;
-  /* height: 600px; */
-  /* width: 600px; */
 }
 
 .axis path,
 .axis line {
   fill: none;
-  stroke: #666;
+  stroke: #ffffff;
   shape-rendering:optimizeSpeed;
 }
 
+rect.histogram:hover {
+  fill: #ffffff;
+  stroke-width: 1px;
+}
+
+text.axis.title {
+  font-size: 16px;
+  opacity: 40%;
+}
+
+.axis label {
+  stroke: white;
+}
+
 .highlight {
-  fill: #0000006a;
+  fill: #ffecec;
   font-weight: bold;
 }
 
@@ -98,22 +163,60 @@ svg.right {
 }
 
 .label {
-  stroke: white;
   pointer-events: none;
   font-family: sans-serif;
-  dominant-baseline: central;
+  fill: white;
+  font-weight: 100;
+}
+
+.summary-circle {
+  stroke: #ffffff;
+  stroke-width: 2px;
+}
+
+.summary-circle:hover {
+  fill: rgb(245, 245, 245);
+}
+
+.annotate-circle {
+  fill: white;
+  stroke: #ffffff;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.annotate-circle:hover {
+  fill: rgb(255, 255, 255);
+  transition:0.5s;
 }
 
 .node-circle {
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 1px;
+  fill: white;
+  stroke: #000000;
+  stroke-width: 2px;
 }
 
 .node-circle:hover {
-  fill: red;
+  fill: rgb(255, 255, 255);
 }
 
-.scroll-rectangle {
-  opacity: 0.5;
+.histogram-circle {
+  fill: white;
+  stroke: #000000;
+  stroke-width: 2px;
+}
+
+.country {
+  stroke: rgb(51, 255, 0);
+  stroke-width: 0.1rem;
+  position: relative;
+
+}
+
+.festival-locations {
+  position: absolute;
+  stroke: #ffffff;
+  stroke-width: 1px;
+  position: relative;
+  opacity: 10%;
 }
