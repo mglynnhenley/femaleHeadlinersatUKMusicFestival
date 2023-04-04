@@ -34,39 +34,78 @@ class summaryCircles {
     let vis = this;
 
     // Get the chart object and move to the correct position
-    this.parent.selectAll('.chart').attr(
-      'transform',
-      `translate(${this.props.margin.left},${this.props.margin.top})`
-    );
+    this.parent
+      .selectAll('.chart')
+      .attr(
+        'transform',
+        `translate(${this.props.margin.left},${this.props.margin.top})`
+      );
 
     // This is the data for the Summary data set
-    this.data = d3.groups(this.props.data, (d) => d.stage_name);
-    this.data.forEach((d) => {
+    const dataToDisplay = d3.groups(this.props.data, (d) => d.stage_name);
+    dataToDisplay.forEach((d) => {
       d.radius = Math.sqrt(d[1].length);
     });
 
     // select all circles and change
-    const circles = vis.chart.selectAll('circle').data(this.data, (d) => d[0]);
+    const circles = vis.chart
+      .selectAll('circle')
+      .data(dataToDisplay, (d) => d[0]);
 
     // create circle element for each element
-    const circlesEnter = circles.enter().append('circle');
+    const circlesEnter = circles
+      .enter()
+      .append('circle')
+      .attr('cx', (d) => vis.centre.x)
+      .attr('cy', (d) => vis.centre.y);
 
     // create simulation for this data set
-    this.simulation = d3.forceSimulation(this.data);
+    this.simulation = d3.forceSimulation(dataToDisplay);
 
     // Define each tick of simulation
     this.simulation.on('tick', () => {
-      circlesEnter.attr('cx', (d) => d.x).attr('cy', (d) => d.y);
+      vis.chart
+        .selectAll('circle')
+        .transition('circle2')
+        .duration(90)
+        .attr('cx', (d) => d.x)
+        .attr('cy', (d) => d.y);
     });
 
     // Stop the simulation until later
     this.simulation.stop();
 
     // Tooltip event listeners
-    const tooltipPadding = 15;
 
     circlesEnter
       .merge(circles)
+      .transition()
+      .duration(2000)
+      .attr('r', function (d) {
+        return 9 * d.radius;
+      })
+      .attr('stroke', (d) => 'white')
+      .attr('fill', (d) =>
+        (d[1][0].gender == 'f') | (d[1][0].gender == 'mixed')
+          ? d[1][0].gender == 'mixed'
+            ? 'purple'
+            : '#FF10F0'
+          : 'blue'
+      )
+      .attr('stroke-width', (d) =>
+        (d[1][0].gender == 'f') | (d[1][0].gender == 'mixed')
+          ? d[1][0].gender == 'mixed'
+            ? 2
+            : 3
+          : 1
+      );
+
+    circles.exit().remove();
+
+    const tooltipPadding = 25;
+    
+    vis.chart
+      .selectAll('circle')
       .on('mousemove', (event, d) => {
         d3.select('#tooltip')
           .style('display', 'inline-block')
@@ -78,31 +117,7 @@ class summaryCircles {
         d3.select('#tooltip').style('display', 'none');
       })
       .on('click',  (event,d) => this.props.onClick(d[0]))
-      .transition()
-      .duration(300)
-      .attr('r', function (d) {
-        return 9 * d.radius;
-      })
-      .attr('stroke', (d) => 'white')
-      .transition(100)
-      .duration(1000)
-      .attr('fill', (d) =>
-        (d[1][0].gender == 'f') | (d[1][0].gender == 'mixed')
-          ? d[1][0].gender == 'mixed'
-            ? 'purple'
-            : '#FF10F0'
-          : 'blue'
-      )
-      .attr('stroke-width', (d) =>
-      (d[1][0].gender == 'f') | (d[1][0].gender == 'mixed')
-        ? d[1][0].gender == 'mixed'
-          ? 2
-          : 3
-        : 1)
 
-
-
-    circles.exit().remove();
 
     // Specify the simulation force for each data point
     this.simulation
@@ -110,16 +125,11 @@ class summaryCircles {
       .force(
         'collide',
         d3.forceCollide().radius(function (d) {
-          return 11 * d.radius;
+          return 12 * d.radius;
         })
       );
 
     // Reset the force ( for scrolling back up )
     this.simulation.alpha(1).alphaTarget(0).restart();
-  }
-
-  stopSimulation() {
-    // stop the force simulation for this visualization
-    this.simulation.stop();
   }
 }

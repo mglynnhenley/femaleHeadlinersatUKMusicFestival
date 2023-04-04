@@ -63,12 +63,12 @@ const scrollVis = onClick => {
   }
 
   function showTitle () {
-    svg.selectAll('.histogram').transition().duration(1000).attr('opacity', 0)
+    svg.selectAll('.histogram').transition().duration(1000).attr('display', 'none')
   }
 
   function showSummary () {
-    svg.selectAll('circle').transition().attr('opacity', 1)
-    svg.selectAll('.histogram').transition().duration(1000).attr('opacity', 0)
+    svg.selectAll('circle').transition('add_circles').attr('display', 'inline-block')
+    svg.selectAll('.histogram').transition('hide_histo').duration(1000).attr('display', 'none')
     circlesClassVariable.props.data = data
     circlesClassVariable.showCircles()
   }
@@ -79,19 +79,9 @@ const scrollVis = onClick => {
   }
 
   const showHistogram = () => {
-    svg.selectAll('circle').transition().attr('opacity', 0)
+    svg.selectAll('circle').transition('hide_circles').attr('display', 'none')
     circlesHistogramClassVariable.showCircles();
     }
-
-  function showMap () {
-    svg.call(map, {
-      countries: geoData,
-      locations: data,
-      margin: { top: 10, bottom: 10, left: 10, right: 10 }
-    })
-    svg.selectAll('#map').transition(1000).duration(600).attr('opacity', 1)
-    svg.selectAll('#histogram').transition(1000).duration(600).attr('opacity', 0)
-  }
 
   chart.activate = function (index) {
     activeIndex = index
