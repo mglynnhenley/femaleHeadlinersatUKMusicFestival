@@ -1,4 +1,4 @@
-class histogramCircles {
+class histogram {
   constructor(_parent, _props, _data) {
     this.parent = _parent;
     this.props = {
@@ -7,29 +7,40 @@ class histogramCircles {
       xAxisLabel: _props.xAxisLabel,
       yAxisLabel: _props.yAxisLabel,
       onClick: _props.onClick,
+      colorScheme: _props.colorScheme,
     };
-    // Margin conventions
-    this.width = +this.parent.attr('width');
-    this.height = +this.parent.attr('height');
-    this.innerWidth =
-      this.width - this.props.margin.left - this.props.margin.right;
-    this.innerHeight =
-      this.height - this.props.margin.top - this.props.margin.bottom;
-    this.chart = this.parent.selectAll('.chart');
+    this.initVis();
+  }
 
+  initVis() {
+    let vis = this;
+    const width = +vis.parent.attr('width');
+    const height = +vis.parent.attr('height');
+    vis.innerWidth = width - vis.props.margin.left - vis.props.margin.right;
+    vis.innerHeight = height - vis.props.margin.top - vis.props.margin.bottom;
+    vis.chart = this.parent
+      .selectAll('.chart')
+      .attr(
+        'transform',
+        `translate(${this.props.margin.left},${this.props.margin.top})`
+      );
   }
 
   // grouped bar plot: https://d3-graph-gallery.com/graph/barplot_grouped_basicWide.html
-  showCircles() {
+  updateVis() {
+    const formatID = (x) => {
+      return x.toUpperCase().split(' ').join('_')
+  }
+
     let vis = this;
 
-    this.chart.attr(
-      'transform',
-      `translate(${this.props.margin.left},${this.props.margin.top})`
-    );
+    this.parent
+      .selectAll('.chart')
+      .attr(
+        'transform',
+        `translate(${this.props.margin.left},${this.props.margin.top})`
+      );
 
-
-    // Prepare the data to be displayed
     let maxIndex = 0; // This will be used for our y axis range
 
     //Get a list of all the festivals
@@ -37,6 +48,19 @@ class histogramCircles {
     this.props.data.forEach((d) => {
       festivals.add(d.festival);
     });
+
+    // Looking at calculating the order of the festival
+    const groupData = d3.rollup(
+      this.props.data,
+      (v) => v.length,
+      (d) => d.festival,
+      (d) => d.gender
+    );
+    const totals = d3.rollup(
+      this.props.data,
+      (v) => v.length,
+      (d) => d.festival
+    );
 
     // produce index's for displaying the data as a histogram
     festivals.forEach((festival) => {
@@ -56,12 +80,23 @@ class histogramCircles {
       maxIndex = maxIndex > indexOther ? maxIndex : indexOther; //we always know female will be in minority
     });
 
+    // I want my histogram to be sorted in ascending order of absolute difference between performers
+    const festivalSorted = Array.from(festivals);
+    festivalSorted.sort((a, b) => {
+      const womenForFestival_a =
+        (groupData.get(a).get('f') ?? 0) + (groupData.get(a).get('mixed') ?? 0) / totals.get(a)
+      const womenForFestival_b =
+        (groupData.get(b).get('f') ?? 0) + (groupData.get(b).get('mixed') ?? 0) / totals.get(b)
+
+      return d3.ascending(womenForFestival_a, womenForFestival_b);
+    });
+
     // Initialise scales
     var xScale = d3
       .scaleBand()
-      .domain(festivals)
+      .domain(festivalSorted)
       .range([0, this.innerWidth])
-      .paddingOuter(2);
+      .padding([0.1])
 
     const yScale = d3
       .scaleLinear()
@@ -69,10 +104,14 @@ class histogramCircles {
       .range([this.innerHeight, 0]);
 
     // initialize axis
-    const xAxis = d3.axisBottom(xScale).ticks(festivals);
+    const xAxis = d3.axisBottom(xScale).ticks(festivals).tickSize(0)
 
-    const yAxis = d3.axisLeft(yScale).ticks(20).tickSizeOuter(0).tickSizeInner(-this.innerWidth, 0, 0)
-    ;
+
+    const yAxis = d3
+      .axisLeft(yScale)
+      .ticks(20)
+      .tickSizeOuter(0)
+      .tickSizeInner(-this.innerWidth, 0, 0);
 
     // Append empty x-axis group and move it to the bottom of the chart
     const xAxisG = this.chart
@@ -86,9 +125,10 @@ class histogramCircles {
       .call(xAxis)
       .selectAll('text')
       .style('text-anchor', 'end')
-      .attr('dx', '-.8em')
-      .attr('dy', '.15em')
-      .attr('transform', 'rotate(-40)');
+      .attr('dx', '-.4em')
+      .attr('dy', '.45em')
+      .attr('transform', 'rotate(-40)')
+      .attr('class', 'axis label')
 
     // Append y-axis group
     const yAxisG = this.chart
@@ -102,26 +142,23 @@ class histogramCircles {
       .attr('class', 'axis title')
       .attr('y', -20)
       .attr('x', 0)
-      .attr('fill', 'white')
       .attr('text-anchor', 'middle')
-      .text(this.props.yAxisLabel)
+      .text(this.props.yAxisLabel);
 
     xAxisG
       .append('text')
       .attr('class', 'axis title')
       .attr('y', 100)
       .attr('x', this.innerWidth / 2)
-      .attr('fill', 'white')
       .attr('text-anchor', 'end')
-      .text(this.props.xAxisLabel)
+      .text(this.props.xAxisLabel);
 
     // Another scale for subgroup position?
     var xSubgroup = d3
       .scaleBand()
       .domain(['f', 'other'])
       .range([0, xScale.bandwidth()])
-      .paddingInner(0.5);
-
+      .padding([0.05])
 
     // Create new circles for each group
     const g = this.chart;
@@ -130,21 +167,20 @@ class histogramCircles {
     });
 
     //create the new circle elements
-    const circles = this.chart
+    const rect = this.chart
       .selectAll('rect')
-      .data(this.props.data, (d) => d.stage_name)
-      
+      .data(this.props.data, (d) => d.stage_name);
 
     //append a new circle for each data element
-    const circlesEnter = circles.enter().append('rect');
+    const rectEnter = rect.enter().append('rect');
 
-    const tooltipPadding = 25
-    const rectHeight = this.innerHeight/maxIndex
+    const tooltipPadding = 25;
+    const rectHeight = this.innerHeight / maxIndex +1;
 
     //plot circles
-    circlesEnter
-      .merge(circles)
-      .attr('id', d => d.stage_name)
+    rectEnter
+      .merge(rect)
+      .attr('id', (d) => formatID(d.stage_name))
       .attr('class', 'histogram')
       .on('mousemove', (event, d) => {
         d3.select('#tooltip')
@@ -152,46 +188,53 @@ class histogramCircles {
           .style('left', event.pageX + tooltipPadding + 'px')
           .style('top', event.pageY + tooltipPadding + 'px')
           .html('<div class="tooltip-title">' + d.stage_name + '</div>');
-        d3.selectAll('#'+d.stage_name).style('fill', 'white');
+        d3.selectAll('#' + formatID(d.stage_name)).style('fill', 'white').style('z-index', '-1')
       })
       .on('mouseleave', (event, d) => {
         d3.select('#tooltip').style('display', 'none');
-        d3.selectAll('#'+d.stage_name).style('fill', (d.gender == 'f') | (d.gender == 'mixed')
-        ? d.gender == 'mixed'
-          ? 'purple'
-          : '#FF10F0'
-        : 'blue')
+        d3.selectAll('#' + formatID(d.stage_name)).style(
+          'fill',
+          (d.gender == 'f') | (d.gender == 'mixed')
+            ? d.gender == 'mixed'
+              ? this.props.colorScheme[1]
+              : this.props.colorScheme[0]
+            : this.props.colorScheme[2]
+        );
       })
-      .on('click', (event,d) => this.props.onClick(d.stage_name))
+      .on('click', (event, d) => this.props.onClick(d.stage_name))
+      .attr('x', (d) => {
+        return (
+          xScale(d.festival) +
+          xSubgroup((d.gender == 'f') | (d.gender == 'mixed') ? 'f' : 'other') 
+        );
+      })
+      .attr('width', 20)
+      .attr('y', this.innerHeight)
+      .attr('fill', (d) =>
+        (d.gender == 'f') | (d.gender == 'mixed')
+          ? d.gender == 'mixed'
+          ? this.props.colorScheme[1]
+          : this.props.colorScheme[0]
+        : this.props.colorScheme[2]
+      )
       .transition('hello')
       .duration(1000)
       .delay((d, i) => {
         if ((d.gender == 'f') | (d.gender == 'mixed')) {
-          return yScale(maxIndex - d.index_histogram * 10);
+          return yScale(maxIndex - d.index_histogram * 10) / 2;
         } else {
-          return yScale(maxIndex - d.index_histogram * 10);
+          return yScale(maxIndex - d.index_histogram * 10) / 2;
         }
-      })
-      .attr('x', (d) => {
-        return (
-          xScale(d.festival) +
-          xSubgroup((d.gender == 'f') | (d.gender == 'mixed') ? 'f' : 'other') /
-          2
-        );
       })
       .attr('y', function (d) {
         return yScale(d.index_histogram) - rectHeight; // we have to adjust because of the radius of the circle
       })
-      .attr('fill', (d) =>
-        (d.gender == 'f') | (d.gender == 'mixed')
-          ? d.gender == 'mixed'
-            ? 'purple'
-            : '#FF10F0'
-          : 'blue'
-      )
-      .attr('width', 12)
       .attr('height', rectHeight)
+      .transition('stroke-to-white')
+      .duration(100)
+      .delay(1000)
+      .attr('stroke', 'white')
 
-    circles.exit().remove();
+    rect.exit().remove();
   }
 }

@@ -8,19 +8,18 @@ let artistData;
 let artistShown = [];
 
 const updateVis = () => {
+  const colorScheme = ['#d01c8b', '#f1b6da', '#4dac26']
+
   // TODO: you should pass the svg into display from index.js
   let rightDiv = d3.selectAll('#right')
   const legendSvg = d3.selectAll('#legend-histogram')
   const legendSummary = d3.selectAll('#legend-summary')
   const legendAnnotate = d3.selectAll('#legend-annotate')
 
-
-  console.log(legendSvg)
-
   legendSvg.call(colourLegend, {
     legendType: 'rect',
-    colourScale: ['purple', '#FF10F0', 'blue'],
-    keys: ['mixed', 'female', 'other'],
+    colourScale: colorScheme,
+    keys: ['female', 'mixed', 'other'],
     circleRadius: 4,
     spacing: 10,
     textOffset: 4,
@@ -29,7 +28,7 @@ const updateVis = () => {
 
   legendSummary.call(colourLegend, {
     legendType: 'circle',
-    colourScale: ['#FF10F0', 'purple', 'blue'],
+    colourScale: colorScheme,
     keys: ['female', 'mixed',  'other'],
     circleRadius: 4,
     spacing: 10,
@@ -39,7 +38,7 @@ const updateVis = () => {
 
   legendAnnotate.call(colourLegend, {
     legendType: 'circle',
-    colourScale: ['#FF10F0', 'purple'],
+    colourScale: colorScheme,
     keys: ['female', 'mixed'],
     circleRadius: 4,
     spacing: 10,
@@ -50,7 +49,8 @@ const updateVis = () => {
   const artistInfoClass = new artistInfo(rightDiv, {
     data: data,
     margin: { top: 10, bottom: 10, left: 10, right: 10},
-    artists: []
+    artists: [],
+    colorScheme: colorScheme,
   })
   artistInfoClass.initVis();
   
@@ -59,19 +59,13 @@ const updateVis = () => {
     if (artistShown.includes(d)){
       const index = artistShown.indexOf(d);
       artistShown.splice(index, 1);
-      event.target.style.opacity = null;
-      event.target.style['stroke-width'] = '1px';
     } else {
       artistShown.push(d);
-      event.target.style.opacity = '1';
-      event.target.style['stroke-width'] = '5px';
     }
     artistInfoClass.props.artists = artistShown;
     artistInfoClass.updateVis();
   }
-
-
-  display(data, geoData, onClick)
+  display(data, onClick)
 
 }
 

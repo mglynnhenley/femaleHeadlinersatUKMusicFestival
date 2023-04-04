@@ -6,17 +6,17 @@ class artistInfo {
       data: _props.data,
       margin: _props.margin,
       artists: _props.artists,
+      colorScheme: _props.colorScheme,
     };
+    this.initVis();
+  }
 
-    // Why is the data no being passed in ?
-    console.log(this.props.data);
+  initVis() {
+    let vis = this;
+    vis.width = vis.parent.width;
+    vis.height = vis.parent.height;
 
-    this.width = this.parent.width;
-    this.height = this.parent.height;
-
-    this.box = this.parent.selectAll('.annotations').data([null]);
-    this.boxEnter = this.box
-      .enter()
+    vis.container = vis.parent
       .append('div')
       .attr('class', 'annotations')
       .attr(
@@ -25,25 +25,25 @@ class artistInfo {
       );
   }
 
-  initVis() { }
-
   updateVis() {
+    const formatID = (x) => {
+      return x.toUpperCase().split(' ').join('_');
+    };
+
+    // Prepare data to display
     const group = d3.group(
-      this.props.data.filter((d) =>
-        this.props.artists.includes(d.stage_name)
-      ),
+      this.props.data.filter((d) => this.props.artists.includes(d.stage_name)),
       (d) => d.festival
     );
     const hierarchy = d3.hierarchy(group);
     const data = d3.groups(hierarchy.leaves(), (d) => d.data.stage_name);
 
-    const divs = this.boxEnter
-      .merge(this.box)
-      .selectAll('div')
-      .data(data, (d) => d[0]);
+    // Create one div per data point
+    const divs = this.container.selectAll('.artist_info').data(data, (d) => d[0]);
 
     const divEnter = divs.enter().append('div').attr('class', 'artist_info');
 
+    // merge with previous data
     divEnter
       .merge(divs)
       .attr(
@@ -52,19 +52,16 @@ class artistInfo {
       ) // use index to calculate y position
       .transition()
       .duration(1000)
-      .style('border-color', d => {
-        console.log(d[1][0].data.gender)
+      .style('border-color', (d) => {
+        console.log(d[1][0].data.gender);
         if (d[1][0].data.gender == 'f') {
-          return '#FF10F0'
+          return this.props.colorScheme[0];
         } else if (d[1][0].data.gender == 'mixed') {
-          return 'purple'
-        } else  {
-          return 'blue'
+          return this.props.colorScheme[1];
+        } else {
+          return this.props.colorScheme[2];
         }
-      })
-      
-
-    divs.exit().remove();
+      });
 
     divEnter
       .append('p')
@@ -73,19 +70,37 @@ class artistInfo {
           '<h1>' +
           d[0] +
           '</h1>  <hr>' +
-          '<b>Gender: </b>' +
+          '<text> Gender: ' +
           d[1][0].data.gender +
-          '<br> <b>Formation year: </b>' +
+          '<br> Formation year:' +
           Math.trunc(d[1][0].data.formation) +
-          '<br> <b>Birthplace: </b>' +
+          '<br> Birthplace: ' +
           d[1][0].data.birthplace +
-          '<br> <b>Ethnicity: </b>' +
+          '<br> Ethnicity: ' +
           d[1][0].data.ethnicity +
-          '<br> <b>Age at present: </b>' +
-          d[1][0].data.age_present
-      );
+          '<br> Age at present:' +
+          d[1][0].data.age_present +
+          '</text>'
+      )
+      .on('mousemove', (event, d) => {
+        console.log(d);
+        d3.selectAll('#' + formatID(d[0]))
+          .style('fill', 'white')
+          .style('stroke', ' #C0C0BB');
+      })
+      .on('mouseleave', (event, d) => {
+        d3.selectAll('#' + formatID(d[0]))
+          .style(
+            'fill',
+            (d[1][0].data.gender == 'f') | (d[1][0].data.gender == 'mixed')
+              ? d[1][0].data.gender == 'mixed'
+                ? this.props.colorScheme[1]
+                : this.props.colorScheme[0]
+              : this.props.colorScheme[2]
+          )
+          .style('stroke', 'white');
+      });
 
-      this.box.exit().remove();
+    divs.exit().remove();
   }
 }
-

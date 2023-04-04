@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: #E5E2E0;
 }
 
 circle:hover {
@@ -11,62 +11,73 @@ svg {
 }
 
 text {
-  font-family: "Comic Sans", "Helvetica Neue", Helvetica;
-  font-size: 16px;
+  font-family: 'ITC Franklin Gothic Std';
+  font-size: 12px ;
   line-height: 10px;
-  color: #ffffff;
+  color: #635F5D;
   opacity: 1;
 }
 
 h1 {
-  font-family: "Helvetica Neue", Helvetica;
-  font-size: 16px;
-  color: #fffcfc;
+  font-family: 'ITC Franklin Gothic Std';
+  font-size: 20px;
+  color: #635F5D;
   line-height: 6px;
   opacity: 1;
   text-align: center;
-  font-family: system-ui;
 }
 
 hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #ffffff, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #C0C0BB, rgba(0, 0, 0, 0));
 }
 
 #tooltip {
   position: absolute;
   display: none;
-  background: rgba(0, 0, 0, .7);
-  border-radius: 3px;
+  background: rgb(255, 255, 255);
   box-shadow: -3px 3px 15px #939393;
-  color: white;
+  border: #C0C0BB;
+  border-width:2px;
   padding: 6px;
-  font-size: 1.1em;
+  font-size: 12px;
+  color: #635F5D;
+  font-style: italic;
   max-width: 400px;
   z-index: 100;
   text-transform:capitalize;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .artist_info {
-  padding: 10px;
+  padding: 8px;
   text-align: left;
   box-shadow: rgba(255, 255, 255, 0.09) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px, rgba(255, 255, 255, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px;  margin: 10px;
   font-size: 12px;
-  text-transform:capitalize;
-  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+  color: #635F5D;
+  background-color: white;
   border-style: solid;
   border-width: 3px;
-  border-radius: 3%;
-  fill: black;
 }
 
-.subtitle {
-  inline-size: 300px;
-  overflow-wrap: break-word;
-  opacity: 0.6;
-  font-size: 16px;
+text.subtitle {
+  font-size: 12px;
+  font-family: 'ITC Franklin Gothic Std';
+  fill: #8E8883 !important;
+  font-weight: 500;
+  opacity: 1;
+}
 
+.extra-info {
+  inline-size: 300px;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  font-size: 12px;
+  font-family: 'Georgia';
+  color: #8E8883;
+  font-style: italic;
 }
 
 .container {
@@ -75,13 +86,12 @@ hr {
   margin: 2rem;
   padding: 2rem 2rem;
   text-align: left;
-  background-color: #000000;
 }
 
 #right {
   height: 80vh;
-  width:20%;
-  left: 75vw;
+  width:18%;
+  left: 80vw;
   font-size: 20px;
   position: fixed;
   opacity: 1;
@@ -100,20 +110,19 @@ hr {
 
 .step {
   margin-bottom: 200px;
-  font-family: "TiemposTextWeb-Regular","Georgia";
-  font-size: 8px;
+  font-family: Arial;
+  font-size: 20px;
   line-height: 23px;
-  color: #000000;
   position: relative;
   left: -15vw;
 }
 
 #sections .title {
-  font-family: Arial,Helvetica,"san-serif";
-  font-size: 18px;
+  font-family: Arial;
+  font-size: 20px;
   font-weight: light;
   margin-bottom: 2px;
-  color: #ffffff;
+  color: #635F5D;
   inline-size: 300px;
   overflow-wrap: break-word;
 }
@@ -130,25 +139,33 @@ hr {
   position: fixed;
 }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #ffffff;
+
+.histogram path,
+.histogram line {
+  stroke: white;
+  fill: white;
   shape-rendering:optimizeSpeed;
 }
 
-rect.histogram:hover {
-  fill: #ffffff;
-  stroke-width: 1px;
-}
 
 text.axis.title {
-  font-size: 16px;
-  opacity: 40%;
+  fill: #635F5D;
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.axis label {
-  stroke: white;
+axis title {
+  stroke: #635F5D;
+  font-family: Arial;
+}
+
+.axis.label {
+  font-family: 'ITC Franklin Gothic Std';
+  text-transform: capitalize;
+  font-size: 12px ;
+  line-height: 10px;
+  fill: #635F5D;
+  opacity: 1;
 }
 
 .highlight {
@@ -169,54 +186,20 @@ text.axis.title {
   font-weight: 100;
 }
 
-.summary-circle {
-  stroke: #ffffff;
-  stroke-width: 2px;
-}
-
-.summary-circle:hover {
-  fill: rgb(245, 245, 245);
-}
-
-.annotate-circle {
+circle:hover {
   fill: white;
-  stroke: #ffffff;
-  stroke-width: 2px;
-  cursor: pointer;
+  stroke: #C0C0BB;
 }
 
-.annotate-circle:hover {
-  fill: rgb(255, 255, 255);
-  transition:0.5s;
+rect{ 
+  box-sizing: border-box;
 }
 
-.node-circle {
+rect:hover {
   fill: white;
-  stroke: #000000;
-  stroke-width: 2px;
+  stroke: white;
 }
 
-.node-circle:hover {
-  fill: rgb(255, 255, 255);
-}
-
-.histogram-circle {
-  fill: white;
-  stroke: #000000;
-  stroke-width: 2px;
-}
-
-.country {
-  stroke: rgb(51, 255, 0);
-  stroke-width: 0.1rem;
-  position: relative;
-
-}
-
-.festival-locations {
-  position: absolute;
-  stroke: #ffffff;
-  stroke-width: 1px;
-  position: relative;
-  opacity: 10%;
+text.mylabels {
+  fill: #635F5D;
 }

@@ -1,14 +1,11 @@
-import { map } from './map.js'
-
 const { x, y, width, height } = d3
   .selectAll('#graphic')
   .node()
   .getBoundingClientRect()
 
 let data
-let geoData
-let circlesClassVariable
-let circlesHistogramClassVariable
+let circlesView
+let histogramView
 
 const scrollVis = onClick => {
   var margin = { top: 10, left: 10, bottom: 10, right: 10 }
@@ -38,17 +35,20 @@ const scrollVis = onClick => {
   }
 
   const setupVis = () => {
-    circlesClassVariable = new summaryCircles(svg, {
+    const colorScheme = ['#d01c8b', '#f1b6da', '#4dac26']
+    circlesView = new circles(svg, {
       data,
       margin: { top: 40, bottom: 10, left: 40, right: 10 },
-      onClick: onClick
+      onClick: onClick,
+      colorScheme: colorScheme,
     })
-    circlesHistogramClassVariable = new histogramCircles(svg, {
+    histogramView = new histogram(svg, {
       data: data.filter(d => d.year >= 2007),
-      margin: { top: 40, bottom: 200, left:200, right:20 },
+      margin: { top: 40, bottom: 30, left:200, right:20 },
       xAxisLabel: 'UK Festival',
       yAxisLabel: 'Number of Headlining Acts' ,
-      onClick: onClick
+      onClick: onClick,
+      colorScheme: colorScheme,
     })
   }
 
@@ -69,18 +69,18 @@ const scrollVis = onClick => {
   function showSummary () {
     svg.selectAll('circle').transition('add_circles').attr('display', 'inline-block')
     svg.selectAll('.histogram').transition('hide_histo').duration(1000).attr('display', 'none')
-    circlesClassVariable.props.data = data
-    circlesClassVariable.showCircles()
+    circlesView.props.data = data
+    circlesView.updateVis()
   }
 
   function splitCircles () {
-    circlesClassVariable.props.data = data.filter(d => d.gender == 'f' | d.gender == 'mixed')
-    circlesClassVariable.showCircles()
+    circlesView.props.data = data.filter(d => d.gender == 'f' | d.gender == 'mixed')
+    circlesView.updateVis()
   }
 
   const showHistogram = () => {
     svg.selectAll('circle').transition('hide_circles').attr('display', 'none')
-    circlesHistogramClassVariable.showCircles();
+    histogramView.updateVis();
     }
 
   chart.activate = function (index) {
@@ -96,13 +96,11 @@ const scrollVis = onClick => {
   chart.update = function (index, progress) {
     updateFunctions[index](progress)
   }
-
   return chart
 }
 
-export const display = (dataArgument, geoDataArgument, onClick) => {
+export const display = (dataArgument, onClick) => {
   data = dataArgument
-  geoData = geoDataArgument
 
   var plot = scrollVis(onClick)
   d3.select('#vis').datum(data).call(plot, { data: data })
