@@ -4,6 +4,7 @@ const { x, y, width, height } = d3
   .getBoundingClientRect()
 
 let data
+let colourScheme
 let circlesView
 let histogramView
 
@@ -12,7 +13,6 @@ const scrollVis = onClick => {
   var lastIndex = -1
   var activeIndex = 0
   var svg = null
-  var g = null
 
   var activateFunctions = []
   var updateFunctions = []
@@ -35,12 +35,12 @@ const scrollVis = onClick => {
   }
 
   const setupVis = () => {
-    const colorScheme = ['#d01c8b', '#f1b6da', '#4dac26']
+
     circlesView = new circles(svg, {
       data,
       margin: { top: 40, bottom: 10, left: 40, right: 10 },
       onClick: onClick,
-      colorScheme: colorScheme,
+      colorScheme: colourScheme,
     })
     histogramView = new histogram(svg, {
       data: data.filter(d => d.year >= 2007),
@@ -48,37 +48,43 @@ const scrollVis = onClick => {
       xAxisLabel: 'UK Festival',
       yAxisLabel: 'Number of Headlining Acts' ,
       onClick: onClick,
-      colorScheme: colorScheme,
+      colorScheme: colourScheme,
     })
   }
 
+  // on scroll through each view the activate function will be called in order
   var setupSections = function () {
-    activateFunctions[3] = splitCircles
-    activateFunctions[2] = showSummary
-    activateFunctions[1] = showHistogram
     activateFunctions[0] = showTitle
-    for (var i = 0; i < 5; i++) {
+    activateFunctions[1] = showHistogram
+    activateFunctions[2] = showSummary
+    activateFunctions[3] = filterCircles
+    for (var i = 0; i < 4; i++) {
       updateFunctions[i] = function () {}
     }
   }
 
   function showTitle () {
+    // On scroll back up, we want to hide the histogram view
     svg.selectAll('.histogram').transition().duration(1000).attr('display', 'none')
   }
 
   function showSummary () {
+    // Show the circle elements, hide the histogram view
     svg.selectAll('circle').transition('add_circles').attr('display', 'inline-block')
     svg.selectAll('.histogram').transition('hide_histo').duration(1000).attr('display', 'none')
+    // update the circle class with all the data for the summary screen
     circlesView.props.data = data
     circlesView.updateVis()
   }
 
-  function splitCircles () {
+  function filterCircles () {
+    // update the circle class with just the data for female and mixed headliners
     circlesView.props.data = data.filter(d => d.gender == 'f' | d.gender == 'mixed')
     circlesView.updateVis()
   }
 
   const showHistogram = () => {
+    // hide the circles and then show the histogram
     svg.selectAll('circle').transition('hide_circles').attr('display', 'none')
     histogramView.updateVis();
     }
@@ -93,22 +99,24 @@ const scrollVis = onClick => {
     lastIndex = activeIndex
   }
 
-  chart.update = function (index, progress) {
-    updateFunctions[index](progress)
-  }
   return chart
 }
 
-export const display = (dataArgument, onClick) => {
+// external function to be called by index
+export const display = (dataArgument, colours, onClick) => {
   data = dataArgument
-
+  colourScheme = colours
+  
+  // initiate scroller function
   var plot = scrollVis(onClick)
   d3.select('#vis').datum(data).call(plot, { data: data })
 
+  // initialize scroller component on graphic section
   var scroll = scroller().container(d3.select('#graphic'))
 
   scroll(d3.selectAll('.step'))
 
+  // define what happens when a scroll event is detected
   scroll.on('active', function (index) {
     plot.activate(index)
     d3.selectAll('.step')
@@ -116,7 +124,5 @@ export const display = (dataArgument, onClick) => {
     .style('opacity', function (d, i) { return i === index ? 1 : 0.1; });
   })
 
-  scroll.on('progress', function (index, progress) {
-    plot.update(index, progress)
-  })
+
 }

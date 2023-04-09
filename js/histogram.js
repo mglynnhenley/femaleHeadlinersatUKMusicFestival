@@ -217,18 +217,16 @@ class histogram {
           : this.props.colorScheme[0]
         : this.props.colorScheme[2]
       )
-      .transition('hello')
+      .transition('bar grow')
       .duration(1000)
       .delay((d, i) => {
         if ((d.gender == 'f') | (d.gender == 'mixed')) {
           return yScale(maxIndex - d.index_histogram * 10) / 2;
         } else {
-          return yScale(maxIndex - d.index_histogram * 10) / 2;
+          return 3200 + yScale(maxIndex - d.index_histogram * 10) / 2;
         }
       })
-      .attr('y', function (d) {
-        return yScale(d.index_histogram) - rectHeight; // we have to adjust because of the radius of the circle
-      })
+      .attr('y', (d) =>  yScale(d.index_histogram) - rectHeight) // we have to adjust because of the radius of the circle
       .attr('height', rectHeight)
       .transition('stroke-to-white')
       .duration(100)
@@ -237,4 +235,5 @@ class histogram {
 
     rect.exit().remove();
   }
+
 }

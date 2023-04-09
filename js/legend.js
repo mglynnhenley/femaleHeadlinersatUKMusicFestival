@@ -17,10 +17,8 @@ export const colourLegend = (parent, props) => {
     .scaleSqrt() // instead of scaleLinear()
     .domain([0, 6])
     .range([0, 20])
-    
   
   parent.append('text').text('Gender of the artist or group:').attr('class', 'subtitle').attr('transform', `translate(0,30)`)
-
     
   if (legendType == 'rect') {
     var size = 30
@@ -41,7 +39,7 @@ export const colourLegend = (parent, props) => {
       })
       .attr('x', 100)
       .attr('y', function (d, i) {
-        return 60 + i * (size + 5)
+        return 70 + i * (size + 5)
       }) // 100 is where the first dot appears. 25 is the distance between dots
       .attr('width', size)
       .attr('height', size)
@@ -59,7 +57,7 @@ export const colourLegend = (parent, props) => {
       .attr('class', 'mylabels')
       .attr('x', 120 + size * 1.2)
       .attr('y', function (d, i) {
-        return 60 + i * (size + 5) + size / 2
+        return 70 + i * (size + 5) + size / 2
       }) // 100 is where the first dot appears. 25 is the distance between dots
       .text(function (d) {
         return d
@@ -88,7 +86,7 @@ export const colourLegend = (parent, props) => {
       .attr('class', 'colorCircleLegend')
       .attr('cx', 100)
       .attr('cy', function (d, i) {
-        return 70 + i * (2 * size + 5)
+        return 90 + i * (2 * size + 5)
       }) // 100 is where the first dot appears. 25 is the distance between dots
       .attr('r', size)
       .style('fill', function (d) {
@@ -106,7 +104,7 @@ export const colourLegend = (parent, props) => {
       .attr('class', 'mylabels')
       .attr('x', 100 + size * 2)
       .attr('y', function (d, i) {
-        return 70 + i * (2 * size + 5) 
+        return 90 + i * (2 * size + 5) 
       }) // 100 is where the first dot appears. 25 is the distance between dots
       .text(function (d) {
         return d
