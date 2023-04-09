@@ -1,7 +1,7 @@
 export const loadAndProcessData = () =>
 Promise
   .all([
-    d3.csv('../data/headliners_with_location.csv'),
+    d3.csv('./data/headliners.csv'),
   ])
   .then(([data]) => {   
 

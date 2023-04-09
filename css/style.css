@@ -13,7 +13,6 @@ svg {
 text {
   font-family: 'ITC Franklin Gothic Std';
   font-size: 12px ;
-  line-height: 10px;
   color: #635F5D;
   opacity: 1;
   text-align: left;
@@ -26,10 +25,13 @@ h1 {
   line-height: 20px;
   opacity: 1;
   text-align: center;
+  font-weight: normal;
 }
 
 hr {
-    border: 0;
+    border: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #C0C0BB, rgba(0, 0, 0, 0));
 }
@@ -74,7 +76,6 @@ text.subtitle {
   fill: #635F5D !important;
   opacity: 1;
 }
-
 
 .title {
   font-size: 20px;
