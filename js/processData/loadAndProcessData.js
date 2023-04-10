@@ -12,6 +12,11 @@ Promise
       d['age_(at_time_of_appearance)'] = +d['age_(at_time_of_appearance)'];
       d['years_active_(at_time_of_appearance)'] = +d['years_active_(at_time_of_appearance)']
       d.stage_name = d.stage_name.toLowerCase();
+      if (d.gender !== 'f' && d.gender !== 'mixed') {
+        d.genderGroup = 'other'
+      } else {
+        d.genderGroup = d.gender
+      }
     });
 
     data.sort(function(x, y){

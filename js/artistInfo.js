@@ -6,7 +6,9 @@ class artistInfo {
       data: _props.data,
       margin: _props.margin,
       artists: _props.artists,
-      colorScheme: _props.colorScheme,
+      colourScale: _props.colourScale,
+      onHoverOn: _props.onHoverOn,
+      onHoverOff: _props.onHoverOff,
     };
     this.initVis();
   }
@@ -28,11 +30,7 @@ class artistInfo {
   updateVis() {
     const artists_to_show = [...this.props.artists];
     artists_to_show.reverse();
-
-    const formatID = (x) => {
-      return x.toUpperCase().split(' ').join('_');
-    };
-
+    
     // Prepare data to display
     const group = d3.group(
       this.props.data.filter((d) => artists_to_show.includes(d.stage_name)),
@@ -59,16 +57,7 @@ class artistInfo {
       .merge(divs)
       .transition()
       .duration(1000)
-      .style('border-color', (d) => {
-        console.log(d[1][0].data.gender);
-        if (d[1][0].data.gender == 'f') {
-          return this.props.colorScheme[0];
-        } else if (d[1][0].data.gender == 'mixed') {
-          return this.props.colorScheme[1];
-        } else {
-          return this.props.colorScheme[2];
-        }
-      });
+      .style('border-color', (d) => this.props.colourScale(d[1][0].data.genderGroup))
 
     divEnter
       .append('p')
@@ -87,23 +76,11 @@ class artistInfo {
           d[1][0].data.country_of_origin +
           '</text>'
       )
-      .on('mousemove', (event, d) => {
-        console.log(d);
-        d3.selectAll('#' + formatID(d[0]))
-          .style('fill', 'white')
-          .style('stroke', ' #C0C0BB');
+      .on('mousemove', (_event, d) => {
+        this.props.onHoverOn(d[0])
       })
-      .on('mouseleave', (event, d) => {
-        d3.selectAll('#' + formatID(d[0]))
-          .style(
-            'fill',
-            (d[1][0].data.gender == 'f') | (d[1][0].data.gender == 'mixed')
-              ? d[1][0].data.gender == 'mixed'
-                ? this.props.colorScheme[1]
-                : this.props.colorScheme[0]
-              : this.props.colorScheme[2]
-          )
-          .style('stroke', 'white');
+      .on('mouseleave', (_event, d) => {
+        this.props.onHoverOff(d[0], d[1][0].data.genderGroup)
       });
 
     divs.exit().remove();

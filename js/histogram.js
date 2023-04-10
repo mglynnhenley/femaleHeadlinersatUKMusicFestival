@@ -8,6 +8,9 @@ class histogram {
       yAxisLabel: _props.yAxisLabel,
       onClick: _props.onClick,
       colorScheme: _props.colorScheme,
+      onHoverOn: _props.onHoverOn,
+      onHoverOff: _props.onHoverOff,
+      formatID: _props.formatID,
     };
     this.initVis();
   }
@@ -28,9 +31,6 @@ class histogram {
 
   // grouped bar plot: https://d3-graph-gallery.com/graph/barplot_grouped_basicWide.html
   updateVis() {
-    const formatID = (x) => {
-      return x.toUpperCase().split(' ').join('_')
-  }
 
     let vis = this;
 
@@ -180,7 +180,7 @@ class histogram {
     //plot circles
     rectEnter
       .merge(rect)
-      .attr('id', (d) => formatID(d.stage_name))
+      .attr('id', (d) => this.props.formatID(d.stage_name))
       .attr('class', 'histogram')
       .on('mousemove', (event, d) => {
         d3.select('#tooltip')
@@ -188,18 +188,11 @@ class histogram {
           .style('left', event.pageX + tooltipPadding + 'px')
           .style('top', event.pageY + tooltipPadding + 'px')
           .html('<div class="tooltip-title">' + d.stage_name + '</div>');
-        d3.selectAll('#' + formatID(d.stage_name)).style('fill', 'white').style('z-index', '-1')
+          this.props.onHoverOn(d.stage_name)
       })
       .on('mouseleave', (event, d) => {
         d3.select('#tooltip').style('display', 'none');
-        d3.selectAll('#' + formatID(d.stage_name)).style(
-          'fill',
-          (d.gender == 'f') | (d.gender == 'mixed')
-            ? d.gender == 'mixed'
-              ? this.props.colorScheme[1]
-              : this.props.colorScheme[0]
-            : this.props.colorScheme[2]
-        );
+        this.props.onHoverOff(d.stage_name, d.genderGroup)
       })
       .on('click', (event, d) => this.props.onClick(d.stage_name))
       .attr('x', (d) => {
@@ -223,7 +216,7 @@ class histogram {
         if ((d.gender == 'f') | (d.gender == 'mixed')) {
           return yScale(maxIndex - d.index_histogram * 10) / 2;
         } else {
-          return 3200 + yScale(maxIndex - d.index_histogram * 10) / 2;
+          return 3000 + yScale(maxIndex - d.index_histogram * 10) / 2;
         }
       })
       .attr('y', (d) =>  yScale(d.index_histogram) - rectHeight) // we have to adjust because of the radius of the circle

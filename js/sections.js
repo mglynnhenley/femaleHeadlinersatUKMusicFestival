@@ -1,3 +1,4 @@
+
 const { x, y, width, height } = d3
   .selectAll('#graphic')
   .node()
@@ -8,7 +9,7 @@ let colourScheme
 let circlesView
 let histogramView
 
-const scrollVis = onClick => {
+const scrollVis = (onClick, onHoverOn, onHoverOff, formatID) => {
   var margin = { top: 10, left: 10, bottom: 10, right: 10 }
   var lastIndex = -1
   var activeIndex = 0
@@ -36,12 +37,18 @@ const scrollVis = onClick => {
 
   const setupVis = () => {
 
+    // initialize the circles views
     circlesView = new circles(svg, {
       data,
       margin: { top: 40, bottom: 10, left: 40, right: 10 },
       onClick: onClick,
       colorScheme: colourScheme,
+      onHoverOn: onHoverOn,
+      onHoverOff: onHoverOff,
+      formatID: formatID,
     })
+
+    // initialize the histogram views
     histogramView = new histogram(svg, {
       data: data.filter(d => d.year >= 2007),
       margin: { top: 40, bottom: 30, left:200, right:20 },
@@ -49,6 +56,9 @@ const scrollVis = onClick => {
       yAxisLabel: 'Number of Headlining Acts' ,
       onClick: onClick,
       colorScheme: colourScheme,
+      onHoverOn: onHoverOn,
+      onHoverOff: onHoverOff,
+      formatID: formatID,
     })
   }
 
@@ -64,7 +74,7 @@ const scrollVis = onClick => {
   }
 
   function showTitle () {
-    // On scroll back up, we want to hide the histogram view
+    // On scroll back up to title, we want to hide the histogram view
     svg.selectAll('.histogram').transition().duration(1000).attr('display', 'none')
   }
 
@@ -103,12 +113,12 @@ const scrollVis = onClick => {
 }
 
 // external function to be called by index
-export const display = (dataArgument, colours, onClick) => {
+export const display = (dataArgument, colours, onClick, onHoverOn, onHoverOff, formatID) => {
   data = dataArgument
   colourScheme = colours
   
   // initiate scroller function
-  var plot = scrollVis(onClick)
+  var plot = scrollVis(onClick, onHoverOn, onHoverOff, formatID)
   d3.select('#vis').datum(data).call(plot, { data: data })
 
   // initialize scroller component on graphic section

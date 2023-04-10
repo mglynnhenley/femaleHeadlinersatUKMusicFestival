@@ -3,21 +3,8 @@ export const colourLegend = (parent, props) => {
     legendType,
     colourScale,
     keys,
-    borderWeightScale
   } = props
 
-
-  var color = d3.scaleOrdinal().domain(keys).range(colourScale)
-
-  var borderWeight = d3.scaleOrdinal().domain(keys).range(borderWeightScale)
-
-  const sizeKeys = [1, 2, 8]
-
-  var sizeScale = d3
-    .scaleSqrt() // instead of scaleLinear()
-    .domain([0, 6])
-    .range([0, 20])
-  
   parent.append('text').text('Gender of the artist or group:').attr('class', 'subtitle').attr('transform', `translate(0,30)`)
     
   if (legendType == 'rect') {
@@ -44,7 +31,7 @@ export const colourLegend = (parent, props) => {
       .attr('width', size)
       .attr('height', size)
       .style('fill', function (d) {
-        return color(d)
+        return colourScale(d)
       })
       .style('stroke', 'white')
 
@@ -90,7 +77,7 @@ export const colourLegend = (parent, props) => {
       }) // 100 is where the first dot appears. 25 is the distance between dots
       .attr('r', size)
       .style('fill', function (d) {
-        return color(d)
+        return colourScale(d)
       })
       .style('stroke', 'white');
       

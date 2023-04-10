@@ -20,7 +20,7 @@ text {
 
 h1 {
   font-family: 'ITC Franklin Gothic Std';
-  font-size: 18px;
+  font-size: 16px;
   color: #635F5D;
   line-height: 20px;
   opacity: 1;
@@ -116,7 +116,7 @@ text.subtitle {
 
 #right {
   height: 80vh;
-  width:18%;
+  width:16%;
   left: 80vw;
   font-size: 20px;
   position: fixed;

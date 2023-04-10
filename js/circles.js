@@ -1,4 +1,3 @@
-// https://stackoverflow.com/questions/57277281/d3-how-to-update-force-simulation-when-data-values-change
 class circles {
   constructor(_parent, _props, _data) {
     this.parent = _parent;
@@ -7,6 +6,9 @@ class circles {
       margin: _props.margin,
       onClick: _props.onClick,
       colorScheme: _props.colorScheme,
+      onHoverOn: _props.onHoverOn,
+      onHoverOff: _props.onHoverOff,
+      formatID: _props.formatID,
     };
     this.initVis();
   }
@@ -36,9 +38,6 @@ class circles {
   }
 
   updateVis() {
-    const formatID = (x) => {
-      return x.toUpperCase().split(' ').join('_')
-  }
     let vis = this;
 
     // Get the chart object and move to the correct position
@@ -64,9 +63,9 @@ class circles {
     const circlesEnter = circles
       .enter()
       .append('circle')
-      .attr('id', (d) => formatID(d[0]))
-      .attr('cx', (d) => vis.centre.x)
-      .attr('cy', (d) => vis.centre.y);
+      .attr('id', (d) => this.props.formatID(d[0]))
+      .attr('cx', vis.centre.x)
+      .attr('cy', vis.centre.y);
 
     // create simulation for vis data set
     vis.simulation = d3.forceSimulation(dataToDisplay);
@@ -85,7 +84,7 @@ class circles {
     vis.simulation.stop();
 
     circlesEnter
-      .attr('id', (d) => formatID(d[0]))
+      .attr('id', (d) => this.props.formatID(d[0]))
       .merge(circles)
       .transition()
       .duration(2000)
@@ -107,7 +106,7 @@ class circles {
     const tooltipPadding = 25;
     vis.chart
       .selectAll('circle')
-      .attr('id', (d) => formatID(d[0]))
+      .attr('id', (d) => this.props.formatID(d[0]))
       .on('mousemove', (event, d) => {
         d3.select('#tooltip')
           .style('display', 'inline-block')
@@ -124,11 +123,13 @@ class circles {
               ?'s'
               :'' + '</div>' )
           );
+        this.props.onHoverOn(d[0])
       })
-      .on('mouseleave', () => {
+      .on('mouseleave', (event, d) => {
         d3.select('#tooltip').style('display', 'none');
+        this.props.onHoverOff(d[0], d[1][0].genderGroup)
       })
-      .on('click', (event, d) => vis.props.onClick(d[0]));
+      .on('click', (_event, d) => vis.props.onClick(d[0]));
 
     // Specify the simulation force for each data point
     vis.simulation

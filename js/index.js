@@ -2,50 +2,57 @@ import { display } from "./sections.js"
 import { loadAndProcessData } from "./processData/loadAndProcessData.js";
 import { colourLegend } from "./legend.js";
 
+let rightDiv = d3.selectAll('#right')
+let legendSvg = d3.selectAll('#legend-histogram')
+let legendSummary = d3.selectAll('#legend-summary')
+let legendAnnotate = d3.selectAll('#legend-annotate')
+
+// Global/State variables
 let data;
-let geoData;
-let colourScheme
-let artistData;
 let artistShown = [];
+const colours = ['#d01c8b', '#f1b6da', '#4dac26'] // dark pink, light pink and green 
+const genderOfHeadliners = ['female', 'mixed', 'other']
+
+// Colour scale (shared between views)
+const colourScale = d3
+  .scaleOrdinal()
+  .domain(genderOfHeadliners)
+  .range(colours);
+
+const formatID = (x) => {
+    return x.toUpperCase().split(' ').join('_').split('.').join('')
+}
+
+const onHoverOn = (d) => {
+  console.log('onHoverOn')
+  d3.selectAll('#' + formatID(d)).style('fill', 'white').style('stroke', '#C0C0BB');
+}
+
+const onHoverOff = (d, gender) => {
+  d3.selectAll('#' + formatID(d)).style('fill', colourScale(gender)).style('stroke', 'white');
+}
 
 const updateVis = () => {
-  const colourScheme = ['#d01c8b', '#f1b6da', '#4dac26']
 
-  // TODO: you should pass the svg into display from index.js
-  let rightDiv = d3.selectAll('#right')
-  const legendSvg = d3.selectAll('#legend-histogram')
-  const legendSummary = d3.selectAll('#legend-summary')
-  const legendAnnotate = d3.selectAll('#legend-annotate')
-
-  // call the legend function
+// legend for the first view
   legendSvg.call(colourLegend, {
     legendType: 'rect',
-    colourScale: colourScheme,
+    colourScale: colourScale,
     keys: ['female', 'mixed', 'other'],
-    circleRadius: 4,
-    spacing: 10,
-    textOffset: 4,
-    borderWeightScale:  ['1','2','3']
   })
 
+// legend for the second view
   legendSummary.call(colourLegend, {
     legendType: 'circle',
-    colourScale: colourScheme,
-    keys: ['female', 'mixed',  'other'],
-    circleRadius: 4,
-    spacing: 10,
-    textOffset: 4,
-    borderWeightScale: ['3','2','1']
+    colourScale: colourScale,
+    keys: ['female', 'mixed',  'other']
   })
 
+// legend for the third view
   legendAnnotate.call(colourLegend, {
     legendType: 'circle',
-    colourScale: colourScheme,
-    keys: ['female', 'mixed'],
-    circleRadius: 4,
-    spacing: 10,
-    textOffset: 4,
-    borderWeightScale: ['3','1']
+    colourScale: colourScale,
+    keys: ['female', 'mixed']
   })
 
   // Initialize the recording of artist information class
@@ -53,29 +60,32 @@ const updateVis = () => {
     data: data,
     margin: { top: 10, bottom: 10, left: 10, right: 10},
     artists: [],
-    colorScheme: colourScheme,
+    colourScale: colourScale,
+    onHoverOn: onHoverOn,
+    onHoverOff: onHoverOff,
   })
   artistInfoClass.initVis();
   
-  // function that shows the artist information on click on the object
+  
   const onClick = (d) => {
     if (artistShown.length > 4) {
-      artistShown = artistShown.slice(1);
+      artistShown = artistShown.slice(1); // If length is greater than 4, remove last artist
     }
     if (artistShown.includes(d)){
       const index = artistShown.indexOf(d);
-      artistShown.splice(index, 1);
+      artistShown.splice(index, 1);  // If element already selected, remove artist from array 
     } else {
-      artistShown.push(d);
+      artistShown.push(d); // Otherwise add artist
     }
-    artistInfoClass.props.artists = artistShown;
-    artistInfoClass.updateVis();
+    artistInfoClass.props.artists = artistShown; 
+    artistInfoClass.updateVis(); // update artist info visualisation with new/removed artists
   }
-  display(data, colourScheme, onClick)
 
+
+  display(data, colours, onClick, onHoverOn, onHoverOff, formatID)
 }
 
-// load data and display
+// Data loading, preprocessing, and init visualisation
 loadAndProcessData().then(([loadedData]) => {
   data = loadedData
   updateVis()
