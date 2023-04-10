@@ -5,7 +5,7 @@ const { x, y, width, height } = d3
   .getBoundingClientRect()
 
 let data
-let colourScheme
+let colourScale
 let circlesView
 let histogramView
 
@@ -42,7 +42,7 @@ const scrollVis = (onClick, onHoverOn, onHoverOff, formatID) => {
       data,
       margin: { top: 40, bottom: 10, left: 40, right: 10 },
       onClick: onClick,
-      colorScheme: colourScheme,
+      colourScale: colourScale,
       onHoverOn: onHoverOn,
       onHoverOff: onHoverOff,
       formatID: formatID,
@@ -55,7 +55,7 @@ const scrollVis = (onClick, onHoverOn, onHoverOff, formatID) => {
       xAxisLabel: 'UK Festival',
       yAxisLabel: 'Number of Headlining Acts' ,
       onClick: onClick,
-      colorScheme: colourScheme,
+      colourScale: colourScale,
       onHoverOn: onHoverOn,
       onHoverOff: onHoverOff,
       formatID: formatID,
@@ -74,15 +74,15 @@ const scrollVis = (onClick, onHoverOn, onHoverOff, formatID) => {
   }
 
   function showTitle () {
-    // On scroll back up to title, we want to hide the histogram view
+    // On scroll back up to title, hide the histogram view
     svg.selectAll('.histogram').transition().duration(1000).attr('display', 'none')
   }
 
   function showSummary () {
-    // Show the circle elements, hide the histogram view
-    svg.selectAll('circle').transition('add_circles').attr('display', 'inline-block')
-    svg.selectAll('.histogram').transition('hide_histo').duration(1000).attr('display', 'none')
-    // update the circle class with all the data for the summary screen
+    // 1. Show the circle elements, hide the histogram view
+    svg.selectAll('circle').transition('add circles').attr('display', 'inline-block')
+    svg.selectAll('.histogram').transition('hide histogram').duration(1000).attr('display', 'none')
+    // 2. update the circle class with all the data for the summary screen
     circlesView.props.data = data
     circlesView.updateVis()
   }
@@ -99,6 +99,7 @@ const scrollVis = (onClick, onHoverOn, onHoverOff, formatID) => {
     histogramView.updateVis();
     }
 
+  // deals with active index for scrolling
   chart.activate = function (index) {
     activeIndex = index
     var sign = activeIndex - lastIndex < 0 ? -1 : 1
@@ -113,17 +114,16 @@ const scrollVis = (onClick, onHoverOn, onHoverOff, formatID) => {
 }
 
 // external function to be called by index
-export const display = (dataArgument, colours, onClick, onHoverOn, onHoverOff, formatID) => {
+export const display = (scrollingViews, dataArgument, _colourScale, onClick, onHoverOn, onHoverOff, formatID) => {
   data = dataArgument
-  colourScheme = colours
+  colourScale = _colourScale
   
   // initiate scroller function
   var plot = scrollVis(onClick, onHoverOn, onHoverOff, formatID)
-  d3.select('#vis').datum(data).call(plot, { data: data })
+  scrollingViews.datum(data).call(plot, { data: data })
 
   // initialize scroller component on graphic section
   var scroll = scroller().container(d3.select('#graphic'))
-
   scroll(d3.selectAll('.step'))
 
   // define what happens when a scroll event is detected
@@ -131,7 +131,7 @@ export const display = (dataArgument, colours, onClick, onHoverOn, onHoverOff, f
     plot.activate(index)
     d3.selectAll('.step')
     .transition().duration(1000)
-    .style('opacity', function (d, i) { return i === index ? 1 : 0.1; });
+    .style('opacity', (d, i) => i === index ? 1 : 0.1 );
   })
 
 

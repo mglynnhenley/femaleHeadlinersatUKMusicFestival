@@ -7,7 +7,7 @@ class histogram {
       xAxisLabel: _props.xAxisLabel,
       yAxisLabel: _props.yAxisLabel,
       onClick: _props.onClick,
-      colorScheme: _props.colorScheme,
+      colourScale: _props.colourScale,
       onHoverOn: _props.onHoverOn,
       onHoverOff: _props.onHoverOff,
       formatID: _props.formatID,
@@ -17,6 +17,7 @@ class histogram {
 
   initVis() {
     let vis = this;
+    // initialize margins
     const width = +vis.parent.attr('width');
     const height = +vis.parent.attr('height');
     vis.innerWidth = width - vis.props.margin.left - vis.props.margin.right;
@@ -29,19 +30,17 @@ class histogram {
       );
   }
 
-  // grouped bar plot: https://d3-graph-gallery.com/graph/barplot_grouped_basicWide.html
+  // some of the structure taken from grouped bar plot: https://d3-graph-gallery.com/graph/barplot_grouped_basicWide.html
   updateVis() {
 
     let vis = this;
 
-    this.parent
+    vis.parent
       .selectAll('.chart')
       .attr(
         'transform',
         `translate(${this.props.margin.left},${this.props.margin.top})`
       );
-
-    let maxIndex = 0; // This will be used for our y axis range
 
     //Get a list of all the festivals
     var festivals = new Set();
@@ -49,20 +48,9 @@ class histogram {
       festivals.add(d.festival);
     });
 
-    // Looking at calculating the order of the festival
-    const groupData = d3.rollup(
-      this.props.data,
-      (v) => v.length,
-      (d) => d.festival,
-      (d) => d.gender
-    );
-    const totals = d3.rollup(
-      this.props.data,
-      (v) => v.length,
-      (d) => d.festival
-    );
+    let maxIndex = 0; // This will be used for our y axis range
 
-    // produce index's for displaying the data as a histogram
+    // produce index's for genders displaying the grouped bars
     festivals.forEach((festival) => {
       let indexFemale = 0;
       let indexOther = 0;
@@ -80,9 +68,25 @@ class histogram {
       maxIndex = maxIndex > indexOther ? maxIndex : indexOther; //we always know female will be in minority
     });
 
-    // I want my histogram to be sorted in ascending order of absolute difference between performers
-    const festivalSorted = Array.from(festivals);
-    festivalSorted.sort((a, b) => {
+
+    // Sort data in ascending order of percentage difference between performers
+
+    // 1. Group the data
+    const groupData = d3.rollup(
+      this.props.data,
+      (v) => v.length,
+      (d) => d.festival,
+      (d) => d.gender
+    );
+    const totals = d3.rollup(
+      this.props.data,
+      (v) => v.length,
+      (d) => d.festival
+    );
+
+    // 2. Calculate the order and sort the festivalSorted Array
+    const dataToDisplay = Array.from(festivals);
+    dataToDisplay.sort((a, b) => {
       const womenForFestival_a =
         (groupData.get(a).get('f') ?? 0) + (groupData.get(a).get('mixed') ?? 0) / totals.get(a)
       const womenForFestival_b =
@@ -94,7 +98,7 @@ class histogram {
     // Initialise scales
     var xScale = d3
       .scaleBand()
-      .domain(festivalSorted)
+      .domain(dataToDisplay)
       .range([0, this.innerWidth])
       .padding([0.1])
 
@@ -105,7 +109,6 @@ class histogram {
 
     // initialize axis
     const xAxis = d3.axisBottom(xScale).ticks(festivals).tickSize(0)
-
 
     const yAxis = d3
       .axisLeft(yScale)
@@ -121,6 +124,7 @@ class histogram {
       .attr('class', 'histogram');
 
     // https://stackoverflow.com/questions/20947488/d3-grouped-bar-chart-how-to-rotate-the-text-of-x-axis-ticks
+    // Add x axis labels and ticks
     xAxisG
       .call(xAxis)
       .selectAll('text')
@@ -130,13 +134,14 @@ class histogram {
       .attr('transform', 'rotate(-40)')
       .attr('class', 'axis label')
 
-    // Append y-axis group
-    const yAxisG = this.chart
+    // Add y-axis 
+    const yAxisG = vis.chart
       .append('g')
       .attr('class', 'axis y-axis')
       .attr('class', 'histogram');
     yAxisG.call(yAxis);
 
+    // Add y axis titles
     yAxisG
       .append('text')
       .attr('class', 'axis title')
@@ -145,6 +150,7 @@ class histogram {
       .attr('text-anchor', 'middle')
       .text(this.props.yAxisLabel);
 
+    // Add x axis titles
     xAxisG
       .append('text')
       .attr('class', 'axis title')
@@ -161,13 +167,13 @@ class histogram {
       .padding([0.05])
 
     // Create new circles for each group
-    const g = this.chart;
-    this.chart.selectAll('rect').each(function () {
+    const g = vis.chart;
+    vis.chart.selectAll('rect').each(function () {
       g.append(() => this);
     });
 
     //create the new circle elements
-    const rect = this.chart
+    const rect = vis.chart
       .selectAll('rect')
       .data(this.props.data, (d) => d.stage_name);
 
@@ -175,12 +181,12 @@ class histogram {
     const rectEnter = rect.enter().append('rect');
 
     const tooltipPadding = 25;
-    const rectHeight = this.innerHeight / maxIndex +1;
+    const rectHeight = vis.innerHeight / maxIndex +1;
 
-    //plot circles
+    //plot rectangles
     rectEnter
       .merge(rect)
-      .attr('id', (d) => this.props.formatID(d.stage_name))
+      .attr('id', (d) => vis.props.formatID(d.stage_name))
       .attr('class', 'histogram')
       .on('mousemove', (event, d) => {
         d3.select('#tooltip')
@@ -190,11 +196,11 @@ class histogram {
           .html('<div class="tooltip-title">' + d.stage_name + '</div>');
           this.props.onHoverOn(d.stage_name)
       })
-      .on('mouseleave', (event, d) => {
+      .on('mouseleave', (_event, d) => {
         d3.select('#tooltip').style('display', 'none');
         this.props.onHoverOff(d.stage_name, d.genderGroup)
       })
-      .on('click', (event, d) => this.props.onClick(d.stage_name))
+      .on('click', (_event, d) => this.props.onClick(d.stage_name))
       .attr('x', (d) => {
         return (
           xScale(d.festival) +
@@ -202,26 +208,20 @@ class histogram {
         );
       })
       .attr('width', 20)
-      .attr('y', this.innerHeight)
-      .attr('fill', (d) =>
-        (d.gender == 'f') | (d.gender == 'mixed')
-          ? d.gender == 'mixed'
-          ? this.props.colorScheme[1]
-          : this.props.colorScheme[0]
-        : this.props.colorScheme[2]
-      )
-      .transition('bar grow')
+      .attr('y', vis.innerHeight)
+      .attr('fill', (d) => vis.props.colourScale(d.genderGroup))
+      .transition('bars grow up from x axis')
       .duration(1000)
       .delay((d, i) => {
         if ((d.gender == 'f') | (d.gender == 'mixed')) {
           return yScale(maxIndex - d.index_histogram * 10) / 2;
         } else {
-          return 3000 + yScale(maxIndex - d.index_histogram * 10) / 2;
+          return 3000 + yScale(maxIndex - d.index_histogram * 10) / 2; // more delay for the male bars
         }
       })
-      .attr('y', (d) =>  yScale(d.index_histogram) - rectHeight) // we have to adjust because of the radius of the circle
+      .attr('y', (d) =>  yScale(d.index_histogram) - rectHeight) 
       .attr('height', rectHeight)
-      .transition('stroke-to-white')
+      .transition('stroke to white')
       .duration(100)
       .delay(1000)
       .attr('stroke', 'white')

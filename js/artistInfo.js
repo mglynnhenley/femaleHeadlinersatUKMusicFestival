@@ -28,10 +28,12 @@ class artistInfo {
   }
 
   updateVis() {
+    let vis = this;
+
+    // Prepare data to display
     const artists_to_show = [...this.props.artists];
     artists_to_show.reverse();
-    
-    // Prepare data to display
+
     const group = d3.group(
       this.props.data.filter((d) => artists_to_show.includes(d.stage_name)),
       (d) => d.festival
@@ -45,11 +47,10 @@ class artistInfo {
         if (a == d[0]) orderedData.push(d)
       })
     })
-    console.log(orderedData)
 
 
     // Create one div per data point
-    const divs = this.container.selectAll('.artist_info').data(orderedData, d => d[0])
+    const divs = vis.container.selectAll('.artist_info').data(orderedData, d => d[0])
     const divEnter = divs.enter().append('div').attr('class', 'artist_info')
 
     // merge with previous data
@@ -83,6 +84,7 @@ class artistInfo {
         this.props.onHoverOff(d[0], d[1][0].data.genderGroup)
       });
 
+    // Remove data not shown
     divs.exit().remove();
   }
 }

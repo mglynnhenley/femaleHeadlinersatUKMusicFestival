@@ -1,60 +1,56 @@
 export const colourLegend = (parent, props) => {
-  const {
-    legendType,
-    colourScale,
-    keys,
-  } = props
+  const { legendType, colourScale, keys } = props;
 
-  parent.append('text').text('Gender of the artist or group:').attr('class', 'subtitle').attr('transform', `translate(0,30)`)
-    
+  // padding for tool tip
+  const tooltipPadding = 25;
+
+  // title for the legend
+  parent
+    .append('text')
+    .text('Gender of the artist or group:')
+    .attr('class', 'subtitle')
+    .attr('transform', `translate(0,30)`);
+
   if (legendType == 'rect') {
-    var size = 30
+    var size = 30;
     parent
       .selectAll(legendType)
       .data(keys)
-      .enter()
+      .enter() // only need the enter part of the enter/merge/exit pattern since there will be no change in data throughout visualization
       .append(legendType)
       .on('mousemove', (event, d) => {
         d3.select('#tooltip')
           .style('display', 'inline-block')
           .style('left', event.pageX + tooltipPadding + 'px')
           .style('top', event.pageY + tooltipPadding + 'px')
-          .html('<div class="tooltip-title"> Hover over or click the bars in the visualization -> </div>');
+          .html(
+            '<div class="tooltip-title"> Hover over or click the bars in the visualization -> </div>'
+          );
       })
-      .on('mouseleave', (event, d) => {
-        d3.select('#tooltip').style('display', 'none');
-      })
+      .on('mouseleave', () => d3.select('#tooltip').style('display', 'none'))
       .attr('x', 100)
-      .attr('y', function (d, i) {
-        return 70 + i * (size + 5)
-      }) // 100 is where the first dot appears. 25 is the distance between dots
+      .attr('y', (d, i) => 70 + i * (size + 5))
       .attr('width', size)
       .attr('height', size)
-      .style('fill', function (d) {
-        return colourScale(d)
-      })
-      .style('stroke', 'white')
+      .style('fill', colourScale)
+      .style('stroke', 'white');
 
     // Add one dot in the legend for each name.
     parent
-      .selectAll('.mylabels')
+      .selectAll('.labels')
       .data(keys)
       .enter()
       .append('text')
-      .attr('class', 'mylabels')
+      .attr('class', 'labels')
       .attr('x', 120 + size * 1.2)
-      .attr('y', function (d, i) {
-        return 70 + i * (size + 5) + size / 2
-      }) // 100 is where the first dot appears. 25 is the distance between dots
-      .text(function (d) {
-        return d
-      })
+      .attr('y', (d, i) => 70 + i * (size + 5) + size / 2)
+      .text((d) => d)
       .attr('text-anchor', 'left')
-      .style('alignment-baseline', 'middle')
-  }
-  const tooltipPadding = 25
-  if (legendType == 'circle') {
-    var size = 20
+      .style('alignment-baseline', 'middle');
+  } else if (legendType == 'circle') {
+    var size = 20;
+
+   // Add one circle in the legend for each name.
     parent
       .selectAll('.colorCircleLegend')
       .data(keys)
@@ -65,39 +61,31 @@ export const colourLegend = (parent, props) => {
           .style('display', 'inline-block')
           .style('left', event.pageX + tooltipPadding + 'px')
           .style('top', event.pageY + tooltipPadding + 'px')
-          .html('<div class="tooltip-title"> Hover over or click the circles in the visualization -> </div>');
+          .html(
+            '<div class="tooltip-title"> Hover over or click the circles in the visualization -> </div>'
+          );
       })
       .on('mouseleave', (event, d) => {
         d3.select('#tooltip').style('display', 'none');
       })
       .attr('class', 'colorCircleLegend')
       .attr('cx', 100)
-      .attr('cy', function (d, i) {
-        return 90 + i * (2 * size + 5)
-      }) // 100 is where the first dot appears. 25 is the distance between dots
+      .attr('cy', (d, i) => 90 + i * (2 * size + 5)) // 100 is where the first dot appears. 25 is the distance between dots
       .attr('r', size)
-      .style('fill', function (d) {
-        return colourScale(d)
-      })
+      .style('fill', colourScale)
       .style('stroke', 'white');
-      
 
-    // Add one dot in the legend for each name.
+    // Add the labels in the legend for each name.
     parent
-      .selectAll('.mylabels')
+      .selectAll('.labels')
       .data(keys)
       .enter()
       .append('text')
-      .attr('class', 'mylabels')
+      .attr('class', 'labels')
       .attr('x', 100 + size * 2)
-      .attr('y', function (d, i) {
-        return 90 + i * (2 * size + 5) 
-      }) // 100 is where the first dot appears. 25 is the distance between dots
-      .text(function (d) {
-        return d
-      })
+      .attr('y', (d, i) => 90 + i * (2 * size + 5))
+      .text((d) => d)
       .attr('text-anchor', 'left')
-      .style('alignment-baseline', 'middle')
-
-    }
-}
+      .style('alignment-baseline', 'middle');
+  }
+};

@@ -168,7 +168,6 @@ text.subtitle {
   position: fixed;
 }
 
-
 .histogram path,
 .histogram line {
   stroke: white;
@@ -195,6 +194,7 @@ axis title {
   line-height: 10px;
   fill: #635F5D;
   opacity: 1;
+  color: #635F5D;
 }
 
 .highlight {
@@ -215,11 +215,6 @@ axis title {
   font-weight: 100;
 }
 
-circle:hover {
-  fill: white;
-  stroke: #C0C0BB;
-}
-
 rect{ 
   box-sizing: border-box;
 }
@@ -229,6 +224,6 @@ rect:hover {
   stroke: white;
 }
 
-text.mylabels {
+text.labels {
   fill: #635F5D;
 }

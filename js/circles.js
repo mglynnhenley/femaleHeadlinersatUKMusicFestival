@@ -5,7 +5,7 @@ class circles {
       data: _props.data,
       margin: _props.margin,
       onClick: _props.onClick,
-      colorScheme: _props.colorScheme,
+      colourScale: _props.colourScale,
       onHoverOn: _props.onHoverOn,
       onHoverOff: _props.onHoverOff,
       formatID: _props.formatID,
@@ -16,6 +16,7 @@ class circles {
   initVis() {
     
     let vis = this;
+    
     // Margin conventions
     vis.width = +vis.parent.attr('width');
     vis.height = +vis.parent.attr('height');
@@ -74,7 +75,7 @@ class circles {
     vis.simulation.on('tick', () => {
       vis.chart
         .selectAll('circle')
-        .transition('circle2')
+        .transition('circles move to position')
         .duration(90)
         .attr('cx', (d) => d.x)
         .attr('cy', (d) => d.y);
@@ -84,25 +85,19 @@ class circles {
     vis.simulation.stop();
 
     circlesEnter
-      .attr('id', (d) => this.props.formatID(d[0]))
+      .attr('id', (d) => this.props.formatID(d[0])) // need to give circles id for linked highlighting
       .merge(circles)
       .transition()
       .duration(2000)
       .attr('r', function (d) {
         return 9 * d.radius;
       })
-      .attr('stroke', (d) => 'white')
-      .attr('fill', (d) =>
-        (d[1][0].gender == 'f') | (d[1][0].gender == 'mixed')
-          ? d[1][0].gender == 'mixed'
-            ? vis.props.colorScheme[1]
-            : vis.props.colorScheme[0]
-          : vis.props.colorScheme[2]
-      );
+      .attr('stroke', 'white')
+      .attr('fill', (d) => this.props.colourScale(d[1][0].genderGroup));
 
     circles.exit().remove();
 
-    //Tooltip listeners
+    // Tooltip listeners: added here to ensure they update appropriately
     const tooltipPadding = 25;
     vis.chart
       .selectAll('circle')
@@ -115,7 +110,7 @@ class circles {
           .html(
             '<div class="tooltip-title"> <b>' +
               d[0] +
-              '</b> has played at <b>' +
+              '</b> has headlined at <b>' +
               d[1].length +
               '</b> festival' +
               (d[1].length >
@@ -136,9 +131,7 @@ class circles {
       .force('center', d3.forceCenter(vis.centre.x, vis.centre.y))
       .force(
         'collide',
-        d3.forceCollide().radius(function (d) {
-          return 12 * d.radius;
-        })
+        d3.forceCollide().radius((d) => 12 * d.radius)
       );
 
     // Reset the force ( for scrolling back up )
