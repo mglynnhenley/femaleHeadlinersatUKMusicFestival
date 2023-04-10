@@ -184,7 +184,13 @@ text.axis.title {
 
 axis title {
   stroke: #635F5D;
+  color: #635F5D;
   font-family: Arial;
+}
+
+.title {
+  color: #635F5D;
+
 }
 
 .axis.label {
