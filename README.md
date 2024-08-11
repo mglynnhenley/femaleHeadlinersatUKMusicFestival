@@ -2,6 +2,8 @@
 
 Welcome to the **Female Headliners at UK Music Festivals** project! This repository contains a static front-end data visualization project focused on exploring the representation of female artists as headliners at major UK music festivals from 1997 to 2017.
 
+Link to live version: https://femaleheadlinersatukmusicfestival.netlify.app/ 
+
 <img width="1234" alt="Screenshot 2024-08-11 at 18 14 44" src="https://github.com/user-attachments/assets/6227e6db-5e13-4b82-9740-24cfad551ee1">
 
 ## Overview
